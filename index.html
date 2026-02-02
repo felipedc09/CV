@@ -12,344 +12,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <style>
-      :root {
-        --sidebar-bg: #333b47;
-        --sidebar-header-bg: #404854;
-        --accent-yellow: #ffcc00;
-        --accent-blue: #4a90e2;
-        --text-white: #ffffff;
-        --font-mono: "OCR A Std", "OCR A", "Source Code Pro", monospace;
-      }
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
 
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        font-family: var(--font-mono);
-        background-color: #555;
-        margin: 0;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-      }
-
-      .container {
-        width: 210mm;
-        min-height: 250mm;
-        background-color: white;
-        display: flex;
-        overflow: hidden;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-      }
-
-      /* SIDEBAR */
-      .sidebar {
-        width: 35%;
-        background-color: var(--sidebar-bg);
-        color: var(--text-white);
-        display: flex;
-        flex-direction: column;
-      }
-
-      .photo-container {
-        width: 100%;
-        background-color: #d1d1d1;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        overflow: hidden;
-      }
-
-      .photo-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .sidebar-header {
-        background-color: var(--sidebar-header-bg);
-        padding: 10px 15px;
-        display: flex;
-        align-items: center;
-        border-left: 6px solid var(--accent-yellow);
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-      }
-
-      .sidebar-content {
-        padding: 20px;
-      }
-
-      .contact-item {
-        margin-bottom: 15px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .contact-label {
-        color: var(--accent-yellow);
-        display: flex;
-        align-items: center;
-        font-size: 0.8rem;
-        margin-bottom: 3px;
-      }
-
-      .contact-label i {
-        background: var(--accent-yellow);
-        color: var(--sidebar-bg);
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 8px;
-        font-size: 0.8rem;
-      }
-
-      .contact-value {
-        font-size: 0.8rem;
-        padding-left: 28px;
-        color: var(--text-white);
-      }
-      .contact-value a {
-        color: var(--text-white);
-        text-decoration: none;
-      }
-      .contact-value a:hover {
-        color: var(--accent-yellow);
-        text-decoration: underline;
-      }
-
-      .sidebar-divider {
-        border: 0;
-        border-top: 1px solid var(--accent-yellow);
-        margin: 15px 0;
-        position: relative;
-      }
-      .sidebar-divider::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: -3px;
-        width: 6px;
-        height: 6px;
-        background: var(--accent-yellow);
-        border-radius: 50%;
-      }
-
-      .lang-item {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.8rem;
-        margin-bottom: 6px;
-      }
-      .lang-item span:first-child::after {
-        content: " ──▶";
-        color: var(--accent-yellow);
-        margin-left: 5px;
-      }
-
-      .skill-legend {
-        font-size: 0.65rem;
-        margin-bottom: 20px;
-        text-align: center;
-        font-style: italic;
-      }
-      .skill-category {
-        font-size: 0.9rem;
-        color: var(--text-white);
-        margin: 15px 0 10px 0;
-        font-weight: bold;
-      }
-      .skill-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .skill-item {
-        font-size: 0.8rem;
-        margin-bottom: 5px;
-        display: flex;
-        align-items: center;
-      }
-      .dot-a {
-        color: var(--accent-yellow);
-        margin-right: 8px;
-        font-size: 0.8rem;
-      }
-      .dot-i {
-        color: var(--accent-blue);
-        margin-right: 8px;
-        font-size: 0.8rem;
-      }
-      .os-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5px;
-        font-size: 0.8rem;
-        margin-top: 10px;
-      }
-      .os-item {
-        display: flex;
-        align-items: center;
-      }
-
-      /* MAIN CONTENT */
-      .main-content {
-        width: 65%;
-        padding: 40px 0px;
-        background: #fff;
-      }
-
-      .name-header {
-        padding: 20px;
-      }
-
-      .name-header h1 {
-        font-size: 3rem;
-        margin: 0;
-        color: #333;
-      }
-
-      .name-header h2 {
-        font-size: 1.5rem;
-        color: #666;
-        font-weight: normal;
-        margin-top: 5px;
-      }
-
-      .name-header h2 span {
-        color: var(--accent-yellow);
-      }
-
-      .main-section-title {
-        background-color: #f2f2f2;
-        padding: 10px 15px;
-        display: flex;
-        align-items: center;
-        border-left: 6px solid var(--accent-yellow);
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-      }
-
-      .sub-section-title {
-        font-weight: bold;
-        font-size: 0.85rem;
-        border-bottom: 2px solid var(--accent-yellow);
-        display: inline-block;
-        margin-bottom: 15px;
-        padding-right: 20px;
-        text-transform: capitalize;
-      }
-
-      .main-text {
-        font-size: 0.8rem;
-        line-height: 1.2;
-        color: #333;
-        text-align: justify;
-        margin-bottom: 10px;
-        padding: 10px 40px;
-      }
-
-      .exp-box {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 8px;
-        padding: 10px 40px;
-      }
-      .exp-left {
-        font-weight: bold;
-        font-size: 0.8rem;
-      }
-      .exp-middle {
-        font-size: 0.8rem;
-        color: #666;
-      }
-      .exp-right {
-        width: 50%;
-        font-size: 0.8rem;
-        color: #666;
-        text-align: right;
-      }
-
-      .main-list,
-      .platzi-list {
-        padding-left: 18px;
-        margin-top: 5px;
-        padding: 10px 40px;
-      }
-      .main-list li,
-      .platzi-list li {
-        font-size: 0.8rem;
-        line-height: 1.2;
-        margin-bottom: 6px;
-        list-style: none;
-        position: relative;
-      }
-      .main-list li::before,
-      .platzi-list li::before {
-        content: "●";
-        color: var(--accent-yellow);
-        position: absolute;
-        left: -18px;
-        font-size: 0.8rem;
-      }
-
-      .edu-grid {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 15px;
-        margin-bottom: 25px;
-        font-size: 0.8rem;
-      }
-      .edu-year {
-        font-weight: bold;
-      }
-
-      .conf-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.8rem;
-      }
-      .conf-table td {
-        padding: 5px 0;
-        vertical-align: top;
-      }
-      .conf-year {
-        width: 30%;
-        font-weight: bold;
-      }
-
-      @media print {
-        body {
-          padding: 0;
-          background: none;
-          gap: 0;
-        }
-        .container {
-          box-shadow: none;
-          width: 100%;
-          height: 100%;
-          page-break-after: always;
-        }
-        .sidebar-header,
-        .main-section-title {
-          -webkit-print-color-adjust: exact;
-        }
-      }
-    </style>
   </head>
   <body>
     <div class="container">
       <div class="sidebar">
         <div class="photo-container">
-          <img src="photo.JPEG" alt="Felipe Duitama" />
+          <div class="slider-wrapper">
+            <div class="slider" id="photoSlider">
+              <!-- Images will be loaded here by JavaScript -->
+            </div>
+          </div>
         </div>
         <div class="sidebar-header">Contact</div>
         <div class="sidebar-content">
@@ -590,6 +267,76 @@
         </div>
       </div>
     </div>
+    <script>
+      let currentPhotoIndex = 0;
+      let photos = [];
+
+      async function loadPhotos() {
+        try {
+          const response = await fetch('photos/');
+          const html = await response.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const links = doc.querySelectorAll('a');
+
+          photos = Array.from(links)
+            .map(link => link.getAttribute('href'))
+            .filter(href => href && /\.(jpg|jpeg|png|gif|webp)$/i.test(href))
+            .map(href => href);
+        } catch (error) {
+          console.error('Error loading photos:', error);
+          photos = ['photos/photo.JPEG'];
+        }
+
+        if (photos.length > 0) {
+          renderPhotos();
+          let count = 0
+          setInterval(() => {
+            count++;
+            if(count === photos.length-1){
+              count = 0;
+            }
+            showPhoto(count);
+          }, 5000);
+        }
+      }
+
+      function renderPhotos() {
+        const slider = document.getElementById('photoSlider');
+
+        slider.innerHTML = '';
+
+        photos.forEach((photo, index) => {
+          const img = document.createElement('img');
+          img.src = photo;
+          img.alt = 'Felipe Duitama - Photo ' + (index + 1);
+          img.className = index === 0 ? 'active' : '';
+          slider.appendChild(img);
+        });
+      }
+
+      function showPhoto(index) {
+        if (photos.length === 0) return;
+
+        currentPhotoIndex = (index + photos.length) % photos.length;
+        const imgs = document.querySelectorAll('#photoSlider img');
+        const dots = document.querySelectorAll('.slider-dots .dot');
+
+        imgs.forEach((img, i) => {
+          img.classList.toggle('active', i === currentPhotoIndex);
+        });
+
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentPhotoIndex);
+        });
+      }
+
+      function changePhoto(direction) {
+        showPhoto(currentPhotoIndex + direction);
+      }
+
+      document.addEventListener('DOMContentLoaded', loadPhotos);
+    </script>
   </body>
 </html>
 
