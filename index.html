@@ -14,9 +14,16 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
-    <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">EN</button>
+    <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
+      EN
+    </button>
+    <button id="downloadPDF" class="download-btn" onclick="downloadPDF()">
+      <i class="fa-solid fa-download"></i> PDF
+    </button>
     <div class="container">
       <div class="sidebar">
         <div class="photo-container">
@@ -30,13 +37,15 @@
         <div class="sidebar-content">
           <div class="contact-item">
             <div class="contact-label">
-              <i class="fa-solid fa-phone"></i><span data-i18n="phone">Phone</span>
+              <i class="fa-solid fa-phone"></i
+              ><span data-i18n="phone">Phone</span>
             </div>
             <div class="contact-value">+57 320 3448583</div>
           </div>
           <div class="contact-item">
             <div class="contact-label">
-              <i class="fa-solid fa-envelope"></i><span data-i18n="email">Email</span>
+              <i class="fa-solid fa-envelope"></i
+              ><span data-i18n="email">Email</span>
             </div>
             <div class="contact-value">
               <a href="mailto:felipedc09@gmail.com">felipedc09@gmail.com</a>
@@ -44,7 +53,8 @@
           </div>
           <div class="contact-item">
             <div class="contact-label">
-              <i class="fa-solid fa-location-dot"></i><span data-i18n="address">Address</span>
+              <i class="fa-solid fa-location-dot"></i
+              ><span data-i18n="address">Address</span>
             </div>
             <div class="contact-value">
               Carrera 45 # 56-51<br />Bogotá - Colombia
@@ -71,10 +81,17 @@
               >
             </div>
           </div>
-          <div class="sidebar-header" style="margin: 20px -20px 15px -20px" data-i18n="languages">
+          <div
+            class="sidebar-header"
+            style="margin: 20px -20px 15px -20px"
+            data-i18n="languages"
+          >
             Languages
           </div>
-          <div class="lang-item"><span data-i18n="spanish">Spanish</span> <span data-i18n="native">Native</span></div>
+          <div class="lang-item">
+            <span data-i18n="spanish">Spanish</span>
+            <span data-i18n="native">Native</span>
+          </div>
           <div class="lang-item">
             <span data-i18n="english">English</span>
             <span style="width: 100px; text-align: end" data-i18n="englishLevel"
@@ -82,7 +99,10 @@
               roles)</span
             >
           </div>
-          <div class="lang-item"><span data-i18n="french">French</span> <span data-i18n="basic">Basic</span></div>
+          <div class="lang-item">
+            <span data-i18n="french">French</span>
+            <span data-i18n="basic">Basic</span>
+          </div>
         </div>
       </div>
       <div class="main-content">
@@ -146,9 +166,13 @@
         <div class="main-section-title">Experience</div>
         <div class="exp-box">
           <div>
-            <div class="exp-left" data-i18n="companyName">3D Virtual Environment Solutions</div>
+            <div class="exp-left" data-i18n="companyName">
+              3D Virtual Environment Solutions
+            </div>
 
-            <div class="exp-middle" data-i18n="companySector">Construction Technology Sector</div>
+            <div class="exp-middle" data-i18n="companySector">
+              Construction Technology Sector
+            </div>
           </div>
           <div class="exp-right">
             <span data-i18n="companyRole">Innovation Engineering</span><br />
@@ -204,11 +228,15 @@
 
     <div class="container">
       <div class="sidebar">
-        <div class="sidebar-header" data-i18n="technicalSkills">Technical Skills</div>
+        <div class="sidebar-header" data-i18n="technicalSkills">
+          Technical Skills
+        </div>
         <div class="sidebar-content">
           <div class="skill-legend">
-            <span class="dot-a">●</span> <span data-i18n="advanced">Advanced</span>
-            <span class="dot-i">●</span> <span data-i18n="intermediate">Intermediate</span>
+            <span class="dot-a">●</span>
+            <span data-i18n="advanced">Advanced</span>
+            <span class="dot-i">●</span>
+            <span data-i18n="intermediate">Intermediate</span>
           </div>
           <div class="skill-category" data-i18n="programming">Programming</div>
           <ul class="skill-list">
@@ -219,7 +247,9 @@
             <li class="skill-item"><span class="dot-i">●</span> Python</li>
             <li class="skill-item"><span class="dot-i">●</span> CSS</li>
           </ul>
-          <div class="skill-category" data-i18n="frameworksTools">Frameworks / Tools</div>
+          <div class="skill-category" data-i18n="frameworksTools">
+            Frameworks / Tools
+          </div>
           <ul class="skill-list">
             <li class="skill-item"></li>
             <li class="skill-item"><span class="dot-i">●</span> ReactJS</li>
@@ -229,14 +259,18 @@
             <li class="skill-item"><span class="dot-i">●</span> Unity 3D</li>
             <li class="skill-item"><span class="dot-i">●</span> Git</li>
             <li class="skill-item">
-              <span class="dot-i">●</span> <span data-i18n="githubCopilot">Github copilot as AI agent</span>
+              <span class="dot-i">●</span>
+              <span data-i18n="githubCopilot">Github copilot as AI agent</span>
             </li>
             <li class="skill-item">
-              <span class="dot-i">●</span> <span data-i18n="testing">playwright, cypress - testing</span>
+              <span class="dot-i">●</span>
+              <span data-i18n="testing">playwright, cypress - testing</span>
             </li>
             <li class="skill-item">
-              <span class="dot-i">●</span> <span data-i18n="devops">DevOps, CI/CD, contenedores (Docker,
-              Kubernetes)</span>
+              <span class="dot-i">●</span>
+              <span data-i18n="devops"
+                >DevOps, CI/CD, contenedores (Docker, Kubernetes)</span
+              >
             </li>
           </ul>
           <div class="skill-category" data-i18n="databases">Databases</div>
@@ -245,34 +279,48 @@
             <li class="skill-item"><span class="dot-i">●</span> MySQL</li>
             <li class="skill-item"><span class="dot-i">●</span> PostgreSQL</li>
           </ul>
-          <div class="sidebar-header" style="margin: 20px -20px 15px -20px" data-i18n="softSkills">
+          <div
+            class="sidebar-header"
+            style="margin: 20px -20px 15px -20px"
+            data-i18n="softSkills"
+          >
             Soft Skills
           </div>
           <ul class="skill-list" style="margin-top: 15px">
             <li class="skill-item">
-              <span class="dot-a">●</span> <span data-i18n="skill1">Self‑management & Proactivity</span>
+              <span class="dot-a">●</span>
+              <span data-i18n="skill1">Self‑management & Proactivity</span>
             </li>
             <li class="skill-item">
-              <span class="dot-a">●</span> <span data-i18n="skill2">Assertive Communication</span>
+              <span class="dot-a">●</span>
+              <span data-i18n="skill2">Assertive Communication</span>
             </li>
             <li class="skill-item">
-              <span class="dot-a">●</span> <span data-i18n="skill3">Solution‑oriented Thinking</span>
+              <span class="dot-a">●</span>
+              <span data-i18n="skill3">Solution‑oriented Thinking</span>
             </li>
             <li class="skill-item">
-              <span class="dot-a">●</span> <span data-i18n="skill4">Curiosity & Innovation Mindset</span>
+              <span class="dot-a">●</span>
+              <span data-i18n="skill4">Curiosity & Innovation Mindset</span>
             </li>
             <li class="skill-item">
-              <span class="dot-a">●</span> <span data-i18n="skill5">Continuous Learning</span>
+              <span class="dot-a">●</span>
+              <span data-i18n="skill5">Continuous Learning</span>
             </li>
             <li class="skill-item">
-              <span class="dot-a">●</span> <span data-i18n="skill6">Leadership & Team Guidance</span>
+              <span class="dot-a">●</span>
+              <span data-i18n="skill6">Leadership & Team Guidance</span>
             </li>
           </ul>
         </div>
       </div>
 
       <div class="main-content">
-        <div class="main-section-title" style="margin-top: 0" data-i18n="careerObjective">
+        <div
+          class="main-section-title"
+          style="margin-top: 0"
+          data-i18n="careerObjective"
+        >
           Career Objective
         </div>
         <div class="main-text" data-i18n="careerObjectiveText">
@@ -285,23 +333,34 @@
         </div>
         <div class="main-section-title" data-i18n="education">Education</div>
         <div class="main-text">
-          <div class="sub-section-title" data-i18n="universityEducation">University Education</div>
+          <div class="sub-section-title" data-i18n="universityEducation">
+            University Education
+          </div>
           <div class="edu-grid">
-            <div class="edu-year"><span data-i18n="systemsEngineering">Systems Engineering</span><br />2011 - 2020</div>
+            <div class="edu-year">
+              <span data-i18n="systemsEngineering">Systems Engineering</span
+              ><br />2011 - 2020
+            </div>
             <div class="edu-info">
-              <span data-i18n="universityName">Universidad Distrital Francisco José de Caldas</span><br />Bogotá,
-              Colombia
+              <span data-i18n="universityName"
+                >Universidad Distrital Francisco José de Caldas</span
+              ><br />Bogotá, Colombia
             </div>
           </div>
 
-          <div class="sub-section-title" data-i18n="complementaryTraining">Complementary Training</div>
+          <div class="sub-section-title" data-i18n="complementaryTraining">
+            Complementary Training
+          </div>
           <div class="edu-grid">
             <div class="edu-year">
-              <span data-i18n="unityCertified">Unity Certified Developer</span><br />2017 - 2019
+              <span data-i18n="unityCertified">Unity Certified Developer</span
+              ><br />2017 - 2019
             </div>
             <div class="edu-info">UNAD Naska Digital<br />Bogotá, Colombia</div>
           </div>
-          <div class="sub-section-title" data-i18n="conferences">Conferences</div>
+          <div class="sub-section-title" data-i18n="conferences">
+            Conferences
+          </div>
           <table class="conf-table">
             <tr>
               <td class="conf-year">2019</td>
@@ -315,75 +374,5 @@
         </div>
       </div>
     </div>
-    <script>
-      let currentPhotoIndex = 0;
-      let photos = [];
-
-      async function loadPhotos() {
-        try {
-          const response = await fetch("photos/");
-          const html = await response.text();
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-          const links = doc.querySelectorAll("a");
-
-          photos = Array.from(links)
-            .map((link) => link.getAttribute("href"))
-            .filter((href) => href && /\.(jpg|jpeg|png|gif|webp)$/i.test(href))
-            .map((href) => href);
-        } catch (error) {
-          console.error("Error loading photos:", error);
-          photos = ["photos/photo.JPEG"];
-        }
-
-        if (photos.length > 0) {
-          renderPhotos();
-          let count = 0;
-          setInterval(() => {
-            count++;
-            if (count === photos.length - 1) {
-              count = 0;
-            }
-            showPhoto(count);
-          }, 5000);
-        }
-      }
-
-      function renderPhotos() {
-        const slider = document.getElementById("photoSlider");
-
-        slider.innerHTML = "";
-
-        photos.forEach((photo, index) => {
-          const img = document.createElement("img");
-          img.src = photo;
-          img.alt = "Felipe Duitama - Photo " + (index + 1);
-          img.className = index === 0 ? "active" : "";
-          slider.appendChild(img);
-        });
-      }
-
-      function showPhoto(index) {
-        if (photos.length === 0) return;
-
-        currentPhotoIndex = (index + photos.length) % photos.length;
-        const imgs = document.querySelectorAll("#photoSlider img");
-        const dots = document.querySelectorAll(".slider-dots .dot");
-
-        imgs.forEach((img, i) => {
-          img.classList.toggle("active", i === currentPhotoIndex);
-        });
-
-        dots.forEach((dot, i) => {
-          dot.classList.toggle("active", i === currentPhotoIndex);
-        });
-      }
-
-      function changePhoto(direction) {
-        showPhoto(currentPhotoIndex + direction);
-      }
-
-      document.addEventListener("DOMContentLoaded", loadPhotos);
-    </script>
   </body>
 </html>

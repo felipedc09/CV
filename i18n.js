@@ -1,4 +1,3 @@
-// i18n translations for CV
 const translations = {
   en: {
     contact: "Contact",
@@ -120,19 +119,15 @@ const translations = {
   }
 };
 
-// Current language state
 let currentLang = localStorage.getItem('cvLang') || 'en';
 
-// Translation function
 function t(key) {
   return translations[currentLang][key] || key;
 }
 
-// Update HTML content with translations
 function updateContent() {
   document.documentElement.lang = currentLang;
 
-  // Update all elements with data-i18n attribute
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
     const translation = translations[currentLang][key];
@@ -141,7 +136,6 @@ function updateContent() {
     }
   });
 
-  // Update language toggle button
   const langBtn = document.getElementById('langToggle');
   if (langBtn) {
     langBtn.textContent = currentLang === 'en' ? 'ES' : 'EN';
@@ -149,14 +143,12 @@ function updateContent() {
   }
 }
 
-// Toggle language
 function toggleLanguage() {
   currentLang = currentLang === 'en' ? 'es' : 'en';
   localStorage.setItem('cvLang', currentLang);
   updateContent();
 }
 
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
   updateContent();
 });
