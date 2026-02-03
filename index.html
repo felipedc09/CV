@@ -12,13 +12,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="styles.css"
-    />
-
+    <link rel="stylesheet" href="styles.css" />
+    <script src="i18n.js"></script>
   </head>
   <body>
+    <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">EN</button>
     <div class="container">
       <div class="sidebar">
         <div class="photo-container">
@@ -28,17 +26,17 @@
             </div>
           </div>
         </div>
-        <div class="sidebar-header">Contact</div>
+        <div class="sidebar-header" data-i18n="contact">Contact</div>
         <div class="sidebar-content">
           <div class="contact-item">
             <div class="contact-label">
-              <i class="fa-solid fa-phone"></i>Phone
+              <i class="fa-solid fa-phone"></i><span data-i18n="phone">Phone</span>
             </div>
             <div class="contact-value">+57 320 3448583</div>
           </div>
           <div class="contact-item">
             <div class="contact-label">
-              <i class="fa-solid fa-envelope"></i>Email
+              <i class="fa-solid fa-envelope"></i><span data-i18n="email">Email</span>
             </div>
             <div class="contact-value">
               <a href="mailto:felipedc09@gmail.com">felipedc09@gmail.com</a>
@@ -46,7 +44,7 @@
           </div>
           <div class="contact-item">
             <div class="contact-label">
-              <i class="fa-solid fa-location-dot"></i>Address
+              <i class="fa-solid fa-location-dot"></i><span data-i18n="address">Address</span>
             </div>
             <div class="contact-value">
               Carrera 45 # 56-51<br />Bogotá - Colombia
@@ -73,50 +71,87 @@
               >
             </div>
           </div>
-          <div class="sidebar-header" style="margin: 20px -20px 15px -20px">
+          <div class="sidebar-header" style="margin: 20px -20px 15px -20px" data-i18n="languages">
             Languages
           </div>
-          <div class="lang-item"><span>Spanish</span> Native</div>
+          <div class="lang-item"><span data-i18n="spanish">Spanish</span> <span data-i18n="native">Native</span></div>
           <div class="lang-item">
-            <span>English</span>
-            <span style="width: 100px; text-align: end"
+            <span data-i18n="english">English</span>
+            <span style="width: 100px; text-align: end" data-i18n="englishLevel"
               >Intermediate (B1–B2, actively improving toward C1 for global
               roles)</span
             >
           </div>
-          <div class="lang-item"><span>French</span> Basic</div>
+          <div class="lang-item"><span data-i18n="french">French</span> <span data-i18n="basic">Basic</span></div>
         </div>
       </div>
       <div class="main-content">
         <div class="name-header">
           <h1>Felipe Duitama</h1>
-          <h2>Systems <span>Engineer</span></h2>
+          <h2 data-i18n="jobTitle">Systems <span>Engineer</span></h2>
         </div>
-        <div class="main-section-title">Profile</div>
-        <p class="main-text">
-          Senior Software Engineer full stack, specialized in
-          <strong>frontend architecture and cloud-integrated systems</strong>,
-          with over 12 years of experience delivering scalable, event-driven
-          applications. Strong focus on
-          <strong>component integration, maintainability and performance</strong
-          >, using modern JavaScript/TypeScript frameworks and
-          <strong>AWS-based serverless architectures</strong>. Hands-on
-          experience with <strong>asynchronous communication patterns</strong>,
-          cloud-native services and
-          <strong>interactive 3D solutions</strong> using Unity, WebGL and basic
-          computer graphics concepts to build immersive, high-impact user
-          experiences. Proven ability to collaborate across product, design and
-          engineering teams in agile, distributed environments.
-        </p>
+        <div class="main-section-title" data-i18n="profile">Profile</div>
+        <section class="main-text">
+          <p data-i18n="profileText1">
+            Senior Software Engineer (Full Stack), specialized in
+            <strong>frontend architecture and cloud-integrated systems</strong>,
+            with over <strong>12 years of experience</strong> delivering
+            <strong>robust, scalable and maintainable software solutions</strong
+            >. Using
+            <strong
+              >clean code principles, clear architectural boundaries, modular
+              design</strong
+            >
+            and long-term maintainability, ensuring systems are easy to evolve,
+            test and scale over time.
+          </p>
+          <p data-i18n="profileText2">
+            Strong focus on <strong>product-driven development</strong> and
+            <strong
+              >designing pragmatic architectures aligned with early-stage
+              validation</strong
+            >, with extensive experience using modern
+            <strong>JavaScript/TypeScript frameworks</strong> and
+            <strong>AWS-based serverless architectures</strong>.
+          </p>
+
+          <p data-i18n="profileText3">
+            Hands-on experience with
+            <strong>asynchronous communication patterns</strong>, cloud-native
+            services and <strong>interactive 3D solutions</strong> using
+            <strong>Unity, WebGL and basic computer graphics concepts</strong>
+            to build immersive, high-impact user experiences.
+          </p>
+
+          <p data-i18n="profileText4">
+            Actively using
+            <strong
+              >AI-assisted development tools and agents (e.g., GitHub
+              Copilot)</strong
+            >
+            to enhance productivity and accelerate iteration, while maintaining
+            high standards in
+            <strong
+              >clean code, scalability, testing and architectural
+              integrity</strong
+            >.
+          </p>
+
+          <p data-i18n="profileText5">
+            Proven ability to collaborate across
+            <strong>product, design and engineering teams</strong>
+            in <strong>agile, distributed environments</strong>.
+          </p>
+        </section>
         <div class="main-section-title">Experience</div>
         <div class="exp-box">
           <div>
-            <div class="exp-left">3D Virtual Environment Solutions</div>
+            <div class="exp-left" data-i18n="companyName">3D Virtual Environment Solutions</div>
 
-            <div class="exp-middle">Construction Technology Sector</div>
+            <div class="exp-middle" data-i18n="companySector">Construction Technology Sector</div>
           </div>
           <div class="exp-right">
-            Innovation Engineering<br />
+            <span data-i18n="companyRole">Innovation Engineering</span><br />
             <strong>2015 - 2026</strong><br />
             <a
               href="https://www.3dves.com"
@@ -128,63 +163,54 @@
           </div>
         </div>
         <ul class="main-list">
-          <li>
+          <li data-i18n="exp1">
             Led the design and development of
             <strong>web and mobile applications</strong> for the construction
             industry, addressing complex domain requirements.
           </li>
-          <li>
+          <li data-i18n="exp2">
             Acted as <strong>technical reference and mentor</strong>, supporting
             team formation and promoting proactive, agile workflows.
           </li>
-          <li>
+          <li data-i18n="exp3">
             Designed
             <strong>distributed solutions and microservice architectures</strong
             >, integrating multiple technologies within a unified ecosystem.
           </li>
-          <li>
+          <li data-i18n="exp4">
             Led the <strong>migration to TypeScript</strong>, improving
             maintainability, static analysis and overall code quality.
           </li>
-          <li>
+          <li data-i18n="exp5">
             Integrated <strong>Unity 3D with React via WebGL</strong>,
             delivering advanced interactive 3D experiences in the browser.
           </li>
-          <li>
+          <li data-i18n="exp6">
             Developed
             <strong>augmented reality solutions using HoloLens</strong>,
             enabling immersive visualization and interaction.
           </li>
-          <li>
+          <li data-i18n="exp7">
             Collaborated closely with UX/UI teams to ensure
             <strong>high usability, accessibility and performance</strong>.
           </li>
-          <li>
+          <li data-i18n="exp8">
             Applied <strong>clean architecture principles</strong> to reduce
             technical debt and support long-term scalability.
           </li>
         </ul>
-        <div class="main-section-title">Career Objective</div>
-        <div class="main-text">
-          To secure a
-          <strong>Senior Software Engineer / Backend–Full Stack</strong> role in
-          an international company (remote, hybrid or on-site) where I can
-          contribute to systems, architectures and high-impact products, while
-          continuing to grow toward principal or architect-level
-          responsibilities in global engineering teams.
-        </div>
       </div>
     </div>
 
     <div class="container">
       <div class="sidebar">
-        <div class="sidebar-header">Technical Skills</div>
+        <div class="sidebar-header" data-i18n="technicalSkills">Technical Skills</div>
         <div class="sidebar-content">
           <div class="skill-legend">
-            <span class="dot-a">●</span> Advanced
-            <span class="dot-i">●</span> Intermediate
+            <span class="dot-a">●</span> <span data-i18n="advanced">Advanced</span>
+            <span class="dot-i">●</span> <span data-i18n="intermediate">Intermediate</span>
           </div>
-          <div class="skill-category">Programming</div>
+          <div class="skill-category" data-i18n="programming">Programming</div>
           <ul class="skill-list">
             <li class="skill-item"><span class="dot-a">●</span> C#</li>
             <li class="skill-item"><span class="dot-a">●</span> HTML</li>
@@ -193,7 +219,7 @@
             <li class="skill-item"><span class="dot-i">●</span> Python</li>
             <li class="skill-item"><span class="dot-i">●</span> CSS</li>
           </ul>
-          <div class="skill-category">Frameworks / Tools</div>
+          <div class="skill-category" data-i18n="frameworksTools">Frameworks / Tools</div>
           <ul class="skill-list">
             <li class="skill-item"></li>
             <li class="skill-item"><span class="dot-i">●</span> ReactJS</li>
@@ -202,58 +228,80 @@
             <li class="skill-item"><span class="dot-i">●</span> .Net</li>
             <li class="skill-item"><span class="dot-i">●</span> Unity 3D</li>
             <li class="skill-item"><span class="dot-i">●</span> Git</li>
+            <li class="skill-item">
+              <span class="dot-i">●</span> <span data-i18n="githubCopilot">Github copilot as AI agent</span>
+            </li>
+            <li class="skill-item">
+              <span class="dot-i">●</span> <span data-i18n="testing">playwright, cypress - testing</span>
+            </li>
+            <li class="skill-item">
+              <span class="dot-i">●</span> <span data-i18n="devops">DevOps, CI/CD, contenedores (Docker,
+              Kubernetes)</span>
+            </li>
           </ul>
-          <div class="skill-category">Databases</div>
+          <div class="skill-category" data-i18n="databases">Databases</div>
           <ul class="skill-list">
             <li class="skill-item"><span class="dot-i">●</span> MongoDB</li>
             <li class="skill-item"><span class="dot-i">●</span> MySQL</li>
             <li class="skill-item"><span class="dot-i">●</span> PostgreSQL</li>
           </ul>
-          <div class="sidebar-header" style="margin: 20px -20px 15px -20px">
+          <div class="sidebar-header" style="margin: 20px -20px 15px -20px" data-i18n="softSkills">
             Soft Skills
           </div>
           <ul class="skill-list" style="margin-top: 15px">
             <li class="skill-item">
-              <span class="dot-a">●</span> Self‑management & Proactivity
+              <span class="dot-a">●</span> <span data-i18n="skill1">Self‑management & Proactivity</span>
             </li>
             <li class="skill-item">
-              <span class="dot-a">●</span> Assertive Communication
+              <span class="dot-a">●</span> <span data-i18n="skill2">Assertive Communication</span>
             </li>
             <li class="skill-item">
-              <span class="dot-a">●</span> Solution‑oriented Thinking
+              <span class="dot-a">●</span> <span data-i18n="skill3">Solution‑oriented Thinking</span>
             </li>
             <li class="skill-item">
-              <span class="dot-a">●</span> Curiosity & Innovation Mindset
+              <span class="dot-a">●</span> <span data-i18n="skill4">Curiosity & Innovation Mindset</span>
             </li>
             <li class="skill-item">
-              <span class="dot-a">●</span> Continuous Learning
+              <span class="dot-a">●</span> <span data-i18n="skill5">Continuous Learning</span>
             </li>
             <li class="skill-item">
-              <span class="dot-a">●</span> Leadership & Team Guidance
+              <span class="dot-a">●</span> <span data-i18n="skill6">Leadership & Team Guidance</span>
             </li>
           </ul>
         </div>
       </div>
+
       <div class="main-content">
-        <div class="main-section-title" style="margin-top: 0">Education</div>
+        <div class="main-section-title" style="margin-top: 0" data-i18n="careerObjective">
+          Career Objective
+        </div>
+        <div class="main-text" data-i18n="careerObjectiveText">
+          To secure a
+          <strong>Software Architect | Principal Software Engineer</strong> role
+          in an international company (remote, hybrid or on-site) where I can
+          contribute to systems, architectures and high-impact products, while
+          continuing to grow toward principal or architect-level
+          responsibilities in global engineering teams.
+        </div>
+        <div class="main-section-title" data-i18n="education">Education</div>
         <div class="main-text">
-          <div class="sub-section-title">University Education</div>
+          <div class="sub-section-title" data-i18n="universityEducation">University Education</div>
           <div class="edu-grid">
-            <div class="edu-year">Systems Engineering<br />2011 - 2020</div>
+            <div class="edu-year"><span data-i18n="systemsEngineering">Systems Engineering</span><br />2011 - 2020</div>
             <div class="edu-info">
-              Universidad Distrital Francisco José de Caldas<br />Bogotá,
+              <span data-i18n="universityName">Universidad Distrital Francisco José de Caldas</span><br />Bogotá,
               Colombia
             </div>
           </div>
 
-          <div class="sub-section-title">Complementary Training</div>
+          <div class="sub-section-title" data-i18n="complementaryTraining">Complementary Training</div>
           <div class="edu-grid">
             <div class="edu-year">
-              Unity Certified Developer<br />2017 - 2019
+              <span data-i18n="unityCertified">Unity Certified Developer</span><br />2017 - 2019
             </div>
             <div class="edu-info">UNAD Naska Digital<br />Bogotá, Colombia</div>
           </div>
-          <div class="sub-section-title">Conferences</div>
+          <div class="sub-section-title" data-i18n="conferences">Conferences</div>
           <table class="conf-table">
             <tr>
               <td class="conf-year">2019</td>
@@ -273,27 +321,27 @@
 
       async function loadPhotos() {
         try {
-          const response = await fetch('photos/');
+          const response = await fetch("photos/");
           const html = await response.text();
           const parser = new DOMParser();
-          const doc = parser.parseFromString(html, 'text/html');
-          const links = doc.querySelectorAll('a');
+          const doc = parser.parseFromString(html, "text/html");
+          const links = doc.querySelectorAll("a");
 
           photos = Array.from(links)
-            .map(link => link.getAttribute('href'))
-            .filter(href => href && /\.(jpg|jpeg|png|gif|webp)$/i.test(href))
-            .map(href => href);
+            .map((link) => link.getAttribute("href"))
+            .filter((href) => href && /\.(jpg|jpeg|png|gif|webp)$/i.test(href))
+            .map((href) => href);
         } catch (error) {
-          console.error('Error loading photos:', error);
-          photos = ['photos/photo.JPEG'];
+          console.error("Error loading photos:", error);
+          photos = ["photos/photo.JPEG"];
         }
 
         if (photos.length > 0) {
           renderPhotos();
-          let count = 0
+          let count = 0;
           setInterval(() => {
             count++;
-            if(count === photos.length-1){
+            if (count === photos.length - 1) {
               count = 0;
             }
             showPhoto(count);
@@ -302,15 +350,15 @@
       }
 
       function renderPhotos() {
-        const slider = document.getElementById('photoSlider');
+        const slider = document.getElementById("photoSlider");
 
-        slider.innerHTML = '';
+        slider.innerHTML = "";
 
         photos.forEach((photo, index) => {
-          const img = document.createElement('img');
+          const img = document.createElement("img");
           img.src = photo;
-          img.alt = 'Felipe Duitama - Photo ' + (index + 1);
-          img.className = index === 0 ? 'active' : '';
+          img.alt = "Felipe Duitama - Photo " + (index + 1);
+          img.className = index === 0 ? "active" : "";
           slider.appendChild(img);
         });
       }
@@ -319,15 +367,15 @@
         if (photos.length === 0) return;
 
         currentPhotoIndex = (index + photos.length) % photos.length;
-        const imgs = document.querySelectorAll('#photoSlider img');
-        const dots = document.querySelectorAll('.slider-dots .dot');
+        const imgs = document.querySelectorAll("#photoSlider img");
+        const dots = document.querySelectorAll(".slider-dots .dot");
 
         imgs.forEach((img, i) => {
-          img.classList.toggle('active', i === currentPhotoIndex);
+          img.classList.toggle("active", i === currentPhotoIndex);
         });
 
         dots.forEach((dot, i) => {
-          dot.classList.toggle('active', i === currentPhotoIndex);
+          dot.classList.toggle("active", i === currentPhotoIndex);
         });
       }
 
@@ -335,9 +383,7 @@
         showPhoto(currentPhotoIndex + direction);
       }
 
-      document.addEventListener('DOMContentLoaded', loadPhotos);
+      document.addEventListener("DOMContentLoaded", loadPhotos);
     </script>
   </body>
 </html>
-
-
