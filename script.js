@@ -1,13 +1,18 @@
 let currentPhotoIndex = 0;
 let photos = [];
+let slideInterval = null;
+let isFunnyMode = false;
 
-async function loadPhotos() {
-  const photoCount = 3;
+async function loadPhotos(photoCount = 3, intervalTime = 5000) {
+  photos = [];
+  console.log(photoCount)
+  console.log(intervalTime)
   const photoList = Array.from(
     { length: photoCount },
     (_, i) => `${i + 1}.png`,
   );
 
+  console.log(photoList)
   for (const photo of photoList) {
     const url = `photos/${photo}`;
     try {
@@ -19,6 +24,7 @@ async function loadPhotos() {
       console.warn(`Photo not found: ${url}`);
     }
   }
+  console.log(photos)
 
   if (photos.length === 0) {
     photos = ["photos/1.png"];
@@ -26,14 +32,33 @@ async function loadPhotos() {
 
   if (photos.length > 0) {
     renderPhotos();
+
+    if (slideInterval) {
+      clearInterval(slideInterval);
+    }
+
     let count = 0;
-    setInterval(() => {
+    slideInterval = setInterval(() => {
       count++;
       if (count === photos.length) {
         count = 0;
       }
       showPhoto(count);
-    }, 5000);
+    }, intervalTime);
+  }
+}
+
+function funnyMode() {
+  const funnyBtn = document.getElementById("funnyMode");
+
+  if (isFunnyMode) {
+    loadPhotos(3, 5000);
+    funnyBtn.textContent = "🧑‍💼";
+    isFunnyMode = false;
+  } else {
+    loadPhotos(12, 1000);
+    funnyBtn.textContent = "😛";
+    isFunnyMode = true;
   }
 }
 
@@ -90,4 +115,4 @@ function downloadPDF() {
   }, 100);
 }
 
-document.addEventListener("DOMContentLoaded", loadPhotos);
+document.addEventListener("DOMContentLoaded", () => loadPhotos(3, 5000));
