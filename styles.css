@@ -160,6 +160,7 @@ body {
   align-items: center;
   font-size: 0.8rem;
   margin-bottom: 3px;
+  line-height: 0;
 }
 
 .contact-label i {
@@ -385,7 +386,7 @@ body {
 .main-list li {
   font-size: 0.8rem;
   line-height: 1.2;
-  margin-bottom: 6px;
+  margin-bottom: 15px;
   list-style: none;
   position: relative;
 }
