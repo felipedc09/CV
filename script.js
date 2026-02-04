@@ -5,14 +5,11 @@ let isFunnyMode = false;
 
 async function loadPhotos(photoCount = 3, intervalTime = 5000) {
   photos = [];
-  console.log(photoCount)
-  console.log(intervalTime)
   const photoList = Array.from(
     { length: photoCount },
     (_, i) => `${i + 1}.png`,
   );
 
-  console.log(photoList)
   for (const photo of photoList) {
     const url = `photos/${photo}`;
     try {
@@ -24,7 +21,6 @@ async function loadPhotos(photoCount = 3, intervalTime = 5000) {
       console.warn(`Photo not found: ${url}`);
     }
   }
-  console.log(photos)
 
   if (photos.length === 0) {
     photos = ["photos/1.png"];
