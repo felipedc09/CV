@@ -2,9 +2,11 @@ let currentPhotoIndex = 0;
 let photos = [];
 let slideInterval = null;
 let isFunnyMode = false;
+let loadedPhotos = new Set();
 
 async function loadPhotos(photoCount = 3, intervalTime = 5000) {
   photos = [];
+  loadedPhotos.clear();
   const photoList = Array.from(
     { length: photoCount },
     (_, i) => `${i + 1}.png`,
@@ -28,6 +30,7 @@ async function loadPhotos(photoCount = 3, intervalTime = 5000) {
 
   if (photos.length > 0) {
     renderPhotos();
+    loadImageLazy(0);
 
     if (slideInterval) {
       clearInterval(slideInterval);
@@ -65,11 +68,29 @@ function renderPhotos() {
 
   photos.forEach((photo, index) => {
     const img = document.createElement("img");
-    img.src = photo;
+    img.dataset.src = photo;
+    img.dataset.index = index;
     img.alt = "Felipe Duitama - Photo " + (index + 1);
     img.className = index === 0 ? "active" : "";
+    img.style.width = "100%";
+    img.style.height = "100%";
     slider.appendChild(img);
   });
+}
+
+function loadImageLazy(index) {
+  if (index >= photos.length || loadedPhotos.has(index)) return;
+
+  const imgs = document.querySelectorAll("#photoSlider img");
+  if (imgs[index] && !imgs[index].src) {
+    const url = photos[index];
+    const img = new Image();
+    img.onload = () => {
+      imgs[index].src = url;
+      loadedPhotos.add(index);
+    };
+    img.src = url;
+  }
 }
 
 function showPhoto(index) {
@@ -81,6 +102,10 @@ function showPhoto(index) {
   imgs.forEach((img, i) => {
     img.classList.toggle("active", i === currentPhotoIndex);
   });
+
+  // Lazy load current and next image
+  loadImageLazy(currentPhotoIndex);
+  loadImageLazy((currentPhotoIndex + 1) % photos.length);
 }
 
 function changePhoto(direction) {
