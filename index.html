@@ -13,20 +13,29 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="content/en.js"></script>
+    <script src="content/es.generated.js"></script>
+    <script src="ats.js"></script>
     <script src="i18n.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
-    <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
-      EN
-    </button>
-    <button id="downloadPDF" class="download-btn" onclick="downloadPDF()">
-      <i class="fa-solid fa-download"></i> PDF
-    </button>
     <button id="funnyMode" class="funny-btn" onclick="funnyMode()">
       🧑‍💼
     </button>
+    <div class="top-controls">
+      <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
+        EN
+      </button>
+      <button id="downloadATS" class="ats-btn" onclick="toggleATSMode()" data-i18n="atsButton">
+        ATS
+      </button>
+      <button id="downloadPDF" class="download-btn" onclick="downloadPDF()">
+        <i class="fa-solid fa-download"></i> PDF
+      </button>
+    </div>
+    <main id="cvContent">
     <div class="container">
       <div class="sidebar">
         <div class="photo-container">
@@ -249,7 +258,7 @@
           <div class="sub-section-title" data-i18n="takeoffTitle">
             Virtual Takeoff — Facility Mapping Tool
           </div>
-          <ul class="main-list">z
+          <ul class="main-list">
             <li data-i18n="takeoff1">
               Led end-to-end delivery of a facility mapping application.
             </li>
@@ -433,5 +442,8 @@
         </div>
       </div>
     </div>
+    </main>
+
+    <section id="atsView" class="ats-view" aria-live="polite"></section>
   </body>
 </html>

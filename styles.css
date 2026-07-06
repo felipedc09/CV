@@ -5,6 +5,11 @@
   --accent-blue: #4a90e2;
   --text-white: #ffffff;
   --font-mono: "OCR A Std", "OCR A", "Source Code Pro", monospace;
+  --paper-width: 210mm;
+  --paper-height: 297mm;
+  --page-margin: 10mm;
+  --page-content-width: calc(var(--paper-width) - (var(--page-margin) * 2));
+  --page-content-height: calc(var(--paper-height) - (var(--page-margin) * 2));
 }
 
 * {
@@ -18,18 +23,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 0;
   position: relative;
 }
 
-.lang-toggle {
+.top-controls {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 12px;
+  right: 12px;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: auto;
+}
+
+.lang-toggle {
+  position: static;
   background-color: var(--accent-yellow);
   color: #333;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 14px;
   font-family: var(--font-mono);
   font-size: 0.9rem;
   font-weight: bold;
@@ -51,12 +67,10 @@ body {
 }
 
 .download-btn {
-  position: fixed;
-  top: 20px;
-  right: 100px;
+  position: static;
   background-color: #f2f2f2;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 14px;
   font-family: var(--font-mono);
   font-size: 0.9rem;
   font-weight: bold;
@@ -80,10 +94,35 @@ body {
   transform: scale(0.95);
 }
 
+.ats-btn {
+  position: static;
+  background-color: #dbe7f5;
+  border: none;
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.ats-btn:hover {
+  background-color: #bfd5ef;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.ats-btn:active {
+  transform: scale(0.95);
+}
+
 .funny-btn {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 12px;
+  left: 0;
   background: transparent;
   border: none;
   padding: 0;
@@ -101,13 +140,99 @@ body {
   transform: scale(0.9) rotate(-15deg);
 }
 
+.ats-view {
+  display: none;
+  width: min(980px, calc(100vw - 40px));
+  background: #fff;
+  color: #111;
+  margin: 80px 0 24px;
+  padding: 28px 36px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.45;
+}
+
+.ats-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.ats-header p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+.ats-divider {
+  border: 0;
+  border-top: 1px solid #c8c8c8;
+  margin: 16px 0;
+}
+
+.ats-section {
+  margin-top: 14px;
+}
+
+.ats-section h2 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ats-section p {
+  margin: 0 0 8px;
+  font-size: 0.96rem;
+}
+
+.ats-bullets {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.ats-bullets li {
+  margin-bottom: 6px;
+  font-size: 0.96rem;
+}
+
+.ats-subtitle {
+  margin: 10px 0 6px;
+  font-weight: 700;
+}
+
+.ats-actions {
+  margin-top: 18px;
+}
+
+.ats-actions button {
+  border: 1px solid #222;
+  background: #fff;
+  color: #222;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+body.ats-mode #cvContent {
+  display: none;
+}
+
+body.ats-mode .ats-view {
+  display: block;
+}
+
 .container {
-  width: 215.9mm;
-  min-height: 300mm;
+  width: min(1100px, calc(100vw - 40px));
+  min-height: auto;
   background-color: white;
   display: flex;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.container + .container {
+  margin-top: 0;
 }
 
 /* SIDEBAR */
@@ -464,8 +589,14 @@ body {
   }
 
   @page {
-    size: 8.5in 13in;
-    margin: 0;
+    size: A4;
+    margin: 10mm;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: auto;
   }
 
   body {
@@ -473,17 +604,20 @@ body {
     background: white;
     gap: 0 !important;
     margin: 0 !important;
+    display: block !important;
   }
 
   .container {
     box-shadow: none;
-    width: 215.9mm !important;
-    max-width: 215.9mm !important;
-    min-height: 330.2mm !important;
-    height: 330.2mm !important;
-    margin: 0 !important;
-    page-break-after: always;
-    page-break-inside: avoid;
+    width: var(--page-content-width) !important;
+    max-width: var(--page-content-width) !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 0 6mm 0 !important;
+    page-break-after: auto;
+    break-after: auto;
+    page-break-inside: auto;
+    break-inside: auto;
     display: flex !important;
     flex-direction: row !important;
     overflow: hidden !important;
@@ -491,7 +625,7 @@ body {
   }
 
   .container:last-child {
-    page-break-after: auto;
+    margin-bottom: 0 !important;
   }
 
   .sidebar {
@@ -505,13 +639,25 @@ body {
     padding: 0 !important;
   }
 
+  .section,
+  .main-text,
+  .main-list,
+  .exp-box,
+  .edu-grid,
+  .conf-table,
+  .contact-item,
+  .skill-item {
+    page-break-inside: avoid;
+    break-inside: avoid-page;
+  }
+
   .main-content {
     width: 65% !important;
     padding: 0px 0px 40px 0px !important;
   }
 
   .photo-container {
-    height: 550px !important;
+    height: 52mm !important;
     background-color: #d1d1d1;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
@@ -519,7 +665,7 @@ body {
   }
 
   .slider-wrapper {
-    height: 550px !important;
+    height: 52mm !important;
   }
 
   .sidebar-header {
@@ -620,6 +766,10 @@ body {
     widows: 3;
   }
 
+  .top-controls {
+    display: none !important;
+  }
+
   .lang-toggle {
     display: none;
   }
@@ -627,6 +777,211 @@ body {
   .download-btn {
     display: none;
   }
+
+  .ats-btn {
+    display: none;
+  }
+}
+
+body.pdf-export-mode {
+  background: white;
+  display: block;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body.pdf-export-mode .name-header-mobile {
+  display: none !important;
+}
+
+body.pdf-export-mode .name-header {
+  display: block !important;
+}
+
+body.pdf-export-mode .top-controls {
+  display: none !important;
+}
+
+body.pdf-export-mode .funny-btn,
+body.pdf-export-mode .lang-toggle,
+body.pdf-export-mode .download-btn,
+body.pdf-export-mode .ats-btn {
+  display: none !important;
+}
+
+body.pdf-export-mode #cvContent {
+  width: var(--page-content-width);
+  max-width: var(--page-content-width);
+  margin: 0 auto;
+}
+
+body.pdf-export-mode .container {
+  box-shadow: none;
+  width: var(--page-content-width) !important;
+  max-width: var(--page-content-width) !important;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  page-break-after: always;
+  break-after: page;
+  page-break-inside: auto;
+  break-inside: auto;
+  display: flex !important;
+  flex-direction: row !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+}
+
+body.pdf-export-mode .container:last-child {
+  margin-bottom: 0 !important;
+  page-break-after: auto;
+  break-after: auto;
+}
+
+body.pdf-export-mode .sidebar {
+  width: 35% !important;
+  background-color: var(--sidebar-bg);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+}
+
+body.pdf-export-mode .main-content {
+  width: 65% !important;
+  padding: 0px 0px 40px 0px !important;
+}
+
+body.pdf-export-mode .section,
+body.pdf-export-mode .main-text,
+body.pdf-export-mode .main-list,
+body.pdf-export-mode .exp-box,
+body.pdf-export-mode .edu-grid,
+body.pdf-export-mode .conf-table,
+body.pdf-export-mode .contact-item,
+body.pdf-export-mode .skill-item {
+  page-break-inside: avoid;
+  break-inside: avoid-page;
+}
+
+body.pdf-export-mode .photo-container {
+  height: 52mm !important;
+  background-color: #d1d1d1;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+body.pdf-export-mode .slider-wrapper {
+  height: 52mm !important;
+}
+
+body.pdf-export-mode .sidebar-header {
+  background-color: var(--sidebar-header-bg);
+  border-left: 6px solid var(--accent-yellow);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+body.pdf-export-mode .main-section-title {
+  background-color: #f2f2f2;
+  border-left: 6px solid var(--accent-yellow);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+body.pdf-export-mode .contact-label i {
+  background: var(--accent-yellow);
+  color: var(--sidebar-bg);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+body.pdf-export-mode .contact-label,
+body.pdf-export-mode .lang-item span:first-child::after,
+body.pdf-export-mode .main-list li::before,
+body.pdf-export-mode .platzi-list li::before,
+body.pdf-export-mode .dot-a {
+  color: var(--accent-yellow) !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+body.pdf-export-mode .dot-i {
+  color: var(--accent-blue) !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+body.pdf-export-mode .name-header h2 span {
+  color: var(--accent-yellow) !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+body.pdf-export-mode .sub-section-title {
+  border-bottom: 2px solid var(--accent-yellow) !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+body.pdf-export-mode .sidebar-divider {
+  border-top: 1px solid var(--accent-yellow) !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+body.pdf-export-mode .sidebar-divider::after {
+  background: var(--accent-yellow) !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+body.pdf-export-mode .dot.active {
+  background-color: var(--accent-yellow) !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+body.pdf-export-mode .slider-btn {
+  display: none !important;
+}
+
+body.pdf-export-mode a {
+  text-decoration: none;
+}
+
+body.pdf-export-mode p,
+body.pdf-export-mode li {
+  orphans: 3;
+  widows: 3;
+}
+
+body.pdf-export-mode .slider-wrapper img {
+  transition: none !important;
+}
+
+body.pdf-export-mode #photoSlider img {
+  display: none !important;
+}
+
+body.pdf-export-mode #photoSlider img:first-child {
+  display: block !important;
+  position: relative !important;
+  opacity: 1 !important;
 }
 
 @media (max-width: 768px) {
@@ -634,24 +989,47 @@ body {
     gap: 20px;
   }
 
+  .top-controls {
+    top: 8px;
+    right: 8px;
+    width: auto;
+    gap: 5px;
+  }
+
   .lang-toggle {
-    top: 10px;
-    right: 10px;
-    padding: 8px 12px;
-    font-size: 0.8rem;
+    padding: 7px 10px;
+    font-size: 0.76rem;
   }
 
   .download-btn {
-    top: 10px;
-    right: 80px;
-    padding: 8px 12px;
-    font-size: 0.8rem;
+    padding: 7px 10px;
+    font-size: 0.76rem;
+    gap: 5px;
+  }
+
+  .ats-btn {
+    padding: 7px 10px;
+    font-size: 0.76rem;
+  }
+
+  .ats-view {
+    width: calc(100vw - 20px);
+    margin-top: 98px;
+    padding: 18px;
+  }
+
+  .ats-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .ats-section h2 {
+    font-size: 0.9rem;
   }
 
   .funny-btn {
-    top: 10px;
-    left: 10px;
-    font-size: 1.2rem;
+    top: 8px;
+    left: 0;
+    font-size: 1rem;
   }
 
   .container {

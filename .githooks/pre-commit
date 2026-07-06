@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+
+changed_files="$(git diff --cached --name-only)"
+
+if echo "$changed_files" | grep -Eq '^(content/en\.js|scripts/generate-content\.js|scripts/generator-utils\.js)$'; then
+  echo "Regenerating language and ATS artifacts..."
+  node scripts/generate-content.js
+  git add content/es.generated.js content/ats.en.txt content/ats.es.txt
+fi
+
+node --check i18n.js
+node --check script.js

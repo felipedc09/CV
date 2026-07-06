@@ -1,0 +1,42 @@
+name: Content Generation
+
+on:
+  push:
+    paths:
+      - content/en.js
+      - scripts/generate-content.js
+      - scripts/generator-utils.js
+      - .github/workflows/content-generation.yml
+  pull_request:
+    paths:
+      - content/en.js
+      - scripts/generate-content.js
+      - scripts/generator-utils.js
+      - .github/workflows/content-generation.yml
+
+jobs:
+  validate-generated-content:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate language and ATS artifacts
+        run: node scripts/generate-content.js
+
+      - name: Ensure generated files are committed
+        run: |
+          git diff --exit-code -- content/es.generated.js content/ats.en.txt content/ats.es.txt || (
+            echo "Generated files are out of date. Run: node scripts/generate-content.js" && exit 1
+          )
+
+      - name: Validate runtime syntax
+        run: |
+          node --check i18n.js
+          node --check script.js
