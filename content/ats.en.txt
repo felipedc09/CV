@@ -5,7 +5,7 @@ Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc0
 PROFESSIONAL SUMMARY
 - Senior Software Engineer and Full Stack Developer with 12+ years of experience building robust, scalable and maintainable products across complex domains. Core strength in frontend architecture : component systems, TypeScript migrations, clean code boundaries and atomic design, combined with solid backend and cloud capabilities that cover the full delivery lifecycle.
 - Proven ability to design and implement complex systems, including graph-based routing algorithms , real-time data pipelines , microservice architectures on AWS (ECS Fargate, Lambda, API Gateway), AR experiences and 3D browser rendering via WebGL. Comfortable owning architecture decisions , leading cross-functional teams and going hands-on when it matters.
-- Operates with a product mindset , pragmatic about tradeoffs, deliberate about long-term maintainability and fast to iterate without sacrificing quality. Experienced with CI/CD (GitHub Actions), containerization (Docker, Kubernetes) and AI-assisted development tooling (GitHub Copilot).
+- Operates with a product mindset , pragmatic about tradeoffs, deliberate about long-term maintainability and fast to iterate without sacrificing quality. Experienced with CI/CD (GitHub Actions), containerization (Docker, Kubernetes) and AI-assisted development workflows — including hands-on use of LLMs as coding agents , MCP servers, CLI-based agent tooling, and prompt-engineering practices around context management, memory strategies and token efficiency.
 
 PROFESSIONAL EXPERIENCE
 - 3D Virtual Environment Solutions - Bogota, Colombia
