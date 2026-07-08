@@ -4,8 +4,20 @@ let slideInterval = null;
 let isFunnyMode = false;
 let loadedPhotos = new Set();
 
-function mergeContainersForWebView() {
-  if (window.innerWidth <= 768) return;
+const PHOTO_CONFIG = {
+  normal: { count: 3, interval: 5000, buttonLabel: "🧑‍💼" },
+  funny: { count: 12, interval: 1000, buttonLabel: "😛" }
+};
+
+function stopSlideshow() {
+  if (slideInterval) {
+    clearInterval(slideInterval);
+    slideInterval = null;
+  }
+}
+
+function mergeContainersForWebView(force = false) {
+  if (!force && window.innerWidth <= 768) return;
 
   const cvContent = document.getElementById("cvContent");
   if (!cvContent || cvContent.dataset.merged === "true") return;
@@ -74,9 +86,7 @@ async function loadPhotos(photoCount = 3, intervalTime = 5000) {
     renderPhotos();
     loadImageLazy(0);
 
-    if (slideInterval) {
-      clearInterval(slideInterval);
-    }
+    stopSlideshow();
 
     let count = 0;
     slideInterval = setInterval(() => {
@@ -91,20 +101,18 @@ async function loadPhotos(photoCount = 3, intervalTime = 5000) {
 
 function funnyMode() {
   const funnyBtn = document.getElementById("funnyMode");
+  if (!funnyBtn) return;
 
-  if (isFunnyMode) {
-    loadPhotos(3, 5000);
-    funnyBtn.textContent = "🧑‍💼";
-    isFunnyMode = false;
-  } else {
-    loadPhotos(12, 1000);
-    funnyBtn.textContent = "😛";
-    isFunnyMode = true;
-  }
+  isFunnyMode = !isFunnyMode;
+  const mode = isFunnyMode ? PHOTO_CONFIG.funny : PHOTO_CONFIG.normal;
+
+  loadPhotos(mode.count, mode.interval);
+  funnyBtn.textContent = mode.buttonLabel;
 }
 
 function renderPhotos() {
   const slider = document.getElementById("photoSlider");
+  if (!slider) return;
 
   slider.innerHTML = "";
 
@@ -154,186 +162,79 @@ function changePhoto(direction) {
   showPhoto(currentPhotoIndex + direction);
 }
 
-function activePhoto(img) {
-  img.classList.add("active");
-  img.style.display = "block";
-}
-
-async function downloadPDF() {
+function preparePdfExport() {
   const cvContent = document.getElementById("cvContent");
-  if (!cvContent) return;
+  const body = document.body;
 
-  if (typeof html2pdf === "undefined") {
-    alert("PDF export library is not available.");
-    return;
-  }
+  if (!cvContent || !body) return;
 
-  const lang = typeof currentLang === "string" ? currentLang : "en";
-  const now = new Date().toISOString().slice(0, 10);
+  mergeContainersForWebView(true);
+  body.classList.add("pdf-export-mode");
+
   const firstPhoto = document.querySelector("#photoSlider img:first-child");
 
   if (firstPhoto) {
     firstPhoto.classList.add("active");
     firstPhoto.style.display = "block";
+
     if (!firstPhoto.src && photos[0]) {
       firstPhoto.src = photos[0];
     }
   }
 
-  await new Promise((resolve) => window.requestAnimationFrame(() => resolve()));
+  loadImageLazy(0);
+  loadImageLazy(1);
 
-  const options = {
-    margin: [6, 6, 6, 6],
-    filename: `Felipe_Duitama_CV_${lang}_${now}.pdf`,
-    image: { type: "jpeg", quality: 0.98 },
-    html2canvas: {
-      scale: 2,
-      useCORS: true,
-      backgroundColor: "#ffffff",
-      windowWidth: 794,
-      scrollX: 0,
-      scrollY: 0,
-      onclone: (clonedDocument) => {
-        const clonedBody = clonedDocument.body;
-        const clonedHtml = clonedDocument.documentElement;
-        const clonedCvContent = clonedDocument.getElementById("cvContent");
+  void cvContent.offsetHeight;
+}
 
-        const pdfStyle = clonedDocument.createElement("style");
-        pdfStyle.textContent = `
-          @page {
-            size: A4;
-            margin: 10mm;
-          }
-
-          html, body {
-            width: 100%;
-            height: auto;
-            margin: 0;
-            padding: 0;
-            background: #fff;
-          }
-
-          body {
-            display: block !important;
-            gap: 0 !important;
-          }
-
-          body .top-controls,
-          body .lang-toggle,
-          body .download-btn,
-          body .ats-btn,
-          body .funny-btn {
-            display: none !important;
-          }
-
-          #cvContent {
-            width: 718px !important;
-            max-width: 718px !important;
-            margin: 0 !important;
-          }
-
-          #cvContent .container {
-            width: 718px !important;
-            max-width: 718px !important;
-            min-height: 0 !important;
-            height: auto !important;
-            margin: 0 !important;
-            display: flex !important;
-            flex-direction: row !important;
-            overflow: hidden !important;
-            box-shadow: none !important;
-            border-radius: 0 !important;
-            page-break-after: always !important;
-            break-after: page !important;
-            page-break-inside: avoid !important;
-            break-inside: avoid-page !important;
-          }
-
-          #cvContent .container:last-child {
-            page-break-after: auto !important;
-            break-after: auto !important;
-          }
-
-          #cvContent .sidebar {
-            width: 35% !important;
-            display: flex !important;
-            flex-direction: column !important;
-            padding: 0 !important;
-            min-width: 0 !important;
-          }
-
-          #cvContent .main-content,
-          #cvContent .section {
-            width: 65% !important;
-            min-width: 0 !important;
-          }
-
-          #cvContent .main-text,
-          #cvContent .main-list,
-          #cvContent .exp-box,
-          #cvContent .edu-grid,
-          #cvContent .conf-table,
-          #cvContent .contact-item,
-          #cvContent .skill-item {
-            min-width: 0 !important;
-          }
-
-          #cvContent .photo-container,
-          #cvContent .slider-wrapper {
-            height: 52mm !important;
-          }
-
-          #cvContent .slider-wrapper img {
-            transition: none !important;
-          }
-
-          #cvContent .section,
-          #cvContent .main-text,
-          #cvContent .main-list,
-          #cvContent .exp-box,
-          #cvContent .edu-grid,
-          #cvContent .conf-table,
-          #cvContent .contact-item,
-          #cvContent .skill-item {
-            break-inside: avoid-page !important;
-            page-break-inside: avoid !important;
-          }
-        `;
-        clonedDocument.head.appendChild(pdfStyle);
-
-        if (clonedHtml) {
-          clonedHtml.style.background = "white";
-          clonedHtml.style.width = "100%";
-          clonedHtml.style.height = "auto";
-        }
-
-        if (clonedBody) {
-          clonedBody.classList.add("pdf-export-mode");
-          clonedBody.style.background = "white";
-          clonedBody.style.margin = "0";
-          clonedBody.style.padding = "0";
-          clonedBody.style.display = "block";
-        }
-
-        if (clonedCvContent) {
-          clonedCvContent.style.width = "var(--page-content-width)";
-          clonedCvContent.style.maxWidth = "var(--page-content-width)";
-          clonedCvContent.style.margin = "0 auto";
-        }
-      },
-    },
-    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-    pagebreak: { mode: ["avoid-all", "css", "legacy"] },
-  };
-
-  try {
-    await html2pdf().set(options).from(cvContent).save();
-  } finally {
+function cleanupPdfExport() {
+  if (document.body) {
+    document.body.classList.remove("pdf-export-mode");
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => loadPhotos(3, 5000));
+function downloadPDF() {
+  const cvContent = document.getElementById("cvContent");
+  if (!cvContent) return;
+
+  if (typeof window.print !== "function") {
+    alert("Print is not available in this browser.");
+    return;
+  }
+
+  preparePdfExport();
+  window.print();
+}
+
+function bindControlEvents() {
+  const funnyBtn = document.getElementById("funnyMode");
+  const pdfBtn = document.getElementById("downloadPDF");
+  const atsBtn = document.getElementById("downloadATS");
+
+  if (funnyBtn) {
+    funnyBtn.addEventListener("click", funnyMode);
+  }
+
+  if (pdfBtn) {
+    pdfBtn.addEventListener("click", downloadPDF);
+  }
+
+  if (atsBtn && typeof window.toggleATSMode === "function") {
+    atsBtn.addEventListener("click", window.toggleATSMode);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  bindControlEvents();
+  loadPhotos(PHOTO_CONFIG.normal.count, PHOTO_CONFIG.normal.interval);
   mergeContainersForWebView();
   window.requestAnimationFrame(mergeContainersForWebView);
 });
+
+window.addEventListener("beforeprint", preparePdfExport);
+window.addEventListener("afterprint", cleanupPdfExport);
+
+window.funnyMode = funnyMode;
+window.downloadPDF = downloadPDF;
+window.changePhoto = changePhoto;

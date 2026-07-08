@@ -17,21 +17,20 @@
     <script src="content/es.generated.js"></script>
     <script src="ats.js"></script>
     <script src="i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
-    <button id="funnyMode" class="funny-btn" onclick="funnyMode()">
+    <button id="funnyMode" class="funny-btn">
       🧑‍💼
     </button>
     <div class="top-controls">
-      <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
+      <button id="langToggle" class="lang-toggle">
         EN
       </button>
-      <button id="downloadATS" class="ats-btn" onclick="toggleATSMode()" data-i18n="atsButton">
+      <button id="downloadATS" class="ats-btn" data-i18n="atsButton">
         ATS
       </button>
-      <button id="downloadPDF" class="download-btn" onclick="downloadPDF()">
+      <button id="downloadPDF" class="download-btn">
         <i class="fa-solid fa-download"></i> PDF
       </button>
     </div>

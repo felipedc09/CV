@@ -1,6 +1,49 @@
 const sourceEnglish = window.CV_CONTENT_EN || {};
 const sourceSpanish = window.CV_CONTENT_ES || {};
 
+const PHRASE_PAIRS_EN_ES = [
+  ["Senior Software Engineer", "Ingeniero de Software Senior"],
+  ["Software Architect", "Arquitecto de Software"],
+  ["Full Stack Developer", "Desarrollador Full Stack"],
+  ["Systems Engineer", "Ingeniero de Sistemas"],
+  ["Profile", "Perfil"],
+  ["Experience", "Experiencia"],
+  ["Technical Skills", "Habilidades Tecnicas"],
+  ["Soft Skills", "Habilidades Blandas"],
+  ["Career Objective", "Objetivo Profesional"],
+  ["Education", "Educacion"],
+  ["University Education", "Educacion Universitaria"],
+  ["Complementary Training", "Formacion Complementaria"],
+  ["Conferences", "Conferencias"],
+  ["Contact", "Contacto"],
+  ["Phone", "Telefono"],
+  ["Email", "Correo"],
+  ["Address", "Direccion"],
+  ["Languages", "Idiomas"],
+  ["Spanish", "Espanol"],
+  ["English", "Ingles"],
+  ["French", "Frances"],
+  ["Native", "Nativo"],
+  ["Basic", "Basico"],
+  ["Advanced", "Avanzado"],
+  ["Intermediate", "Intermedio"],
+  ["Programming", "Programacion"],
+  ["Frameworks / Tools", "Frameworks / Herramientas"],
+  ["Databases", "Bases de Datos"],
+  ["Construction Technology Sector", "Sector de Tecnologia para Construccion"],
+  ["Innovation Engineering", "Ingenieria de Innovacion"]
+];
+
+const WORD_PAIRS_EN_ES = [
+  ["with", "con"], ["and", "y"], ["for", "para"], ["to", "a"], ["of", "de"], ["in", "en"],
+  ["building", "construyendo"], ["products", "productos"], ["robust", "robustos"],
+  ["scalable", "escalables"], ["maintainable", "mantenibles"], ["complex", "complejos"],
+  ["architecture", "arquitectura"], ["frontend", "frontend"], ["backend", "backend"],
+  ["cloud", "nube"], ["design", "diseno"], ["team", "equipo"], ["lead", "lider"],
+  ["leadership", "liderazgo"], ["delivery", "entrega"], ["project", "proyecto"],
+  ["testing", "pruebas"], ["containers", "contenedores"], ["toward", "hacia"]
+];
+
 let currentLang = localStorage.getItem("cvLang") || "en";
 
 function t(key) {
@@ -21,48 +64,6 @@ function replaceCaseInsensitive(input, findText, replaceText) {
 function fallbackTranslateEnglishToSpanish(value) {
   const raw = String(value || "");
   const parts = raw.split(/(<[^>]+>)/g);
-  const phrasePairs = [
-    ["Senior Software Engineer", "Ingeniero de Software Senior"],
-    ["Software Architect", "Arquitecto de Software"],
-    ["Full Stack Developer", "Desarrollador Full Stack"],
-    ["Systems Engineer", "Ingeniero de Sistemas"],
-    ["Profile", "Perfil"],
-    ["Experience", "Experiencia"],
-    ["Technical Skills", "Habilidades Tecnicas"],
-    ["Soft Skills", "Habilidades Blandas"],
-    ["Career Objective", "Objetivo Profesional"],
-    ["Education", "Educacion"],
-    ["University Education", "Educacion Universitaria"],
-    ["Complementary Training", "Formacion Complementaria"],
-    ["Conferences", "Conferencias"],
-    ["Contact", "Contacto"],
-    ["Phone", "Telefono"],
-    ["Email", "Correo"],
-    ["Address", "Direccion"],
-    ["Languages", "Idiomas"],
-    ["Spanish", "Espanol"],
-    ["English", "Ingles"],
-    ["French", "Frances"],
-    ["Native", "Nativo"],
-    ["Basic", "Basico"],
-    ["Advanced", "Avanzado"],
-    ["Intermediate", "Intermedio"],
-    ["Programming", "Programacion"],
-    ["Frameworks / Tools", "Frameworks / Herramientas"],
-    ["Databases", "Bases de Datos"],
-    ["Construction Technology Sector", "Sector de Tecnologia para Construccion"],
-    ["Innovation Engineering", "Ingenieria de Innovacion"]
-  ];
-
-  const wordPairs = [
-    ["with", "con"], ["and", "y"], ["for", "para"], ["to", "a"], ["of", "de"], ["in", "en"],
-    ["building", "construyendo"], ["products", "productos"], ["robust", "robustos"],
-    ["scalable", "escalables"], ["maintainable", "mantenibles"], ["complex", "complejos"],
-    ["architecture", "arquitectura"], ["frontend", "frontend"], ["backend", "backend"],
-    ["cloud", "nube"], ["design", "diseno"], ["team", "equipo"], ["lead", "lider"],
-    ["leadership", "liderazgo"], ["delivery", "entrega"], ["project", "proyecto"],
-    ["testing", "pruebas"], ["containers", "contenedores"], ["toward", "hacia"]
-  ];
 
   return parts.map((part) => {
     if (part.startsWith("<") && part.endsWith(">")) {
@@ -70,11 +71,11 @@ function fallbackTranslateEnglishToSpanish(value) {
     }
 
     let text = part;
-    phrasePairs.forEach(([enText, esText]) => {
+    PHRASE_PAIRS_EN_ES.forEach(([enText, esText]) => {
       text = replaceCaseInsensitive(text, enText, esText);
     });
 
-    wordPairs.forEach(([enWord, esWord]) => {
+    WORD_PAIRS_EN_ES.forEach(([enWord, esWord]) => {
       const pattern = new RegExp(`\\b${escapeRegex(enWord)}\\b`, "gi");
       text = text.replace(pattern, esWord);
     });
@@ -132,6 +133,11 @@ function toggleLanguage() {
 window.toggleLanguage = toggleLanguage;
 
 document.addEventListener("DOMContentLoaded", () => {
+  const langBtn = document.getElementById("langToggle");
+  if (langBtn) {
+    langBtn.addEventListener("click", toggleLanguage);
+  }
+
   if (window.ATSFeature) {
     window.ATSFeature.init({
       getCurrentLang: () => currentLang,
