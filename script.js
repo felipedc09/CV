@@ -162,15 +162,39 @@ function changePhoto(direction) {
   showPhoto(currentPhotoIndex + direction);
 }
 
-function preparePdfExport() {
+function addPrintFrame() {
   const cvContent = document.getElementById("cvContent");
-  const body = document.body;
+  if (!cvContent || cvContent.querySelector(".print-frame")) return;
 
-  if (!cvContent || !body) return;
+  const container = cvContent.querySelector(".container");
+  if (!container) return;
 
-  mergeContainersForWebView(true);
-  body.classList.add("pdf-export-mode");
+  const table = document.createElement("table");
+  table.className = "print-frame";
+  table.innerHTML =
+    '<thead><tr><td><div class="print-frame-space"></div></td></tr></thead>' +
+    '<tbody><tr><td class="print-frame-body"></td></tr></tbody>' +
+    '<tfoot><tr><td><div class="print-frame-space"></div></td></tr></tfoot>';
 
+  cvContent.appendChild(table);
+  table.querySelector(".print-frame-body").appendChild(container);
+}
+
+function removePrintFrame() {
+  const cvContent = document.getElementById("cvContent");
+  if (!cvContent) return;
+
+  const table = cvContent.querySelector(".print-frame");
+  if (!table) return;
+
+  const container = table.querySelector(".container");
+  if (container) {
+    cvContent.appendChild(container);
+  }
+  table.remove();
+}
+
+function activateExportPhoto() {
   const firstPhoto = document.querySelector("#photoSlider img:first-child");
 
   if (firstPhoto) {
@@ -184,22 +208,41 @@ function preparePdfExport() {
 
   loadImageLazy(0);
   loadImageLazy(1);
+}
+
+function preparePdfExport() {
+  const cvContent = document.getElementById("cvContent");
+  const body = document.body;
+
+  if (!cvContent || !body) return;
+
+  mergeContainersForWebView(true);
+  addPrintFrame();
+  body.classList.add("pdf-export-mode");
+
+  activateExportPhoto();
 
   void cvContent.offsetHeight;
 }
 
 function cleanupPdfExport() {
+  removePrintFrame();
   if (document.body) {
     document.body.classList.remove("pdf-export-mode");
   }
 }
 
+// The browser's own layout engine is the only reliable way to paginate this
+// two-column (flex) CV — html2pdf slices a raster and paged.js fragments the
+// columns independently, both leaving empty/cut pages. So we print natively.
+// The repeating table-frame (see addPrintFrame) supplies the 14mm top/bottom
+// margin on every page, independent of the print dialog's Margins setting.
 function downloadPDF() {
   const cvContent = document.getElementById("cvContent");
   if (!cvContent) return;
 
   if (typeof window.print !== "function") {
-    alert("Print is not available in this browser.");
+    alert("PDF generation is not available in this browser.");
     return;
   }
 

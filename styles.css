@@ -7,7 +7,7 @@
   --font-mono: "OCR A Std", "OCR A", "Source Code Pro", monospace;
   --paper-width: 210mm;
   --paper-height: 297mm;
-  --page-margin: 10mm;
+  --page-margin: 0mm;
   --page-content-width: calc(var(--paper-width) - (var(--page-margin) * 2));
   --page-content-height: calc(var(--paper-height) - (var(--page-margin) * 2));
 }
@@ -590,7 +590,23 @@ body.ats-mode .ats-view {
 
   @page {
     size: A4;
-    margin: 10mm;
+    margin: 0;
+  }
+
+  .print-frame {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .print-frame td {
+    padding: 0;
+    vertical-align: top;
+  }
+
+  /* Empty thead/tfoot repeat on every printed page, reserving a top and
+     bottom margin that the browser's print dialog cannot strip away. */
+  .print-frame-space {
+    height: 14mm;
   }
 
   html,
@@ -639,9 +655,6 @@ body.ats-mode .ats-view {
     padding: 0 !important;
   }
 
-  .section,
-  .main-text,
-  .main-list,
   .exp-box,
   .edu-grid,
   .conf-table,
@@ -781,6 +794,12 @@ body.ats-mode .ats-view {
   .ats-btn {
     display: none;
   }
+
+  .ats-view {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
 
 body.pdf-export-mode {
@@ -855,9 +874,6 @@ body.pdf-export-mode .main-content {
   padding: 0px 0px 40px 0px !important;
 }
 
-body.pdf-export-mode .section,
-body.pdf-export-mode .main-text,
-body.pdf-export-mode .main-list,
 body.pdf-export-mode .exp-box,
 body.pdf-export-mode .edu-grid,
 body.pdf-export-mode .conf-table,

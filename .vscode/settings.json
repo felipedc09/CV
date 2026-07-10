@@ -1,0 +1,24 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "/^cd /home/pip/workspace/felipe/CV && node --check i18n\\.js && echo 'i18n\\.js syntax OK'$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^cd /home/pip/workspace/felipe/CV && node --check i18n\\.js && echo 'i18n\\.js syntax OK after ATS view update'$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^cd /home/pip/workspace/felipe/CV && node --check i18n\\.js && echo 'i18n\\.js syntax OK after source-of-truth sync refactor'$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^cd /home/pip/workspace/felipe/CV && node --check script\\.js$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^cd /home/pip/workspace/felipe/CV && node scripts/generate-content\\.js$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
+}

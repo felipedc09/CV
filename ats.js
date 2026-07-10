@@ -166,10 +166,6 @@
         <h2>${data.locale.sectionCompetencies}</h2>
         <p>${data.coreCompetencies.join(", ")}</p>
       </section>
-
-      <div class="ats-actions">
-        <button onclick="downloadATSVersion()">${data.locale.downloadLabel}</button>
-      </div>
     `;
   }
 
