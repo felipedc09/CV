@@ -23,6 +23,10 @@ function translateEnglishToSpanishText(value) {
   const parts = raw.split(/(<[^>]+>)/g);
 
   const phrasePairs = [
+    // Whole-phrase education mappings first, so they win before the shorter
+    // "Systems Engineer" rule below can substring-corrupt "Systems Engineering".
+    ["Professional engineering degree. Coursework spanned software engineering, data structures and algorithms, databases, operating systems, computer networks, and systems analysis and design, on a strong mathematics foundation, with an emphasis on designing and building software systems end to end.", "Titulo profesional universitario. La formacion abarco ingenieria de software, estructuras de datos y algoritmos, bases de datos, sistemas operativos, redes de computadores y analisis y diseno de sistemas, sobre una solida base matematica, con enfasis en disenar y construir sistemas de software de extremo a extremo."],
+    ["Bachelor of Engineering (BEng), Systems Engineering", "Ingenieria de Sistemas (Titulo profesional)"],
     ["Senior Software Engineer", "Ingeniero de Software Senior"],
     ["Software Architect", "Arquitecto de Software"],
     ["Full Stack Developer", "Desarrollador Full Stack"],
@@ -215,6 +219,7 @@ function buildATSContent(translations, lang) {
 
   addSection(lines, locale.sectionEducation, [
     `${cleanText(content.universityName)} | ${cleanText(content.systemsEngineering)} | 2011 - 2020`,
+    cleanText(content.educationDescription),
     `UNAD Naska Digital | ${cleanText(content.unityCertified)} | 2017 - 2019`
   ]);
 
