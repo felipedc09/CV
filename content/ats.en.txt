@@ -52,7 +52,8 @@ TECHNICAL SKILLS
 - Tools & Practices: Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning
 
 EDUCATION
-- Universidad Distrital Francisco Jose de Caldas | Systems Engineering | 2011 - 2020
+- Universidad Distrital Francisco Jose de Caldas | Bachelor of Engineering (BEng), Systems Engineering | 2011 - 2020
+- Professional engineering degree. Coursework spanned software engineering, data structures and algorithms, databases, operating systems, computer networks, and systems analysis and design, on a strong mathematics foundation, with an emphasis on designing and building software systems end to end.
 - UNAD Naska Digital | Unity Certified Developer | 2017 - 2019
 
 CONFERENCES & TRAINING
@@ -60,7 +61,7 @@ CONFERENCES & TRAINING
 - CSSConf Colombia - 2021
 
 LANGUAGES
-- Spanish (Native) | English (Intermediate (B1-B2, actively improving toward C1 for global roles)) | French (Basic)
+- Spanish (Native) | English (Upper-Intermediate (B2+, improving toward C1 for global roles)) | French (Basic)
 
 CORE COMPETENCIES
 - Self-management & Proactivity, Assertive Communication, Solution-oriented Thinking, Curiosity & Innovation Mindset, Continuous Learning, Leadership & Team Guidance
