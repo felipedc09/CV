@@ -559,6 +559,13 @@ body.ats-mode .ats-view {
   font-weight: bold;
 }
 
+.edu-description {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-top: -15px;
+  margin-bottom: 25px;
+}
+
 .conf-table {
   width: 100%;
   border-collapse: collapse;

@@ -52,7 +52,8 @@ HABILIDADES TECNICAS
 - Herramientas y Practicas: Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning
 
 EDUCACION
-- Universidad Distrital Francisco Jose de Caldas | Ingeniero de Sistemasing | 2011 - 2020
+- Universidad Distrital Francisco Jose de Caldas | Ingenieria de Sistemas (Titulo profesional) | 2011 - 2020
+- Titulo profesional universitario. La formacion abarco ingenieria de software, estructuras de datos y algoritmos, bases de datos, sistemas operativos, redes de computadores y analisis y diseno de sistemas, sobre una solida base matematica, con enfasis en disenar y construir sistemas de software de extremo a extremo.
 - UNAD Naska Digital | Unity Certified Developer | 2017 - 2019
 
 CONFERENCIAS Y FORMACION
