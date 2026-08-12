@@ -15,7 +15,7 @@ EXPERIENCIA PROFESIONAL
 VEYE - HOSPITAL DIGITAL TWIN (2013-2016)
 - Contributed a the arquitectura de a hospital-scale digital twin using Unity 3D y a MENU stack (MongoDB, Express, Node.js, Unity), integrating live HVAC sensor data across a multi-construyendo complejos para a US client.
 - Designed OOP-based C#/.NET controller abstractions en Unity a manage interactive 3D elements, enabling polymorphic behavior per equipment type.
-- Built the HUD layer y interfaces a visualize sensor data y let operators update equipment state en real time.
+- Built the HUD layer y interfaces a visualize sensor data y let operators update equipment state en real time, con filters rendering 500+ assets simultaneously at 60 FPS .
 
 RESOURCE DISTRIBUTION TOOL (2017-2018)
 - Developed the frontend de a construction resource planning web app using React, Chart.js y MongoDB , enabling percentage-based resource allocation across time via interactive calendar y breakdown views.
@@ -24,7 +24,7 @@ HOLOLENS AR PROTOTYPE
 - Designed y implemented an AR application using the Microsoft HoloLens SDK y Unity , streaming 3D assets from a file server a stay within device memory constraints, which required deep optimization de model geometry.
 
 ARAS / BIMEP - HVAC AUTOMATION PLATFORM (CORE PROYECTO)
-- Led the migration from a vanilla JS monolith a a React, TypeScript y Node.js arquitectura, establishing component reuse patterns y reducing runtime errors through static typing.
+- Led the migration from a vanilla JS monolith a a React, TypeScript y Node.js arquitectura, establishing component reuse patterns that cut web-component management time by ~90% y reducing runtime errors through static typing.
 - Designed y implemented a Dijkstra-based pipe auto-routing algorithm using a room-grid graph where edge weights encode HVAC heat load, automating layout-aware pipe distribution across construyendo floors.
 - Authored Revit plugins en C# a extend the platform directly inside the mechanical designer's workflow, bridging the web application con BIM tooling.
 - Architected the transition a a microservices model on AWS (ECS Fargate, EC2, API Gateway, CloudWatch, load balancers), decomposing compute-intensive algorithms into independently escalables services.
@@ -41,7 +41,7 @@ COMMERCIAL CATALOGUE
 
 3D MODEL VIEWER - BROWSER-NATIVO PIPELINE
 - Designed y implemented a file conversion pipeline (Revit RVT y LAS a XKT) con a server-side processing queue y WebSocket-based progress notifications , enabling teams a load BIM models en the browser without login friction.
-- Integrated interactive viewer tools (measurements, camera controls, model transforms) y owned full-stack entrega from the conversion backend a frontend rendering.
+- Integrated interactive viewer tools (measurements, camera controls, model transforms) y owned full-stack entrega from the conversion backend a frontend rendering, cutting model load time by ~50% y supporting 100 concurrent users through the optimized conversion y streaming pipeline; used AI-assisted development a improve entrega efficiency by ~80%.
 
 HABILIDADES TECNICAS
 - Lenguajes: C#, JavaScript, TypeScript, Python, HTML, CSS
