@@ -53,11 +53,11 @@ VISOR DE MODELOS 3D - PIPELINE NATIVO DEL NAVEGADOR
 
 HABILIDADES TECNICAS
 - Lenguajes: C#, JavaScript, TypeScript, Python, HTML, CSS
-- Frameworks y Librerias: React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets
-- Nube y DevOps: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, CI/CD
+- Frameworks y Librerias: React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets, RESTful APIs
+- Nube y DevOps: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, DevOps, CI/CD
 - Bases de Datos: MongoDB, MySQL, PostgreSQL
-- Testing: Playwright, Cypress
-- Herramientas y Practicas: Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning, Authentication, Distributed Systems, System Design
+- Testing: Playwright, Cypress, Testing Library
+- Herramientas y Practicas: Git, GitHub, GitHub Copilot, Claude Code, Clean Code, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning, Agile, Scrum, Authentication, System Design, Distributed Systems, Performance Optimization, Technical Leadership, Mentoring
 
 EDUCACION
 - Universidad Distrital Francisco José de Caldas | Ingeniería de Sistemas (Título profesional) | 2011 - 2020
@@ -75,4 +75,4 @@ COMPETENCIAS CLAVE
 - Autogestión y Proactividad, Comunicación Asertiva, Pensamiento Orientado a Soluciones, Curiosidad y Mentalidad Innovadora, Aprendizaje Continuo, Liderazgo y Guía de Equipos
 
 PALABRAS CLAVE ATS
-- Full Stack, React, Next.js, TypeScript, JavaScript, Node.js, C#, .NET, Python, AWS, ECS Fargate, Lambda, API Gateway, CloudWatch, Kubernetes, Docker, CI/CD, GitHub Actions, PostgreSQL, MongoDB, Mapbox, WebGL, Unity 3D, Revit, Dijkstra, WebSocket, Jenkins, Terraform, Micro-frontends, Authentication, Distributed Systems, System Design
+- Full Stack, React, Next.js, TypeScript, JavaScript, Node.js, C#, .NET, Python, AWS, ECS Fargate, Lambda, API Gateway, CloudWatch, Kubernetes, Docker, CI/CD, GitHub Actions, PostgreSQL, MongoDB, Mapbox, WebGL, Unity 3D, Revit, Dijkstra, WebSocket, Technical Leadership, Jenkins, Terraform, Micro-frontends, Authentication, Distributed Systems, System Design, RESTful APIs, GitHub, Claude Code, Clean Code, Testing Library, Agile, Scrum, Performance Optimization, Mentoring, DevOps

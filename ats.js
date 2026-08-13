@@ -76,11 +76,11 @@
       summary: [cleanText(content.profileText1), cleanText(content.profileText2), cleanText(content.profileText3)],
       technicalSkills: {
         languages: "C#, JavaScript, TypeScript, Python, HTML, CSS",
-        frameworks: "React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets",
-        cloud: "AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, CI/CD",
+        frameworks: "React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets, RESTful APIs",
+        cloud: "AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, DevOps, CI/CD",
         databases: "MongoDB, MySQL, PostgreSQL",
-        testing: "Playwright, Cypress",
-        tools: "Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning, Authentication, Distributed Systems, System Design"
+        testing: "Playwright, Cypress, Testing Library",
+        tools: "Git, GitHub, GitHub Copilot, Claude Code, Clean Code, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning, Agile, Scrum, Authentication, System Design, Distributed Systems, Performance Optimization, Technical Leadership, Mentoring"
       },
       experienceSections: [
         { title: cleanText(content.vEyeTitle), meta: cleanText(content.vEyeMeta), items: [cleanText(content.vEye1), cleanText(content.vEye2), cleanText(content.vEye3)] },

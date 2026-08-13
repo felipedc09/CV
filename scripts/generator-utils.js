@@ -115,7 +115,9 @@ function extractAtsKeywords(sourceText) {
     "Lambda", "API Gateway", "CloudWatch", "Microservices", "Kubernetes", "Docker",
     "CI/CD", "GitHub Actions", "PostgreSQL", "MongoDB", "Mapbox", "WebGL", "Unity 3D",
     "Revit", "Digital Twin", "Dijkstra", "WebSocket", "Technical Leadership",
-    "Jenkins", "Terraform", "Micro-frontends", "Authentication", "Distributed Systems", "System Design"
+    "Jenkins", "Terraform", "Micro-frontends", "Authentication", "Distributed Systems", "System Design",
+    "RESTful APIs", "GitHub", "Claude Code", "Clean Code", "Testing Library", "Agile", "Scrum",
+    "Performance Optimization", "Mentoring", "DevOps"
   ];
 
   const normalizedSource = sourceText.toLowerCase();
@@ -220,11 +222,11 @@ function buildATSContent(translations, lang) {
 
   addSection(lines, locale.sectionSkills, [
     `${locale.labels.languages}: C#, JavaScript, TypeScript, Python, HTML, CSS`,
-    `${locale.labels.frameworks}: React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets`,
-    `${locale.labels.cloud}: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, CI/CD`,
+    `${locale.labels.frameworks}: React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets, RESTful APIs`,
+    `${locale.labels.cloud}: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, DevOps, CI/CD`,
     `${locale.labels.databases}: MongoDB, MySQL, PostgreSQL`,
-    `${locale.labels.testing}: Playwright, Cypress`,
-    `${locale.labels.tools}: Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning, Authentication, Distributed Systems, System Design`
+    `${locale.labels.testing}: Playwright, Cypress, Testing Library`,
+    `${locale.labels.tools}: Git, GitHub, GitHub Copilot, Claude Code, Clean Code, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning, Agile, Scrum, Authentication, System Design, Distributed Systems, Performance Optimization, Technical Leadership, Mentoring`
   ]);
 
   addSection(lines, locale.sectionEducation, [
