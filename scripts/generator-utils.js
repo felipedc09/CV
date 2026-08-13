@@ -30,6 +30,9 @@ function translateEnglishToSpanishText(value) {
     ["Senior Software Engineer", "Ingeniero de Software Senior"],
     ["Software Architect", "Arquitecto de Software"],
     ["Full Stack Developer", "Desarrollador Full Stack"],
+    ["Software Engineer", "Ingeniero de Software"],
+    ["Software Developer", "Desarrollador de Software"],
+    ["Frontend Developer", "Desarrollador Frontend"],
     ["Systems Engineer", "Ingeniero de Sistemas"],
     ["Profile", "Perfil"],
     ["Experience", "Experiencia"],
@@ -183,13 +186,13 @@ function buildATSContent(translations, lang) {
   ];
 
   const experienceSections = [
-    [cleanText(content.vEyeTitle), [cleanText(content.vEye1), cleanText(content.vEye2), cleanText(content.vEye3)]],
-    [cleanText(content.resourceTitle), [cleanText(content.resource1)]],
-    [cleanText(content.hololensTitle), [cleanText(content.hololens1)]],
-    [cleanText(content.arasTitle), [cleanText(content.aras1), cleanText(content.aras2), cleanText(content.aras3), cleanText(content.aras4), cleanText(content.aras5), cleanText(content.aras6), cleanText(content.aras7)]],
-    [cleanText(content.takeoffTitle), [cleanText(content.takeoff1), cleanText(content.takeoff2)]],
-    [cleanText(content.catalogueTitle), [cleanText(content.catalogue1)]],
-    [cleanText(content.viewerTitle), [cleanText(content.viewer1), cleanText(content.viewer2)]]
+    [cleanText(content.vEyeTitle), [cleanText(content.vEyeMeta), cleanText(content.vEye1), cleanText(content.vEye2), cleanText(content.vEye3)]],
+    [cleanText(content.resourceTitle), [cleanText(content.resourceMeta), cleanText(content.resource1), cleanText(content.resource2)]],
+    [cleanText(content.hololensTitle), [cleanText(content.hololensMeta), cleanText(content.hololens1)]],
+    [cleanText(content.arasTitle), [cleanText(content.arasMeta), cleanText(content.aras1), cleanText(content.aras2), cleanText(content.aras3), cleanText(content.aras4), cleanText(content.aras5), cleanText(content.aras6), cleanText(content.aras7)]],
+    [cleanText(content.takeoffTitle), [cleanText(content.takeoffMeta), cleanText(content.takeoff1), cleanText(content.takeoff2)]],
+    [cleanText(content.catalogueTitle), [cleanText(content.catalogueMeta), cleanText(content.catalogue1)]],
+    [cleanText(content.viewerTitle), [cleanText(content.viewerMeta), cleanText(content.viewer1), cleanText(content.viewer2)]]
   ];
 
   const lines = [];

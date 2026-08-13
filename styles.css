@@ -495,6 +495,14 @@ body.ats-mode .ats-view {
   text-transform: capitalize;
 }
 
+.sub-section-meta {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-yellow);
+  letter-spacing: 0.02em;
+  margin: 3px 0 5px;
+}
+
 .main-text {
   font-size: 0.8rem;
   line-height: 1.2;

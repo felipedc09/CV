@@ -10,20 +10,25 @@ RESUMEN PROFESIONAL
 EXPERIENCIA PROFESIONAL
 - 3D Virtual Environment Solutions - Bogota, Colombia
 - Desarrollador de Software -> Desarrollador Frontend -> Desarrollador Full Stack -> Ingeniero de Software -> Arquitecto de Software | 2015 - 2026
-- Progressed through five roles over 11+ years at a single employer — Software Developer (2015-2016), frontend Developer (2016-2018), Desarrollador Full Stack (2018-2023), Software Engineer (2023-2024) y Arquitecto de Software (2024-2026) — growing from frontend engineer a technical lider . Built deep expertise across the full stack: frontend arquitectura con React y TypeScript , algorithm diseno, nube infrastructure on AWS , 3D y AR Experiencias, y microservices, owning arquitectura decisions , equipo coordination y end-a-end entrega.
+- Progressed through five roles over 11+ years at a single employer — Desarrollador de Software (2015-2016), Desarrollador frontend (2016-2018), Desarrollador Full Stack (2018-2023), Ingeniero de Software (2023-2024) y Arquitecto de Software (2024-2026) — growing from frontend engineer a technical lider . Built deep expertise across the full stack: frontend arquitectura con React y TypeScript , algorithm diseno, nube infrastructure on AWS , 3D y AR Experiencias, y microservices, owning arquitectura decisions , equipo coordination y end-a-end entrega.
 
-VEYE - HOSPITAL DIGITAL TWIN (2013-2016)
+VEYE - HOSPITAL DIGITAL TWIN
+- Desarrollador de Software · 2015 – 2016
 - Contributed a the arquitectura de a hospital-scale digital twin using Unity 3D y a MENU stack (MongoDB, Express, Node.js, Unity), integrating live HVAC sensor data across a multi-construyendo complejos para a US client.
 - Designed OOP-based C#/.NET controller abstractions en Unity a manage interactive 3D elements, enabling polymorphic behavior per equipment type.
 - Built the HUD layer y interfaces a visualize sensor data y let operators update equipment state en real time, con filters rendering 500+ assets simultaneously at 60 FPS .
 
-RESOURCE DISTRIBUTION TOOL (2017-2018)
+RESOURCE DISTRIBUTION TOOL
+- Desarrollador frontend · 2016 – 2018
 - Developed the frontend de a construction resource planning web app using React, Chart.js y MongoDB , enabling percentage-based resource allocation across time via interactive calendar y breakdown views.
+- Replaced legacy jQuery components con React , reducing frontend complexity y boosting maintainability y performance by ~50% .
 
 HOLOLENS AR PROTOTYPE
+- Desarrollador Full Stack · 2018 – 2023
 - Designed y implemented an AR application using the Microsoft HoloLens SDK y Unity , streaming 3D assets from a file server a stay within device memory constraints, which required deep optimization de model geometry.
 
 ARAS / BIMEP - HVAC AUTOMATION PLATFORM (CORE PROYECTO)
+- Desarrollador Full Stack · 2018 – 2023
 - Led the migration from a vanilla JS monolith a a React, TypeScript y Node.js arquitectura, establishing component reuse patterns that cut web-component management time by ~90% y reducing runtime errors through static typing.
 - Designed y implemented a Dijkstra-based pipe auto-routing algorithm using a room-grid graph where edge weights encode HVAC heat load, automating layout-aware pipe distribution across construyendo floors.
 - Authored Revit plugins en C# a extend the platform directly inside the mechanical designer's workflow, bridging the web application con BIM tooling.
@@ -33,13 +38,16 @@ ARAS / BIMEP - HVAC AUTOMATION PLATFORM (CORE PROYECTO)
 - Used local Kubernetes environments para development y integration pruebas a avoid AWS costs, y established CI/CD pipelines via GitHub Actions con semantic versioning y conventional commits.
 
 VIRTUAL TAKEOFF - FACILITY MAPPING TOOL
+- Ingeniero de Software · 2023 – 2024
 - Led end-a-end entrega de a facility mapping application (React, Next.js, PostgreSQL, MongoDB, Mapbox) allowing users a annotate floor plans con geolocated markers enriched con images, audio, video y notes.
 - Owned proyecto management para the initiative: scheduling, task assignment y deliverable coordination alongside a small engineering equipo.
 
 COMMERCIAL CATALOGUE
+- Desarrollador Full Stack · 2018 – 2023
 - Built a Next.js y PostgreSQL HVAC equipment catalogue con Avanzado filtering, deployed on AWS, reducing quote preparation time para contractor users.
 
 3D MODEL VIEWER - BROWSER-NATIVO PIPELINE
+- Arquitecto de Software · 2024 – 2026
 - Designed y implemented a file conversion pipeline (Revit RVT y LAS a XKT) con a server-side processing queue y WebSocket-based progress notifications , enabling teams a load BIM models en the browser without login friction.
 - Integrated interactive viewer tools (measurements, camera controls, model transforms) y owned full-stack entrega from the conversion backend a frontend rendering, cutting model load time by ~50% y supporting 100 concurrent users through the optimized conversion y streaming pipeline; used AI-assisted development a improve entrega efficiency by ~80%.
 
