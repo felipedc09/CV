@@ -4,32 +4,32 @@ Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc0
 
 RESUMEN PROFESIONAL
 - Ingeniero de Software Senior y Desarrollador Full Stack con más de 12 años de experiencia entregando productos robustos y escalables en dominios complejos.
-- Especializado en arquitectura frontend con profundidad full-stack , diseño e implemento sistemas sofisticados —desde ruteo basado en grafos y pipelines de datos en tiempo real hasta microservicios en AWS y renderizado 3D con WebGL — mientras lidero las decisiones de arquitectura y equipos multifuncionales.
+- Especializado en arquitectura frontend con profundidad full-stack, diseño e implemento sistemas sofisticados —desde ruteo basado en grafos y pipelines de datos en tiempo real hasta microservicios en AWS y renderizado 3D con WebGL — mientras lidero las decisiones de arquitectura y equipos multifuncionales.
 - Combino una mentalidad pragmática y orientada al producto con ejecución práctica y flujos de trabajo de desarrollo asistido por IA modernos para entregar soluciones mantenibles y de alta calidad de forma eficiente.
 
 EXPERIENCIA PROFESIONAL
 - 3D Virtual Environment Solutions - Bogota, Colombia
 - Desarrollador de Software -> Desarrollador Frontend -> Desarrollador Full Stack -> Ingeniero de Software -> Arquitecto de Software | 2015 - 2026
-- Progresé a través de cinco roles durante más de 11 años en una misma empresa — Desarrollador de Software (2015-2016), Desarrollador Frontend (2016-2018), Desarrollador Full Stack (2018-2023), Ingeniero de Software (2023-2024) y Arquitecto de Software (2024-2026)— creciendo de ingeniero frontend a líder técnico . Desarrollé experiencia profunda en todo el stack: arquitectura frontend con React y TypeScript , diseño de algoritmos, infraestructura cloud en AWS , experiencias 3D y AR, y microservicios, asumiendo decisiones de arquitectura , coordinación del equipo y entrega de extremo a extremo.
+- Progresé a través de cinco roles durante más de 11 años en una misma empresa — Desarrollador de Software (2015-2016), Desarrollador Frontend (2016-2018), Desarrollador Full Stack (2018-2023), Ingeniero de Software (2023-2024) y Arquitecto de Software (2024-2026)— creciendo de ingeniero frontend a líder técnico. Desarrollé experiencia profunda en todo el stack: arquitectura frontend con React y TypeScript, diseño de algoritmos, infraestructura cloud en AWS, experiencias 3D y AR, y microservicios, asumiendo decisiones de arquitectura, coordinación del equipo y entrega de extremo a extremo.
 
 VEYE - GEMELO DIGITAL HOSPITALARIO
 - Desarrollador de Software · 2015 – 2016
 - Contribuí a la arquitectura de un gemelo digital a escala hospitalaria usando Unity 3D y un stack MENU (MongoDB, Express, Node.js, Unity), integrando datos de sensores HVAC en vivo en un complejo de múltiples edificios para un cliente de EE. UU.
 - Diseñé abstracciones de controladores OOP en C#/.NET en Unity para gestionar elementos 3D interactivos, habilitando comportamiento polimórfico por tipo de equipo.
-- Construí la capa HUD y las interfaces para visualizar datos de sensores y permitir a los operadores actualizar el estado de los equipos en tiempo real, con filtros que renderizan más de 500 activos en simultáneo a 60 FPS .
+- Construí la capa HUD y las interfaces para visualizar datos de sensores y permitir a los operadores actualizar el estado de los equipos en tiempo real, con filtros que renderizan más de 500 activos en simultáneo a 60 FPS.
 
 HERRAMIENTA DE DISTRIBUCIÓN DE RECURSOS
 - Desarrollador Frontend · 2016 – 2018
-- Desarrollé el frontend de una aplicación web de planificación de recursos de construcción usando React, Chart.js y MongoDB , habilitando la asignación de recursos por porcentaje a lo largo del tiempo mediante vistas de calendario interactivo y de desglose.
-- Reemplacé componentes heredados de jQuery por React , reduciendo la complejidad del frontend y mejorando la mantenibilidad y el rendimiento en un ~50% .
+- Desarrollé el frontend de una aplicación web de planificación de recursos de construcción usando React, Chart.js y MongoDB, habilitando la asignación de recursos por porcentaje a lo largo del tiempo mediante vistas de calendario interactivo y de desglose.
+- Reemplacé componentes heredados de jQuery por React, reduciendo la complejidad del frontend y mejorando la mantenibilidad y el rendimiento en un ~50%.
 
 PROTOTIPO AR CON HOLOLENS
 - Desarrollador Full Stack · 2018 – 2023
-- Diseñé e implementé una aplicación de AR con el SDK de Microsoft HoloLens y Unity , transmitiendo activos 3D desde un servidor de archivos para mantenerse dentro de los límites de memoria del dispositivo, lo que requirió una optimización profunda de la geometría de los modelos.
+- Diseñé e implementé una aplicación de AR con el SDK de Microsoft HoloLens y Unity, transmitiendo activos 3D desde un servidor de archivos para mantenerse dentro de los límites de memoria del dispositivo, lo que requirió una optimización profunda de la geometría de los modelos.
 
 ARAS / BIMEP - PLATAFORMA DE AUTOMATIZACIÓN HVAC (PROYECTO CENTRAL)
 - Desarrollador Full Stack · 2018 – 2023
-- Lideré la migración de un monolito de JS plano a una arquitectura de React, TypeScript y Node.js , estableciendo patrones de reutilización de componentes que redujeron el tiempo de gestión de componentes web en ~90% y disminuyendo errores en tiempo de ejecución mediante tipado estático.
+- Lideré la migración de un monolito de JS plano a una arquitectura de React, TypeScript y Node.js, estableciendo patrones de reutilización de componentes que redujeron el tiempo de gestión de componentes web en ~90% y disminuyendo errores en tiempo de ejecución mediante tipado estático.
 - Diseñé e implementé un algoritmo de auto-ruteo de tuberías basado en Dijkstra usando un grafo de cuadrícula de habitaciones donde los pesos de las aristas codifican la carga térmica HVAC, automatizando la distribución de tuberías consciente del layout a través de los pisos del edificio.
 - Desarrollé plugins de Revit en C# para extender la plataforma directamente dentro del flujo de trabajo del diseñador mecánico, conectando la aplicación web con las herramientas BIM.
 - Diseñé la transición a un modelo de microservicios en AWS (ECS Fargate, EC2, API Gateway, CloudWatch, balanceadores de carga), descomponiendo algoritmos de cómputo intensivo en servicios escalables de forma independiente.
@@ -48,7 +48,7 @@ CATÁLOGO COMERCIAL
 
 VISOR DE MODELOS 3D - PIPELINE NATIVO DEL NAVEGADOR
 - Arquitecto de Software · 2024 – 2026
-- Diseñé e implementé un pipeline de conversión de archivos (Revit RVT y LAS a XKT) con una cola de procesamiento del lado del servidor y notificaciones de progreso vía WebSocket , permitiendo a los equipos cargar modelos BIM en el navegador sin fricción de inicio de sesión.
+- Diseñé e implementé un pipeline de conversión de archivos (Revit RVT y LAS a XKT) con una cola de procesamiento del lado del servidor y notificaciones de progreso vía WebSocket, permitiendo a los equipos cargar modelos BIM en el navegador sin fricción de inicio de sesión.
 - Integré herramientas de visor interactivas (mediciones, controles de cámara, transformaciones de modelo) y asumí la entrega full-stack desde el backend de conversión hasta el renderizado en el frontend, reduciendo el tiempo de carga del modelo en ~50% y soportando 100 usuarios concurrentes mediante el pipeline optimizado de conversión y streaming; usé desarrollo asistido por IA para mejorar la eficiencia de entrega en ~80%.
 
 HABILIDADES TECNICAS

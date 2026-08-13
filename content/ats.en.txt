@@ -4,28 +4,28 @@ Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc0
 
 PROFESSIONAL SUMMARY
 - Senior Software Engineer and Full Stack Developer with 12+ years of experience delivering robust, scalable products across complex domains.
-- Specializing in frontend architecture with full-stack depth , I design and implement sophisticated systems — from graph-based routing and real-time data pipelines to AWS microservices and WebGL 3D rendering — while owning architectural decisions and leading cross-functional teams.
+- Specializing in frontend architecture with full-stack depth, I design and implement sophisticated systems — from graph-based routing and real-time data pipelines to AWS microservices and WebGL 3D rendering — while owning architectural decisions and leading cross-functional teams.
 - I combine a pragmatic, product-focused mindset with hands-on execution and modern AI-assisted development workflows to ship maintainable, high-quality solutions efficiently.
 
 PROFESSIONAL EXPERIENCE
 - 3D Virtual Environment Solutions - Bogota, Colombia
 - Software Developer -> Frontend Developer -> Full Stack Developer -> Software Engineer -> Software Architect | 2015 - 2026
-- Progressed through five roles over 11+ years at a single employer — Software Developer (2015-2016), Frontend Developer (2016-2018), Full Stack Developer (2018-2023), Software Engineer (2023-2024) and Software Architect (2024-2026) — growing from frontend engineer to technical lead . Built deep expertise across the full stack: frontend architecture with React and TypeScript , algorithm design, cloud infrastructure on AWS , 3D and AR experiences, and microservices, owning architecture decisions , team coordination and end-to-end delivery.
+- Progressed through five roles over 11+ years at a single employer — Software Developer (2015-2016), Frontend Developer (2016-2018), Full Stack Developer (2018-2023), Software Engineer (2023-2024) and Software Architect (2024-2026) — growing from frontend engineer to technical lead. Built deep expertise across the full stack: frontend architecture with React and TypeScript, algorithm design, cloud infrastructure on AWS, 3D and AR experiences, and microservices, owning architecture decisions, team coordination and end-to-end delivery.
 
 VEYE - HOSPITAL DIGITAL TWIN
 - Software Developer · 2015 – 2016
 - Contributed to the architecture of a hospital-scale digital twin using Unity 3D and a MENU stack (MongoDB, Express, Node.js, Unity), integrating live HVAC sensor data across a multi-building complex for a US client.
 - Designed OOP-based C#/.NET controller abstractions in Unity to manage interactive 3D elements, enabling polymorphic behavior per equipment type.
-- Built the HUD layer and interfaces to visualize sensor data and let operators update equipment state in real time, with filters rendering 500+ assets simultaneously at 60 FPS .
+- Built the HUD layer and interfaces to visualize sensor data and let operators update equipment state in real time, with filters rendering 500+ assets simultaneously at 60 FPS.
 
 RESOURCE DISTRIBUTION TOOL
 - Frontend Developer · 2016 – 2018
-- Developed the frontend of a construction resource planning web app using React, Chart.js and MongoDB , enabling percentage-based resource allocation across time via interactive calendar and breakdown views.
-- Replaced legacy jQuery components with React , reducing frontend complexity and boosting maintainability and performance by ~50% .
+- Developed the frontend of a construction resource planning web app using React, Chart.js and MongoDB, enabling percentage-based resource allocation across time via interactive calendar and breakdown views.
+- Replaced legacy jQuery components with React, reducing frontend complexity and boosting maintainability and performance by ~50%.
 
 HOLOLENS AR PROTOTYPE
 - Full Stack Developer · 2018 – 2023
-- Designed and implemented an AR application using the Microsoft HoloLens SDK and Unity , streaming 3D assets from a file server to stay within device memory constraints, which required deep optimization of model geometry.
+- Designed and implemented an AR application using the Microsoft HoloLens SDK and Unity, streaming 3D assets from a file server to stay within device memory constraints, which required deep optimization of model geometry.
 
 ARAS / BIMEP - HVAC AUTOMATION PLATFORM (CORE PROJECT)
 - Full Stack Developer · 2018 – 2023
@@ -48,7 +48,7 @@ COMMERCIAL CATALOGUE
 
 3D MODEL VIEWER - BROWSER-NATIVE PIPELINE
 - Software Architect · 2024 – 2026
-- Designed and implemented a file conversion pipeline (Revit RVT and LAS to XKT) with a server-side processing queue and WebSocket-based progress notifications , enabling teams to load BIM models in the browser without login friction.
+- Designed and implemented a file conversion pipeline (Revit RVT and LAS to XKT) with a server-side processing queue and WebSocket-based progress notifications, enabling teams to load BIM models in the browser without login friction.
 - Integrated interactive viewer tools (measurements, camera controls, model transforms) and owned full-stack delivery from the conversion backend to frontend rendering, cutting model load time by ~50% and supporting 100 concurrent users through the optimized conversion and streaming pipeline; used AI-assisted development to improve delivery efficiency by ~80%.
 
 TECHNICAL SKILLS

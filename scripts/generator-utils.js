@@ -4,6 +4,8 @@ function cleanText(value) {
   return String(value || "")
     .replace(/<[^>]*>/g, " ")
     .replace(/\s+/g, " ")
+    .replace(/\s+([,.;:%)])/g, "$1")
+    .replace(/\(\s+/g, "(")
     .trim();
 }
 

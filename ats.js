@@ -10,6 +10,8 @@
     return String(value || "")
       .replace(/<[^>]*>/g, " ")
       .replace(/\s+/g, " ")
+      .replace(/\s+([,.;:%)])/g, "$1")
+      .replace(/\(\s+/g, "(")
       .trim();
   }
 
@@ -113,7 +115,18 @@
     const lang = state.getCurrentLang();
     const data = getAtsStructuredContent(lang);
     const sectionMarkup = data.experienceSections
-      .map((section) => `<p class="ats-subtitle">${section.title}</p>${section.meta ? `<p class="ats-meta">${section.meta}</p>` : ""}<ul class="ats-bullets">${section.items.map((item) => `<li>${item}</li>`).join("")}</ul>`)
+      .map((section) => {
+        let role = "";
+        let dates = "";
+        if (section.meta) {
+          const parts = section.meta.split("·");
+          role = (parts[0] || "").trim();
+          dates = (parts[1] || "").trim();
+        }
+        const head = `<div class="ats-exp-head"><span class="ats-exp-title">${section.title}</span>${dates ? `<span class="ats-exp-date">${dates}</span>` : ""}</div>${role ? `<p class="ats-exp-role">${role}</p>` : ""}`;
+        const bullets = `<ul class="ats-bullets">${section.items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+        return head + bullets;
+      })
       .join("");
 
     rootEl.innerHTML = `
