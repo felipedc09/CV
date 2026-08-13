@@ -19,7 +19,9 @@ if (!fs.existsSync(contentDir)) {
   fs.mkdirSync(contentDir, { recursive: true });
 }
 
-const spanish = generateSpanishFromEnglish(english);
+const overridesPath = path.join(contentDir, "es.overrides.js");
+const overrides = fs.existsSync(overridesPath) ? require(overridesPath) : {};
+const spanish = generateSpanishFromEnglish(english, overrides);
 const translations = {
   en: english,
   es: spanish

@@ -94,10 +94,14 @@ function translateEnglishToSpanishText(value) {
   return translated.join("");
 }
 
-function generateSpanishFromEnglish(englishContent) {
+function generateSpanishFromEnglish(englishContent, overrides = {}) {
   const spanish = {};
   Object.keys(englishContent).forEach((key) => {
-    spanish[key] = translateEnglishToSpanishText(englishContent[key]);
+    const hasOverride =
+      Object.prototype.hasOwnProperty.call(overrides, key) && overrides[key] != null;
+    spanish[key] = hasOverride
+      ? overrides[key]
+      : translateEnglishToSpanishText(englishContent[key]);
   });
   return spanish;
 }
