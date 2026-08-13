@@ -129,11 +129,16 @@
       })
       .join("");
 
+    const contactHtml = data.contactLine
+      .replace(/(felipedc09@gmail\.com)/, '<a href="mailto:$1">$1</a>')
+      .replace(/(github\.com\/felipedc09)/, '<a href="https://$1" target="_blank" rel="noopener">$1</a>')
+      .replace(/(linkedin\.com\/in\/felipedc09)/, '<a href="https://$1" target="_blank" rel="noopener">$1</a>');
+
     rootEl.innerHTML = `
       <div class="ats-header">
         <h1>${data.name}</h1>
         <p>${data.roleLine}</p>
-        <p>${data.contactLine}</p>
+        <p>${contactHtml}</p>
       </div>
       <hr class="ats-divider" />
 
