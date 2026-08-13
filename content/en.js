@@ -16,7 +16,7 @@
     spanish: "Spanish",
     native: "Native",
     english: "English",
-    englishLevel: "Upper-Intermediate (B2+, improving toward C1 for global roles)",
+    englishLevel: "Upper-Intermediate (B2+)",
     french: "French",
     basic: "Basic",
     jobTitle: "Systems <span>Engineer</span>",

@@ -13,7 +13,7 @@ module.exports = {
   spanish: "Español",
   native: "Nativo",
   english: "Inglés",
-  englishLevel: "Intermedio-Alto (B2+, mejorando hacia C1 para roles globales)",
+  englishLevel: "Intermedio-Alto (B2+)",
   french: "Francés",
   basic: "Básico",
   jobTitle: "Ingeniero de <span>Sistemas</span>",
