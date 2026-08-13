@@ -63,31 +63,31 @@
     const locale = getAtsLocale(lang);
 
     return {
-      name: "Felipe Duitama",
+      name: "Luis Felipe Duitama Castillo",
       roleLine: locale.roleLine,
       contactLine: "Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/in/felipedc09",
       companyHeader: `${cleanText(content.companyName)} - Bogota, Colombia`,
       companyRoleLine: lang === "es"
-        ? "Lider Tecnico / Ingeniero de Software Senior (evolucion desde Frontend Engineer) | 2015 - 2026"
-        : "Technical Lead / Senior Software Engineer (progressed from Frontend Engineer) | 2015 - 2026",
+        ? "Desarrollador de Software -> Desarrollador Frontend -> Desarrollador Full Stack -> Ingeniero de Software -> Arquitecto de Software | 2015 - 2026"
+        : "Software Developer -> Frontend Developer -> Full Stack Developer -> Software Engineer -> Software Architect | 2015 - 2026",
       companySummary: cleanText(content.companySummary),
       summary: [cleanText(content.profileText1), cleanText(content.profileText2), cleanText(content.profileText3)],
       technicalSkills: {
         languages: "C#, JavaScript, TypeScript, Python, HTML, CSS",
-        frameworks: "React, Next.js, Node.js, .NET, Unity 3D",
-        cloud: "AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, CI/CD",
+        frameworks: "React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets",
+        cloud: "AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, CI/CD",
         databases: "MongoDB, MySQL, PostgreSQL",
         testing: "Playwright, Cypress",
-        tools: "Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning"
+        tools: "Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning, Authentication, Distributed Systems, System Design"
       },
       experienceSections: [
-        { title: cleanText(content.vEyeTitle), items: [cleanText(content.vEye1), cleanText(content.vEye2), cleanText(content.vEye3)] },
-        { title: cleanText(content.resourceTitle), items: [cleanText(content.resource1)] },
-        { title: cleanText(content.hololensTitle), items: [cleanText(content.hololens1)] },
-        { title: cleanText(content.arasTitle), items: [cleanText(content.aras1), cleanText(content.aras2), cleanText(content.aras3), cleanText(content.aras4), cleanText(content.aras5), cleanText(content.aras6), cleanText(content.aras7)] },
-        { title: cleanText(content.takeoffTitle), items: [cleanText(content.takeoff1), cleanText(content.takeoff2)] },
-        { title: cleanText(content.catalogueTitle), items: [cleanText(content.catalogue1)] },
-        { title: cleanText(content.viewerTitle), items: [cleanText(content.viewer1), cleanText(content.viewer2)] }
+        { title: cleanText(content.vEyeTitle), meta: cleanText(content.vEyeMeta), items: [cleanText(content.vEye1), cleanText(content.vEye2), cleanText(content.vEye3)] },
+        { title: cleanText(content.resourceTitle), meta: cleanText(content.resourceMeta), items: [cleanText(content.resource1), cleanText(content.resource2)] },
+        { title: cleanText(content.hololensTitle), meta: cleanText(content.hololensMeta), items: [cleanText(content.hololens1)] },
+        { title: cleanText(content.arasTitle), meta: cleanText(content.arasMeta), items: [cleanText(content.aras1), cleanText(content.aras2), cleanText(content.aras3), cleanText(content.aras4), cleanText(content.aras5), cleanText(content.aras6), cleanText(content.aras7)] },
+        { title: cleanText(content.takeoffTitle), meta: cleanText(content.takeoffMeta), items: [cleanText(content.takeoff1), cleanText(content.takeoff2)] },
+        { title: cleanText(content.catalogueTitle), meta: cleanText(content.catalogueMeta), items: [cleanText(content.catalogue1)] },
+        { title: cleanText(content.viewerTitle), meta: cleanText(content.viewerMeta), items: [cleanText(content.viewer1), cleanText(content.viewer2)] }
       ],
       education: [
         { institution: cleanText(content.universityName), details: `${cleanText(content.systemsEngineering)} | 2011 - 2020` },
@@ -113,7 +113,7 @@
     const lang = state.getCurrentLang();
     const data = getAtsStructuredContent(lang);
     const sectionMarkup = data.experienceSections
-      .map((section) => `<p class="ats-subtitle">${section.title}</p><ul class="ats-bullets">${section.items.map((item) => `<li>${item}</li>`).join("")}</ul>`)
+      .map((section) => `<p class="ats-subtitle">${section.title}</p>${section.meta ? `<p class="ats-meta">${section.meta}</p>` : ""}<ul class="ats-bullets">${section.items.map((item) => `<li>${item}</li>`).join("")}</ul>`)
       .join("");
 
     rootEl.innerHTML = `
@@ -190,6 +190,9 @@
 
     data.experienceSections.forEach((section) => {
       lines.push(section.title.toUpperCase());
+      if (section.meta) {
+        lines.push(`- ${section.meta}`);
+      }
       section.items.forEach((item) => lines.push(`- ${item}`));
       lines.push("");
     });
@@ -249,7 +252,7 @@
     const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = `Felipe_Duitama_CV_ATS_${suffix}_${date}.txt`;
+    link.download = `Luis_Felipe_Duitama_Castillo_CV_ATS_${suffix}_${date}.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

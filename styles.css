@@ -200,6 +200,12 @@ body {
   font-weight: 700;
 }
 
+.ats-meta {
+  margin: 0 0 6px;
+  font-weight: 600;
+  font-style: italic;
+}
+
 .ats-actions {
   margin-top: 18px;
 }
