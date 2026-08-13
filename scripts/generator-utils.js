@@ -105,7 +105,8 @@ function extractAtsKeywords(sourceText) {
     "TypeScript", "JavaScript", "Node.js", "C#", ".NET", "Python", "AWS", "ECS Fargate",
     "Lambda", "API Gateway", "CloudWatch", "Microservices", "Kubernetes", "Docker",
     "CI/CD", "GitHub Actions", "PostgreSQL", "MongoDB", "Mapbox", "WebGL", "Unity 3D",
-    "Revit", "Digital Twin", "Dijkstra", "WebSocket", "Technical Leadership"
+    "Revit", "Digital Twin", "Dijkstra", "WebSocket", "Technical Leadership",
+    "Jenkins", "Terraform", "Micro-frontends", "Authentication", "Distributed Systems", "System Design"
   ];
 
   const normalizedSource = sourceText.toLowerCase();
@@ -130,7 +131,7 @@ function getAtsLocale(lang) {
     ? {
       roleLine: "Ingeniero de Software Senior | Arquitecto de Software | Desarrollador Full Stack",
       contactLine: "Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/in/felipedc09",
-      companyRoleLine: "Lider Tecnico / Ingeniero de Software Senior (evolucion desde Frontend Engineer) | 2015 - 2026",
+      companyRoleLine: "Desarrollador de Software -> Desarrollador Frontend -> Desarrollador Full Stack -> Ingeniero de Software -> Arquitecto de Software | 2015 - 2026",
       sectionSummary: "RESUMEN PROFESIONAL",
       sectionSkills: "HABILIDADES TECNICAS",
       sectionExperience: "EXPERIENCIA PROFESIONAL",
@@ -151,7 +152,7 @@ function getAtsLocale(lang) {
     : {
       roleLine: "Senior Software Engineer | Software Architect | Full Stack Developer",
       contactLine: "Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/in/felipedc09",
-      companyRoleLine: "Technical Lead / Senior Software Engineer (progressed from Frontend Engineer) | 2015 - 2026",
+      companyRoleLine: "Software Developer -> Frontend Developer -> Full Stack Developer -> Software Engineer -> Software Architect | 2015 - 2026",
       sectionSummary: "PROFESSIONAL SUMMARY",
       sectionSkills: "TECHNICAL SKILLS",
       sectionExperience: "PROFESSIONAL EXPERIENCE",
@@ -192,7 +193,7 @@ function buildATSContent(translations, lang) {
   ];
 
   const lines = [];
-  lines.push("FELIPE DUITAMA");
+  lines.push("LUIS FELIPE DUITAMA CASTILLO");
   lines.push(locale.roleLine);
   lines.push(locale.contactLine);
   lines.push("");
@@ -210,11 +211,11 @@ function buildATSContent(translations, lang) {
 
   addSection(lines, locale.sectionSkills, [
     `${locale.labels.languages}: C#, JavaScript, TypeScript, Python, HTML, CSS`,
-    `${locale.labels.frameworks}: React, Next.js, Node.js, .NET, Unity 3D`,
-    `${locale.labels.cloud}: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, CI/CD`,
+    `${locale.labels.frameworks}: React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets`,
+    `${locale.labels.cloud}: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, CI/CD`,
     `${locale.labels.databases}: MongoDB, MySQL, PostgreSQL`,
     `${locale.labels.testing}: Playwright, Cypress`,
-    `${locale.labels.tools}: Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning`
+    `${locale.labels.tools}: Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning, Authentication, Distributed Systems, System Design`
   ]);
 
   addSection(lines, locale.sectionEducation, [

@@ -1,16 +1,16 @@
-FELIPE DUITAMA
+LUIS FELIPE DUITAMA CASTILLO
 Senior Software Engineer | Software Architect | Full Stack Developer
 Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/in/felipedc09
 
 PROFESSIONAL SUMMARY
-- Senior Software Engineer and Full Stack Developer with 12+ years of experience building robust, scalable and maintainable products across complex domains. Core strength in frontend architecture : component systems, TypeScript migrations, clean code boundaries and atomic design, combined with solid backend and cloud capabilities that cover the full delivery lifecycle.
-- Proven ability to design and implement complex systems, including graph-based routing algorithms , real-time data pipelines , microservice architectures on AWS (ECS Fargate, Lambda, API Gateway), AR experiences and 3D browser rendering via WebGL. Comfortable owning architecture decisions , leading cross-functional teams and going hands-on when it matters.
-- Operates with a product mindset , pragmatic about tradeoffs, deliberate about long-term maintainability and fast to iterate without sacrificing quality. Experienced with CI/CD (GitHub Actions), containerization (Docker, Kubernetes) and AI-assisted development workflows — including hands-on use of LLMs as coding agents , MCP servers, CLI-based agent tooling, and prompt-engineering practices around context management, memory strategies and token efficiency.
+- Senior Software Engineer and Full Stack Developer with 12+ years of experience delivering robust, scalable products across complex domains.
+- Specializing in frontend architecture with full-stack depth , I design and implement sophisticated systems — from graph-based routing and real-time data pipelines to AWS microservices and WebGL 3D rendering — while owning architectural decisions and leading cross-functional teams.
+- I combine a pragmatic, product-focused mindset with hands-on execution and modern AI-assisted development workflows to ship maintainable, high-quality solutions efficiently.
 
 PROFESSIONAL EXPERIENCE
 - 3D Virtual Environment Solutions - Bogota, Colombia
-- Technical Lead / Senior Software Engineer (progressed from Frontend Engineer) | 2015 - 2026
-- Over 11 years contributing to and leading the development of multiple software products, growing from frontend engineer to technical lead . Built deep expertise across the full stack: frontend architecture with React and TypeScript , algorithm design, cloud infrastructure on AWS , 3D and AR experiences, and microservices. Worked closely with product, design and data science teams, taking ownership of architecture decisions , team coordination and end-to-end delivery across all stages of the products.
+- Software Developer -> Frontend Developer -> Full Stack Developer -> Software Engineer -> Software Architect | 2015 - 2026
+- Progressed through five roles over 11+ years at a single employer — Software Developer (2015-2016), Frontend Developer (2016-2018), Full Stack Developer (2018-2023), Software Engineer (2023-2024) and Software Architect (2024-2026) — growing from frontend engineer to technical lead . Built deep expertise across the full stack: frontend architecture with React and TypeScript , algorithm design, cloud infrastructure on AWS , 3D and AR experiences, and microservices, owning architecture decisions , team coordination and end-to-end delivery.
 
 VEYE - HOSPITAL DIGITAL TWIN (2013-2016)
 - Contributed to the architecture of a hospital-scale digital twin using Unity 3D and a MENU stack (MongoDB, Express, Node.js, Unity), integrating live HVAC sensor data across a multi-building complex for a US client.
@@ -45,11 +45,11 @@ COMMERCIAL CATALOGUE
 
 TECHNICAL SKILLS
 - Languages: C#, JavaScript, TypeScript, Python, HTML, CSS
-- Frameworks & Libraries: React, Next.js, Node.js, .NET, Unity 3D
-- Cloud & DevOps: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, CI/CD
+- Frameworks & Libraries: React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets
+- Cloud & DevOps: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, CI/CD
 - Databases: MongoDB, MySQL, PostgreSQL
 - Testing: Playwright, Cypress
-- Tools & Practices: Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning
+- Tools & Practices: Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning, Authentication, Distributed Systems, System Design
 
 EDUCATION
 - Universidad Distrital Francisco Jose de Caldas | Bachelor of Engineering (BEng), Systems Engineering | 2011 - 2020
@@ -67,4 +67,4 @@ CORE COMPETENCIES
 - Self-management & Proactivity, Assertive Communication, Solution-oriented Thinking, Curiosity & Innovation Mindset, Continuous Learning, Leadership & Team Guidance
 
 ATS KEYWORDS
-- Full Stack, React, Next.js, TypeScript, JavaScript, Node.js, C#, .NET, Python, AWS, ECS Fargate, Lambda, API Gateway, CloudWatch, Microservices, Kubernetes, Docker, CI/CD, GitHub Actions, PostgreSQL, MongoDB, Mapbox, WebGL, Unity 3D, Revit, Digital Twin, Dijkstra, WebSocket
+- Full Stack, React, Next.js, TypeScript, JavaScript, Node.js, C#, .NET, Python, AWS, ECS Fargate, Lambda, API Gateway, CloudWatch, Microservices, Kubernetes, Docker, CI/CD, GitHub Actions, PostgreSQL, MongoDB, Mapbox, WebGL, Unity 3D, Revit, Digital Twin, Dijkstra, WebSocket, Jenkins, Terraform, Micro-frontends, Authentication, Distributed Systems, System Design
