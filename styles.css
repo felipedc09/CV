@@ -659,6 +659,14 @@ body.ats-mode .ats-view {
     margin: 0;
   }
 
+  /* Named page scoped to the single-column document/ATS view only, so it gets
+     real per-page margins on every page without affecting the colorful CV's
+     print-frame export (which relies on the default zero-margin page). */
+  @page atsDoc {
+    size: A4;
+    margin: 16mm;
+  }
+
   .print-frame {
     width: 100%;
     border-collapse: collapse;
@@ -865,7 +873,8 @@ body.ats-mode .ats-view {
     box-shadow: none !important;
     width: auto !important;
     margin: 0 !important;
-    padding: 14mm 16mm !important;
+    padding: 0 !important;
+    page: atsDoc;
   }
 }
 
