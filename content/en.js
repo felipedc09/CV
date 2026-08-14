@@ -16,29 +16,34 @@
     spanish: "Spanish",
     native: "Native",
     english: "English",
-    englishLevel: "Intermediate (B1-B2, actively improving toward C1 for global roles)",
+    englishLevel: "Upper-Intermediate (B2+)",
     french: "French",
     basic: "Basic",
     jobTitle: "Systems <span>Engineer</span>",
     profile: "Profile",
-    profileText1: "Senior Software Engineer and Full Stack Developer with <strong>12+ years of experience</strong> building <strong>robust, scalable and maintainable products</strong> across complex domains. Core strength in <strong>frontend architecture</strong>: component systems, TypeScript migrations, clean code boundaries and atomic design, combined with solid backend and cloud capabilities that cover the full delivery lifecycle.",
-    profileText2: "Proven ability to design and implement complex systems, including <strong>graph-based routing algorithms</strong>, <strong>real-time data pipelines</strong>, <strong>microservice architectures on AWS</strong> (ECS Fargate, Lambda, API Gateway), AR experiences and 3D browser rendering via WebGL. Comfortable <strong>owning architecture decisions</strong>, leading cross-functional teams and going hands-on when it matters.",
-    profileText3: "Operates with a <strong>product mindset</strong>, pragmatic about tradeoffs, deliberate about long-term maintainability and fast to iterate without sacrificing quality. Experienced with <strong>CI/CD</strong> (GitHub Actions), <strong>containerization</strong> (Docker, Kubernetes) and <strong>AI-assisted development workflows</strong> — including hands-on use of <strong>LLMs as coding agents</strong>, MCP servers, CLI-based agent tooling, and prompt-engineering practices around context management, memory strategies and token efficiency.",
+    profileText1: "Senior Software Engineer and Full Stack Developer with <strong>12+ years of experience</strong> delivering <strong>robust, scalable products</strong> across complex domains.",
+    profileText2: "Specializing in <strong>frontend architecture with full-stack depth</strong>, I design and implement sophisticated systems — from <strong>graph-based routing</strong> and <strong>real-time data pipelines</strong> to <strong>AWS microservices</strong> and <strong>WebGL 3D rendering</strong> — while owning architectural decisions and leading cross-functional teams.",
+    profileText3: "I combine a <strong>pragmatic, product-focused mindset</strong> with hands-on execution and modern <strong>AI-assisted development workflows</strong> to ship maintainable, high-quality solutions efficiently.",
     experience: "Experience",
     companyName: "3D Virtual Environment Solutions",
     companySector: "Construction Technology Sector",
     companyRole: "Innovation Engineering",
-    companySummary: "Over <strong>11 years</strong> contributing to and leading the development of multiple software products, growing from frontend engineer to <strong>technical lead</strong>. Built deep expertise across the full stack: <strong>frontend architecture with React and TypeScript</strong>, algorithm design, <strong>cloud infrastructure on AWS</strong>, 3D and AR experiences, and microservices. Worked closely with product, design and data science teams, taking ownership of <strong>architecture decisions</strong>, team coordination and end-to-end delivery across all stages of the products.",
-    vEyeTitle: "vEye - Hospital Digital Twin (2013-2016)",
+    companySummary: "Progressed through five roles over 11+ years at a single employer — <strong>Software Developer</strong> (2015-2016), <strong>Frontend Developer</strong> (2016-2018), <strong>Full Stack Developer</strong> (2018-2023), <strong>Software Engineer</strong> (2023-2024) and <strong>Software Architect</strong> (2024-2026) — growing from frontend engineer to <strong>technical lead</strong>. Built deep expertise across the full stack: <strong>frontend architecture with React and TypeScript</strong>, algorithm design, <strong>cloud infrastructure on AWS</strong>, 3D and AR experiences, and microservices, owning <strong>architecture decisions</strong>, team coordination and end-to-end delivery.",
+    vEyeTitle: "vEye - Hospital Digital Twin",
+    vEyeMeta: "Software Developer · 2015 – 2016",
     vEye1: "Contributed to the architecture of a hospital-scale <strong>digital twin</strong> using <strong>Unity 3D</strong> and a MENU stack (MongoDB, Express, Node.js, Unity), integrating <strong>live HVAC sensor data</strong> across a multi-building complex for a US client.",
     vEye2: "Designed <strong>OOP-based C#/.NET controller abstractions</strong> in Unity to manage interactive 3D elements, enabling polymorphic behavior per equipment type.",
-    vEye3: "Built the <strong>HUD layer and interfaces</strong> to visualize sensor data and let operators update equipment state in real time.",
-    resourceTitle: "Resource Distribution Tool (2017-2018)",
+    vEye3: "Built the <strong>HUD layer and interfaces</strong> to visualize sensor data and let operators update equipment state in real time, with filters rendering <strong>500+ assets simultaneously at 60 FPS</strong>.",
+    resourceTitle: "Resource Distribution Tool",
+    resourceMeta: "Frontend Developer · 2016 – 2018",
     resource1: "Developed the frontend of a <strong>construction resource planning web app</strong> using <strong>React, Chart.js and MongoDB</strong>, enabling percentage-based resource allocation across time via interactive calendar and breakdown views.",
+    resource2: "Replaced legacy <strong>jQuery</strong> components with <strong>React</strong>, reducing frontend complexity and boosting maintainability and performance by <strong>~50%</strong>.",
     hololensTitle: "HoloLens AR Prototype",
+    hololensMeta: "Full Stack Developer · 2018 – 2023",
     hololens1: "Designed and implemented an <strong>AR application using the Microsoft HoloLens SDK and Unity</strong>, streaming 3D assets from a file server to stay within device memory constraints, which required deep optimization of model geometry.",
     arasTitle: "ARAS / BIMEP - HVAC Automation Platform (Core Project)",
-    aras1: "Led the migration from a vanilla JS monolith to a <strong>React, TypeScript and Node.js</strong> architecture, establishing component reuse patterns and reducing runtime errors through static typing.",
+    arasMeta: "Full Stack Developer · 2018 – 2023",
+    aras1: "Led the migration from a vanilla JS monolith to a <strong>React, TypeScript and Node.js</strong> architecture, establishing component reuse patterns that <strong>cut web-component management time by ~90%</strong> and reducing runtime errors through static typing.",
     aras2: "Designed and implemented a <strong>Dijkstra-based pipe auto-routing algorithm</strong> using a room-grid graph where edge weights encode HVAC heat load, automating layout-aware pipe distribution across building floors.",
     aras3: "Authored <strong>Revit plugins in C#</strong> to extend the platform directly inside the mechanical designer's workflow, bridging the web application with BIM tooling.",
     aras4: "Architected the transition to a <strong>microservices model on AWS</strong> (ECS Fargate, EC2, API Gateway, CloudWatch, load balancers), decomposing compute-intensive algorithms into independently scalable services.",
@@ -46,13 +51,16 @@
     aras6: "Served as <strong>technical lead</strong> during the algorithm integration phase: owned infrastructure and architecture decisions, ran planning sessions, managed the backlog in Notion and coordinated a cross-functional team across engineering, design and data science.",
     aras7: "Used local Kubernetes environments for development and integration testing to avoid AWS costs, and established <strong>CI/CD pipelines via GitHub Actions</strong> with semantic versioning and conventional commits.",
     takeoffTitle: "Virtual Takeoff - Facility Mapping Tool",
+    takeoffMeta: "Software Engineer · 2023 – 2024",
     takeoff1: "Led end-to-end delivery of a <strong>facility mapping application</strong> (React, Next.js, PostgreSQL, MongoDB, Mapbox) allowing users to annotate floor plans with <strong>geolocated markers</strong> enriched with images, audio, video and notes.",
     takeoff2: "Owned <strong>project management</strong> for the initiative: scheduling, task assignment and deliverable coordination alongside a small engineering team.",
     catalogueTitle: "Commercial Catalogue",
+    catalogueMeta: "Full Stack Developer · 2018 – 2023",
     catalogue1: "Built a <strong>Next.js and PostgreSQL</strong> HVAC equipment catalogue with advanced filtering, deployed on AWS, reducing quote preparation time for contractor users.",
     viewerTitle: "3D Model Viewer - Browser-Native Pipeline",
+    viewerMeta: "Software Architect · 2024 – 2026",
     viewer1: "Designed and implemented a <strong>file conversion pipeline</strong> (Revit RVT and LAS to XKT) with a server-side processing queue and <strong>WebSocket-based progress notifications</strong>, enabling teams to load BIM models in the browser without login friction.",
-    viewer2: "Integrated <strong>interactive viewer tools</strong> (measurements, camera controls, model transforms) and owned full-stack delivery from the conversion backend to frontend rendering.",
+    viewer2: "Integrated <strong>interactive viewer tools</strong> (measurements, camera controls, model transforms) and owned full-stack delivery from the conversion backend to frontend rendering, <strong>cutting model load time by ~50%</strong> and supporting <strong>100 concurrent users</strong> through the optimized conversion and streaming pipeline; used <strong>AI-assisted development</strong> to improve delivery efficiency by ~80%.",
     technicalSkills: "Technical Skills",
     advanced: "Advanced",
     intermediate: "Intermediate",
@@ -79,6 +87,63 @@
     atsButton: "ATS",
     githubCopilot: "Github copilot as AI agent",
     testing: "playwright, cypress - testing",
-    devops: "DevOps, CI/CD, containers (Docker, Kubernetes)"
+    devops: "DevOps, CI/CD, containers (Docker, Kubernetes)",
+
+    // --- Identity & contact (single source of truth) ---
+    fullName: "Luis Felipe Duitama Castillo",
+    roleLine: "Senior Software Engineer | Software Architect | Full Stack Developer",
+    locationLine: "Bogota, Colombia",
+    phoneValue: "+57 320 3448583",
+    emailValue: "felipedc09@gmail.com",
+    emailHref: "mailto:felipedc09@gmail.com",
+    addressValue: "Carrera 45 # 56-51, Bogotá - Colombia",
+    githubUser: "felipedc09",
+    githubUrl: "https://github.com/felipedc09",
+    githubLabel: "github.com/felipedc09",
+    linkedinUser: "felipedc09",
+    linkedinUrl: "https://linkedin.com/in/felipedc09",
+    linkedinLabel: "linkedin.com/in/felipedc09",
+    companyUrl: "https://www.3dves.com",
+    companyUrlLabel: "www.3dves.com",
+    companyDates: "2015 - 2026",
+    companyRoleProgression: "Software Developer -> Frontend Developer -> Full Stack Developer -> Software Engineer -> Software Architect | 2015 - 2026",
+    eduUniversityYears: "2011 - 2020",
+    eduUnityYears: "2017 - 2019",
+    unityInstitution: "UNAD Naska Digital",
+    conf1: "JSConf, NodeConf, Unity Developer Day - 2019",
+    conf2: "CSSConf Colombia - 2021",
+
+    // --- Skills: canonical data. `n` = full name (ATS), `short` = chip label,
+    //     `l` = sidebar level (a = advanced, i = intermediate). English only. ---
+    skills: {
+      languages: [
+        { n: "C#", l: "a" }, { n: "JavaScript", short: "JS", l: "a" }, { n: "HTML", l: "a" },
+        { n: "TypeScript", short: "TS", l: "i" }, { n: "Python", l: "i" }, { n: "CSS", l: "i" }
+      ],
+      frameworks: [
+        { n: "React", l: "i" }, { n: "Next.js", l: "i" }, { n: "Node.js", l: "i" },
+        { n: ".NET", l: "i" }, { n: "Unity 3D", l: "i" }, { n: "Micro-frontends", l: "i" },
+        { n: "WebSockets", l: "i" }, { n: "RESTful APIs", l: "i" }
+      ],
+      cloud: [
+        { n: "AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch)", short: "AWS", l: "i" },
+        { n: "Docker", l: "i" }, { n: "Kubernetes", l: "i" }, { n: "GitHub Actions", l: "i" },
+        { n: "Jenkins", l: "i" }, { n: "Terraform", l: "i" }, { n: "DevOps", l: "i" }, { n: "CI/CD", l: "i" }
+      ],
+      databases: [
+        { n: "MongoDB", l: "i" }, { n: "MySQL", l: "i" }, { n: "PostgreSQL", l: "i" }
+      ],
+      testing: [
+        { n: "Playwright", l: "i" }, { n: "Cypress", l: "i" }, { n: "Testing Library", l: "i" }
+      ],
+      tools: [
+        { n: "Git", l: "i" }, { n: "GitHub", l: "i" }, { n: "GitHub Copilot", l: "i" },
+        { n: "Claude Code", l: "i" }, { n: "Clean Code", l: "i" }, { n: "Clean Architecture", l: "i" },
+        { n: "Atomic Design", l: "i" }, { n: "Conventional Commits", l: "i" }, { n: "Semantic Versioning", l: "i" },
+        { n: "Agile", l: "i" }, { n: "Scrum", l: "i" }, { n: "Authentication", l: "i" },
+        { n: "System Design", l: "i" }, { n: "Distributed Systems", l: "i" },
+        { n: "Performance Optimization", l: "i" }, { n: "Technical Leadership", l: "i" }, { n: "Mentoring", l: "i" }
+      ]
+    }
   };
 });

@@ -1,59 +1,67 @@
-FELIPE DUITAMA
+LUIS FELIPE DUITAMA CASTILLO
 Ingeniero de Software Senior | Arquitecto de Software | Desarrollador Full Stack
-Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/in/felipedc09
+Bogotá, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/en/felipedc09
 
 RESUMEN PROFESIONAL
-- Ingeniero de Software Senior y Desarrollador Full Stack con 12+ years de Experiencia construyendo robustos, escalables y mantenibles productos across complejos domains. Core strength en frontend arquitectura : component systems, TypeScript migrations, clean code boundaries y atomic diseno, combined con solid backend y nube capabilities that cover the full entrega lifecycle.
-- Proven ability a diseno y implement complejos systems, including graph-based routing algorithms , real-time data pipelines , microservice architectures on AWS (ECS Fargate, Lambda, API Gateway), AR Experiencias y 3D browser rendering via WebGL. Comfortable owning arquitectura decisions , leading cross-functional teams y going hands-on when it matters.
-- Operates con a product mindset , pragmatic about tradeoffs, deliberate about long-term maintainability y fast a iterate without sacrificing quality. Experienciad con CI/CD (GitHub Actions), containerization (Docker, Kubernetes) y AI-assisted development workflows — including hands-on use de LLMs as coding agents , MCP servers, CLI-based agent tooling, y prompt-engineering practices around context management, memory strategies y token efficiency.
+- Ingeniero de Software Senior y Desarrollador Full Stack con más de 12 años de experiencia entregando productos robustos y escalables en dominios complejos.
+- Especializado en arquitectura frontend con profundidad full-stack, diseño e implemento sistemas sofisticados —desde ruteo basado en grafos y pipelines de datos en tiempo real hasta microservicios en AWS y renderizado 3D con WebGL — mientras lidero las decisiones de arquitectura y equipos multifuncionales.
+- Combino una mentalidad pragmática y orientada al producto con ejecución práctica y flujos de trabajo de desarrollo asistido por IA modernos para entregar soluciones mantenibles y de alta calidad de forma eficiente.
 
 EXPERIENCIA PROFESIONAL
-- 3D Virtual Environment Solutions - Bogota, Colombia
-- Lider Tecnico / Ingeniero de Software Senior (evolucion desde Frontend Engineer) | 2015 - 2026
-- Over 11 years contributing a y leading the development de multiple software productos, growing from frontend engineer a technical lider . Built deep expertise across the full stack: frontend arquitectura con React y TypeScript , algorithm diseno, nube infrastructure on AWS , 3D y AR Experiencias, y microservices. Worked closely con product, diseno y data science teams, taking ownership de arquitectura decisions , equipo coordination y end-a-end entrega across all stages de the productos.
+- 3D Virtual Environment Solutions - Bogotá, Colombia
+- Desarrollador de Software -> Desarrollador Frontend -> Desarrollador Full Stack -> Ingeniero de Software -> Arquitecto de Software | 2015 - 2026
+- Progresé a través de cinco roles durante más de 11 años en una misma empresa — Desarrollador de Software (2015-2016), Desarrollador Frontend (2016-2018), Desarrollador Full Stack (2018-2023), Ingeniero de Software (2023-2024) y Arquitecto de Software (2024-2026)— creciendo de ingeniero frontend a líder técnico. Desarrollé experiencia profunda en todo el stack: arquitectura frontend con React y TypeScript, diseño de algoritmos, infraestructura cloud en AWS, experiencias 3D y AR, y microservicios, asumiendo decisiones de arquitectura, coordinación del equipo y entrega de extremo a extremo.
 
-VEYE - HOSPITAL DIGITAL TWIN (2013-2016)
-- Contributed a the arquitectura de a hospital-scale digital twin using Unity 3D y a MENU stack (MongoDB, Express, Node.js, Unity), integrating live HVAC sensor data across a multi-construyendo complejos para a US client.
-- Designed OOP-based C#/.NET controller abstractions en Unity a manage interactive 3D elements, enabling polymorphic behavior per equipment type.
-- Built the HUD layer y interfaces a visualize sensor data y let operators update equipment state en real time.
+VEYE - GEMELO DIGITAL HOSPITALARIO
+- Desarrollador de Software · 2015 – 2016
+- Contribuí a la arquitectura de un gemelo digital a escala hospitalaria usando Unity 3D y un stack MENU (MongoDB, Express, Node.js, Unity), integrando datos de sensores HVAC en vivo en un complejo de múltiples edificios para un cliente de EE. UU.
+- Diseñé abstracciones de controladores OOP en C#/.NET en Unity para gestionar elementos 3D interactivos, habilitando comportamiento polimórfico por tipo de equipo.
+- Construí la capa HUD y las interfaces para visualizar datos de sensores y permitir a los operadores actualizar el estado de los equipos en tiempo real, con filtros que renderizan más de 500 activos en simultáneo a 60 FPS.
 
-RESOURCE DISTRIBUTION TOOL (2017-2018)
-- Developed the frontend de a construction resource planning web app using React, Chart.js y MongoDB , enabling percentage-based resource allocation across time via interactive calendar y breakdown views.
+HERRAMIENTA DE DISTRIBUCIÓN DE RECURSOS
+- Desarrollador Frontend · 2016 – 2018
+- Desarrollé el frontend de una aplicación web de planificación de recursos de construcción usando React, Chart.js y MongoDB, habilitando la asignación de recursos por porcentaje a lo largo del tiempo mediante vistas de calendario interactivo y de desglose.
+- Reemplacé componentes heredados de jQuery por React, reduciendo la complejidad del frontend y mejorando la mantenibilidad y el rendimiento en un ~50%.
 
-HOLOLENS AR PROTOTYPE
-- Designed y implemented an AR application using the Microsoft HoloLens SDK y Unity , streaming 3D assets from a file server a stay within device memory constraints, which required deep optimization de model geometry.
+PROTOTIPO AR CON HOLOLENS
+- Desarrollador Full Stack · 2018 – 2023
+- Diseñé e implementé una aplicación de AR con el SDK de Microsoft HoloLens y Unity, transmitiendo activos 3D desde un servidor de archivos para mantenerse dentro de los límites de memoria del dispositivo, lo que requirió una optimización profunda de la geometría de los modelos.
 
-ARAS / BIMEP - HVAC AUTOMATION PLATFORM (CORE PROYECTO)
-- Led the migration from a vanilla JS monolith a a React, TypeScript y Node.js arquitectura, establishing component reuse patterns y reducing runtime errors through static typing.
-- Designed y implemented a Dijkstra-based pipe auto-routing algorithm using a room-grid graph where edge weights encode HVAC heat load, automating layout-aware pipe distribution across construyendo floors.
-- Authored Revit plugins en C# a extend the platform directly inside the mechanical designer's workflow, bridging the web application con BIM tooling.
-- Architected the transition a a microservices model on AWS (ECS Fargate, EC2, API Gateway, CloudWatch, load balancers), decomposing compute-intensive algorithms into independently escalables services.
-- Built a lightweight custom message broker a coordinate asynchronous communication between Node.js services y AWS Lambda functions running Python-based algorithms para clean room detection, zoning, equipment plotting y ductwork generation.
-- Served as technical lider during the algorithm integration phase: owned infrastructure y arquitectura decisions, ran planning sessions, managed the backlog en Notion y coordinated a cross-functional equipo across engineering, diseno y data science.
-- Used local Kubernetes environments para development y integration pruebas a avoid AWS costs, y established CI/CD pipelines via GitHub Actions con semantic versioning y conventional commits.
+ARAS / BIMEP - PLATAFORMA DE AUTOMATIZACIÓN HVAC (PROYECTO CENTRAL)
+- Desarrollador Full Stack · 2018 – 2023
+- Lideré la migración de un monolito de JS plano a una arquitectura de React, TypeScript y Node.js, estableciendo patrones de reutilización de componentes que redujeron el tiempo de gestión de componentes web en ~90% y disminuyendo errores en tiempo de ejecución mediante tipado estático.
+- Diseñé e implementé un algoritmo de auto-ruteo de tuberías basado en Dijkstra usando un grafo de cuadrícula de habitaciones donde los pesos de las aristas codifican la carga térmica HVAC, automatizando la distribución de tuberías consciente del layout a través de los pisos del edificio.
+- Desarrollé plugins de Revit en C# para extender la plataforma directamente dentro del flujo de trabajo del diseñador mecánico, conectando la aplicación web con las herramientas BIM.
+- Diseñé la transición a un modelo de microservicios en AWS (ECS Fargate, EC2, API Gateway, CloudWatch, balanceadores de carga), descomponiendo algoritmos de cómputo intensivo en servicios escalables de forma independiente.
+- Construí un message broker personalizado y ligero para coordinar la comunicación asíncrona entre servicios Node.js y funciones AWS Lambda que ejecutan algoritmos en Python para detección de salas limpias, zonificación, ubicación de equipos y generación de ductos.
+- Actué como líder técnico durante la fase de integración de algoritmos: asumí las decisiones de infraestructura y arquitectura, dirigí sesiones de planificación, gestioné el backlog en Notion y coordiné un equipo multifuncional de ingeniería, diseño y ciencia de datos.
+- Utilicé entornos locales de Kubernetes para desarrollo y pruebas de integración a fin de evitar costos de AWS, y establecí pipelines de CI/CD con GitHub Actions con versionado semántico y conventional commits.
 
-VIRTUAL TAKEOFF - FACILITY MAPPING TOOL
-- Led end-a-end entrega de a facility mapping application (React, Next.js, PostgreSQL, MongoDB, Mapbox) allowing users a annotate floor plans con geolocated markers enriched con images, audio, video y notes.
-- Owned proyecto management para the initiative: scheduling, task assignment y deliverable coordination alongside a small engineering equipo.
+VIRTUAL TAKEOFF - HERRAMIENTA DE MAPEO DE INSTALACIONES
+- Ingeniero de Software · 2023 – 2024
+- Lideré la entrega de extremo a extremo de una aplicación de mapeo de instalaciones (React, Next.js, PostgreSQL, MongoDB, Mapbox) que permite a los usuarios anotar planos con marcadores geolocalizados enriquecidos con imágenes, audio, video y notas.
+- Asumí la gestión del proyecto para la iniciativa: planificación, asignación de tareas y coordinación de entregables junto a un pequeño equipo de ingeniería.
 
-COMMERCIAL CATALOGUE
-- Built a Next.js y PostgreSQL HVAC equipment catalogue con Avanzado filtering, deployed on AWS, reducing quote preparation time para contractor users.
+CATÁLOGO COMERCIAL
+- Desarrollador Full Stack · 2018 – 2023
+- Construí un catálogo de equipos HVAC en Next.js y PostgreSQL con filtrado avanzado, desplegado en AWS, reduciendo el tiempo de preparación de cotizaciones para usuarios contratistas.
 
-3D MODEL VIEWER - BROWSER-NATIVO PIPELINE
-- Designed y implemented a file conversion pipeline (Revit RVT y LAS a XKT) con a server-side processing queue y WebSocket-based progress notifications , enabling teams a load BIM models en the browser without login friction.
-- Integrated interactive viewer tools (measurements, camera controls, model transforms) y owned full-stack entrega from the conversion backend a frontend rendering.
+VISOR DE MODELOS 3D - PIPELINE NATIVO DEL NAVEGADOR
+- Arquitecto de Software · 2024 – 2026
+- Diseñé e implementé un pipeline de conversión de archivos (Revit RVT y LAS a XKT) con una cola de procesamiento del lado del servidor y notificaciones de progreso vía WebSocket, permitiendo a los equipos cargar modelos BIM en el navegador sin fricción de inicio de sesión.
+- Integré herramientas de visor interactivas (mediciones, controles de cámara, transformaciones de modelo) y asumí la entrega full-stack desde el backend de conversión hasta el renderizado en el frontend, reduciendo el tiempo de carga del modelo en ~50% y soportando 100 usuarios concurrentes mediante el pipeline optimizado de conversión y streaming; usé desarrollo asistido por IA para mejorar la eficiencia de entrega en ~80%.
 
 HABILIDADES TECNICAS
-- Lenguajes: C#, JavaScript, TypeScript, Python, HTML, CSS
-- Frameworks y Librerias: React, Next.js, Node.js, .NET, Unity 3D
-- Nube y DevOps: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, CI/CD
+- Lenguajes: C#, JavaScript, HTML, TypeScript, Python, CSS
+- Frameworks y Librerias: React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets, RESTful APIs
+- Nube y DevOps: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, DevOps, CI/CD
 - Bases de Datos: MongoDB, MySQL, PostgreSQL
-- Testing: Playwright, Cypress
-- Herramientas y Practicas: Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning
+- Testing: Playwright, Cypress, Testing Library
+- Herramientas y Practicas: Git, GitHub, GitHub Copilot, Claude Code, Clean Code, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning, Agile, Scrum, Authentication, System Design, Distributed Systems, Performance Optimization, Technical Leadership, Mentoring
 
 EDUCACION
-- Universidad Distrital Francisco Jose de Caldas | Ingenieria de Sistemas (Titulo profesional) | 2011 - 2020
-- Titulo profesional universitario. La formacion abarco ingenieria de software, estructuras de datos y algoritmos, bases de datos, sistemas operativos, redes de computadores y analisis y diseno de sistemas, sobre una solida base matematica, con enfasis en disenar y construir sistemas de software de extremo a extremo.
+- Universidad Distrital Francisco José de Caldas | Ingeniería de Sistemas (Título profesional) | 2011 - 2020
+- Título profesional de ingeniería. El plan de estudios abarcó ingeniería de software, estructuras de datos y algoritmos, bases de datos, sistemas operativos, redes de computadores, y análisis y diseño de sistemas, sobre una sólida base matemática, con énfasis en diseñar y construir sistemas de software de extremo a extremo.
 - UNAD Naska Digital | Unity Certified Developer | 2017 - 2019
 
 CONFERENCIAS Y FORMACION
@@ -61,10 +69,10 @@ CONFERENCIAS Y FORMACION
 - CSSConf Colombia - 2021
 
 IDIOMAS
-- Espanol (Nativo) | Ingles (Intermedio (B1-B2, actively improving hacia C1 para global roles)) | Frances (Basico)
+- Español (Nativo) | Inglés (Intermedio-Alto (B2+)) | Francés (Básico)
 
 COMPETENCIAS CLAVE
-- Self-management & Proactivity, Assertive Communication, Solution-oriented Thinking, Curiosity & Innovation Mindset, Continuous Learning, liderazgo & equipo Guidance
+- Autogestión y Proactividad, Comunicación Asertiva, Pensamiento Orientado a Soluciones, Curiosidad y Mentalidad Innovadora, Aprendizaje Continuo, Liderazgo y Guía de Equipos
 
 PALABRAS CLAVE ATS
-- Full Stack, React, Next.js, TypeScript, JavaScript, Node.js, C#, .NET, Python, AWS, ECS Fargate, Lambda, API Gateway, CloudWatch, Microservices, Kubernetes, Docker, CI/CD, GitHub Actions, PostgreSQL, MongoDB, Mapbox, WebGL, Unity 3D, Revit, Digital Twin, Dijkstra, WebSocket
+- Full Stack, React, Next.js, TypeScript, JavaScript, Node.js, C#, .NET, Python, AWS, ECS Fargate, Lambda, API Gateway, CloudWatch, Kubernetes, Docker, CI/CD, GitHub Actions, PostgreSQL, MongoDB, Mapbox, WebGL, Unity 3D, Revit, Dijkstra, WebSocket, Technical Leadership, Jenkins, Terraform, Micro-frontends, Authentication, Distributed Systems, System Design, RESTful APIs, GitHub, Claude Code, Clean Code, Testing Library, Agile, Scrum, Performance Optimization, Mentoring, DevOps

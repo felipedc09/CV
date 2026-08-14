@@ -4,6 +4,8 @@ function cleanText(value) {
   return String(value || "")
     .replace(/<[^>]*>/g, " ")
     .replace(/\s+/g, " ")
+    .replace(/\s+([,.;:%)])/g, "$1")
+    .replace(/\(\s+/g, "(")
     .trim();
 }
 
@@ -30,6 +32,9 @@ function translateEnglishToSpanishText(value) {
     ["Senior Software Engineer", "Ingeniero de Software Senior"],
     ["Software Architect", "Arquitecto de Software"],
     ["Full Stack Developer", "Desarrollador Full Stack"],
+    ["Software Engineer", "Ingeniero de Software"],
+    ["Software Developer", "Desarrollador de Software"],
+    ["Frontend Developer", "Desarrollador Frontend"],
     ["Systems Engineer", "Ingeniero de Sistemas"],
     ["Profile", "Perfil"],
     ["Experience", "Experiencia"],
@@ -91,12 +96,26 @@ function translateEnglishToSpanishText(value) {
   return translated.join("");
 }
 
-function generateSpanishFromEnglish(englishContent) {
+function generateSpanishFromEnglish(englishContent, overrides = {}) {
   const spanish = {};
   Object.keys(englishContent).forEach((key) => {
-    spanish[key] = translateEnglishToSpanishText(englishContent[key]);
+    const value = englishContent[key];
+    if (Object.prototype.hasOwnProperty.call(overrides, key) && overrides[key] != null) {
+      spanish[key] = overrides[key];
+    } else if (typeof value !== "string") {
+      // Non-string content (e.g. the skills data object) is language-neutral;
+      // pass it through unchanged instead of stringifying it.
+      spanish[key] = value;
+    } else {
+      spanish[key] = translateEnglishToSpanishText(value);
+    }
   });
   return spanish;
+}
+
+// Join a skills category array into an ATS comma list using full names.
+function joinSkills(list) {
+  return (list || []).map((s) => s.n).join(", ");
 }
 
 function extractAtsKeywords(sourceText) {
@@ -105,7 +124,10 @@ function extractAtsKeywords(sourceText) {
     "TypeScript", "JavaScript", "Node.js", "C#", ".NET", "Python", "AWS", "ECS Fargate",
     "Lambda", "API Gateway", "CloudWatch", "Microservices", "Kubernetes", "Docker",
     "CI/CD", "GitHub Actions", "PostgreSQL", "MongoDB", "Mapbox", "WebGL", "Unity 3D",
-    "Revit", "Digital Twin", "Dijkstra", "WebSocket", "Technical Leadership"
+    "Revit", "Digital Twin", "Dijkstra", "WebSocket", "Technical Leadership",
+    "Jenkins", "Terraform", "Micro-frontends", "Authentication", "Distributed Systems", "System Design",
+    "RESTful APIs", "GitHub", "Claude Code", "Clean Code", "Testing Library", "Agile", "Scrum",
+    "Performance Optimization", "Mentoring", "DevOps"
   ];
 
   const normalizedSource = sourceText.toLowerCase();
@@ -128,9 +150,6 @@ function addSection(lines, title, items) {
 function getAtsLocale(lang) {
   return lang === "es"
     ? {
-      roleLine: "Ingeniero de Software Senior | Arquitecto de Software | Desarrollador Full Stack",
-      contactLine: "Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/in/felipedc09",
-      companyRoleLine: "Lider Tecnico / Ingeniero de Software Senior (evolucion desde Frontend Engineer) | 2015 - 2026",
       sectionSummary: "RESUMEN PROFESIONAL",
       sectionSkills: "HABILIDADES TECNICAS",
       sectionExperience: "EXPERIENCIA PROFESIONAL",
@@ -149,9 +168,6 @@ function getAtsLocale(lang) {
       }
     }
     : {
-      roleLine: "Senior Software Engineer | Software Architect | Full Stack Developer",
-      contactLine: "Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/in/felipedc09",
-      companyRoleLine: "Technical Lead / Senior Software Engineer (progressed from Frontend Engineer) | 2015 - 2026",
       sectionSummary: "PROFESSIONAL SUMMARY",
       sectionSkills: "TECHNICAL SKILLS",
       sectionExperience: "PROFESSIONAL EXPERIENCE",
@@ -182,25 +198,27 @@ function buildATSContent(translations, lang) {
   ];
 
   const experienceSections = [
-    [cleanText(content.vEyeTitle), [cleanText(content.vEye1), cleanText(content.vEye2), cleanText(content.vEye3)]],
-    [cleanText(content.resourceTitle), [cleanText(content.resource1)]],
-    [cleanText(content.hololensTitle), [cleanText(content.hololens1)]],
-    [cleanText(content.arasTitle), [cleanText(content.aras1), cleanText(content.aras2), cleanText(content.aras3), cleanText(content.aras4), cleanText(content.aras5), cleanText(content.aras6), cleanText(content.aras7)]],
-    [cleanText(content.takeoffTitle), [cleanText(content.takeoff1), cleanText(content.takeoff2)]],
-    [cleanText(content.catalogueTitle), [cleanText(content.catalogue1)]],
-    [cleanText(content.viewerTitle), [cleanText(content.viewer1), cleanText(content.viewer2)]]
+    [cleanText(content.vEyeTitle), [cleanText(content.vEyeMeta), cleanText(content.vEye1), cleanText(content.vEye2), cleanText(content.vEye3)]],
+    [cleanText(content.resourceTitle), [cleanText(content.resourceMeta), cleanText(content.resource1), cleanText(content.resource2)]],
+    [cleanText(content.hololensTitle), [cleanText(content.hololensMeta), cleanText(content.hololens1)]],
+    [cleanText(content.arasTitle), [cleanText(content.arasMeta), cleanText(content.aras1), cleanText(content.aras2), cleanText(content.aras3), cleanText(content.aras4), cleanText(content.aras5), cleanText(content.aras6), cleanText(content.aras7)]],
+    [cleanText(content.takeoffTitle), [cleanText(content.takeoffMeta), cleanText(content.takeoff1), cleanText(content.takeoff2)]],
+    [cleanText(content.catalogueTitle), [cleanText(content.catalogueMeta), cleanText(content.catalogue1)]],
+    [cleanText(content.viewerTitle), [cleanText(content.viewerMeta), cleanText(content.viewer1), cleanText(content.viewer2)]]
   ];
 
+  const skills = content.skills || {};
+
   const lines = [];
-  lines.push("FELIPE DUITAMA");
-  lines.push(locale.roleLine);
-  lines.push(locale.contactLine);
+  lines.push(cleanText(content.fullName).toUpperCase());
+  lines.push(cleanText(content.roleLine));
+  lines.push(`${cleanText(content.locationLine)} | ${cleanText(content.phoneValue)} | ${cleanText(content.emailValue)} | ${cleanText(content.githubLabel)} | ${cleanText(content.linkedinLabel)}`);
   lines.push("");
 
   addSection(lines, locale.sectionSummary, summary);
   addSection(lines, locale.sectionExperience, [
-    `${cleanText(content.companyName)} - Bogota, Colombia`,
-    locale.companyRoleLine,
+    `${cleanText(content.companyName)} - ${cleanText(content.locationLine)}`,
+    cleanText(content.companyRoleProgression),
     cleanText(content.companySummary)
   ]);
 
@@ -209,23 +227,23 @@ function buildATSContent(translations, lang) {
   });
 
   addSection(lines, locale.sectionSkills, [
-    `${locale.labels.languages}: C#, JavaScript, TypeScript, Python, HTML, CSS`,
-    `${locale.labels.frameworks}: React, Next.js, Node.js, .NET, Unity 3D`,
-    `${locale.labels.cloud}: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, CI/CD`,
-    `${locale.labels.databases}: MongoDB, MySQL, PostgreSQL`,
-    `${locale.labels.testing}: Playwright, Cypress`,
-    `${locale.labels.tools}: Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning`
+    `${locale.labels.languages}: ${joinSkills(skills.languages)}`,
+    `${locale.labels.frameworks}: ${joinSkills(skills.frameworks)}`,
+    `${locale.labels.cloud}: ${joinSkills(skills.cloud)}`,
+    `${locale.labels.databases}: ${joinSkills(skills.databases)}`,
+    `${locale.labels.testing}: ${joinSkills(skills.testing)}`,
+    `${locale.labels.tools}: ${joinSkills(skills.tools)}`
   ]);
 
   addSection(lines, locale.sectionEducation, [
-    `${cleanText(content.universityName)} | ${cleanText(content.systemsEngineering)} | 2011 - 2020`,
+    `${cleanText(content.universityName)} | ${cleanText(content.systemsEngineering)} | ${cleanText(content.eduUniversityYears)}`,
     cleanText(content.educationDescription),
-    `UNAD Naska Digital | ${cleanText(content.unityCertified)} | 2017 - 2019`
+    `${cleanText(content.unityInstitution)} | ${cleanText(content.unityCertified)} | ${cleanText(content.eduUnityYears)}`
   ]);
 
   addSection(lines, locale.sectionConferences, [
-    "JSConf, NodeConf, Unity Developer Day - 2019",
-    "CSSConf Colombia - 2021"
+    cleanText(content.conf1),
+    cleanText(content.conf2)
   ]);
 
   addSection(lines, locale.sectionLanguages, [

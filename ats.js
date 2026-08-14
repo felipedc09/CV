@@ -10,13 +10,14 @@
     return String(value || "")
       .replace(/<[^>]*>/g, " ")
       .replace(/\s+/g, " ")
+      .replace(/\s+([,.;:%)])/g, "$1")
+      .replace(/\(\s+/g, "(")
       .trim();
   }
 
   function getAtsLocale(lang) {
     if (lang === "es") {
       return {
-        roleLine: "Ingeniero de Software Senior | Arquitecto de Software | Desarrollador Full Stack",
         sectionSummary: "Resumen Profesional",
         sectionSkills: "Habilidades Tecnicas",
         sectionExperience: "Experiencia Profesional",
@@ -37,7 +38,6 @@
     }
 
     return {
-      roleLine: "Senior Software Engineer | Software Architect | Full Stack Developer",
       sectionSummary: "Professional Summary",
       sectionSkills: "Technical Skills",
       sectionExperience: "Professional Experience",
@@ -57,43 +57,47 @@
     };
   }
 
+  function joinSkills(list) {
+    return (list || []).map(function (s) { return s.n; }).join(", ");
+  }
+
   function getAtsStructuredContent(lang) {
     const translations = state.getTranslations();
     const content = translations[lang] || translations.en || {};
     const locale = getAtsLocale(lang);
+    const skills = content.skills || {};
 
     return {
-      name: "Felipe Duitama",
-      roleLine: locale.roleLine,
-      contactLine: "Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/in/felipedc09",
-      companyHeader: `${cleanText(content.companyName)} - Bogota, Colombia`,
-      companyRoleLine: lang === "es"
-        ? "Lider Tecnico / Ingeniero de Software Senior (evolucion desde Frontend Engineer) | 2015 - 2026"
-        : "Technical Lead / Senior Software Engineer (progressed from Frontend Engineer) | 2015 - 2026",
+      name: cleanText(content.fullName),
+      roleLine: cleanText(content.roleLine),
+      contactLine: `${cleanText(content.locationLine)} | ${cleanText(content.phoneValue)} | ${cleanText(content.emailValue)} | ${cleanText(content.githubLabel)} | ${cleanText(content.linkedinLabel)}`,
+      contactHtml: `${cleanText(content.locationLine)} | ${cleanText(content.phoneValue)} | <a href="${content.emailHref}">${cleanText(content.emailValue)}</a> | <a href="${content.githubUrl}" target="_blank" rel="noopener">${cleanText(content.githubLabel)}</a> | <a href="${content.linkedinUrl}" target="_blank" rel="noopener">${cleanText(content.linkedinLabel)}</a>`,
+      companyHeader: `${cleanText(content.companyName)} - ${cleanText(content.locationLine)}`,
+      companyRoleLine: cleanText(content.companyRoleProgression),
       companySummary: cleanText(content.companySummary),
       summary: [cleanText(content.profileText1), cleanText(content.profileText2), cleanText(content.profileText3)],
       technicalSkills: {
-        languages: "C#, JavaScript, TypeScript, Python, HTML, CSS",
-        frameworks: "React, Next.js, Node.js, .NET, Unity 3D",
-        cloud: "AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, CI/CD",
-        databases: "MongoDB, MySQL, PostgreSQL",
-        testing: "Playwright, Cypress",
-        tools: "Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning"
+        languages: joinSkills(skills.languages),
+        frameworks: joinSkills(skills.frameworks),
+        cloud: joinSkills(skills.cloud),
+        databases: joinSkills(skills.databases),
+        testing: joinSkills(skills.testing),
+        tools: joinSkills(skills.tools)
       },
       experienceSections: [
-        { title: cleanText(content.vEyeTitle), items: [cleanText(content.vEye1), cleanText(content.vEye2), cleanText(content.vEye3)] },
-        { title: cleanText(content.resourceTitle), items: [cleanText(content.resource1)] },
-        { title: cleanText(content.hololensTitle), items: [cleanText(content.hololens1)] },
-        { title: cleanText(content.arasTitle), items: [cleanText(content.aras1), cleanText(content.aras2), cleanText(content.aras3), cleanText(content.aras4), cleanText(content.aras5), cleanText(content.aras6), cleanText(content.aras7)] },
-        { title: cleanText(content.takeoffTitle), items: [cleanText(content.takeoff1), cleanText(content.takeoff2)] },
-        { title: cleanText(content.catalogueTitle), items: [cleanText(content.catalogue1)] },
-        { title: cleanText(content.viewerTitle), items: [cleanText(content.viewer1), cleanText(content.viewer2)] }
+        { title: cleanText(content.vEyeTitle), meta: cleanText(content.vEyeMeta), items: [cleanText(content.vEye1), cleanText(content.vEye2), cleanText(content.vEye3)] },
+        { title: cleanText(content.resourceTitle), meta: cleanText(content.resourceMeta), items: [cleanText(content.resource1), cleanText(content.resource2)] },
+        { title: cleanText(content.hololensTitle), meta: cleanText(content.hololensMeta), items: [cleanText(content.hololens1)] },
+        { title: cleanText(content.arasTitle), meta: cleanText(content.arasMeta), items: [cleanText(content.aras1), cleanText(content.aras2), cleanText(content.aras3), cleanText(content.aras4), cleanText(content.aras5), cleanText(content.aras6), cleanText(content.aras7)] },
+        { title: cleanText(content.takeoffTitle), meta: cleanText(content.takeoffMeta), items: [cleanText(content.takeoff1), cleanText(content.takeoff2)] },
+        { title: cleanText(content.catalogueTitle), meta: cleanText(content.catalogueMeta), items: [cleanText(content.catalogue1)] },
+        { title: cleanText(content.viewerTitle), meta: cleanText(content.viewerMeta), items: [cleanText(content.viewer1), cleanText(content.viewer2)] }
       ],
       education: [
-        { institution: cleanText(content.universityName), details: `${cleanText(content.systemsEngineering)} | 2011 - 2020` },
-        { institution: "UNAD Naska Digital", details: `${cleanText(content.unityCertified)} | 2017 - 2019` }
+        { institution: cleanText(content.universityName), details: `${cleanText(content.systemsEngineering)} | ${cleanText(content.eduUniversityYears)}` },
+        { institution: cleanText(content.unityInstitution), details: `${cleanText(content.unityCertified)} | ${cleanText(content.eduUnityYears)}` }
       ],
-      conferences: ["JSConf, NodeConf, Unity Developer Day - 2019", "CSSConf Colombia - 2021"],
+      conferences: [cleanText(content.conf1), cleanText(content.conf2)],
       languages: [
         `${cleanText(content.spanish)} (${cleanText(content.native)})`,
         `${cleanText(content.english)} (${cleanText(content.englishLevel)})`,
@@ -113,14 +117,25 @@
     const lang = state.getCurrentLang();
     const data = getAtsStructuredContent(lang);
     const sectionMarkup = data.experienceSections
-      .map((section) => `<p class="ats-subtitle">${section.title}</p><ul class="ats-bullets">${section.items.map((item) => `<li>${item}</li>`).join("")}</ul>`)
+      .map((section) => {
+        let role = "";
+        let dates = "";
+        if (section.meta) {
+          const parts = section.meta.split("·");
+          role = (parts[0] || "").trim();
+          dates = (parts[1] || "").trim();
+        }
+        const head = `<div class="ats-exp-head"><span class="ats-exp-title">${section.title}</span>${dates ? `<span class="ats-exp-date">${dates}</span>` : ""}</div>${role ? `<p class="ats-exp-role">${role}</p>` : ""}`;
+        const bullets = `<ul class="ats-bullets">${section.items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+        return head + bullets;
+      })
       .join("");
 
     rootEl.innerHTML = `
       <div class="ats-header">
         <h1>${data.name}</h1>
         <p>${data.roleLine}</p>
-        <p>${data.contactLine}</p>
+        <p>${data.contactHtml}</p>
       </div>
       <hr class="ats-divider" />
 
@@ -190,6 +205,9 @@
 
     data.experienceSections.forEach((section) => {
       lines.push(section.title.toUpperCase());
+      if (section.meta) {
+        lines.push(`- ${section.meta}`);
+      }
       section.items.forEach((item) => lines.push(`- ${item}`));
       lines.push("");
     });
@@ -249,7 +267,8 @@
     const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = `Felipe_Duitama_CV_ATS_${suffix}_${date}.txt`;
+    const namePart = (getAtsStructuredContent(lang).name || "CV").replace(/\s+/g, "_");
+    link.download = `${namePart}_CV_ATS_${suffix}_${date}.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

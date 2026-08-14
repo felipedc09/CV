@@ -87,9 +87,35 @@ function fallbackTranslateEnglishToSpanish(value) {
 function buildFallbackSpanish() {
   const spanish = {};
   Object.keys(sourceEnglish).forEach((key) => {
-    spanish[key] = fallbackTranslateEnglishToSpanish(sourceEnglish[key]);
+    const value = sourceEnglish[key];
+    spanish[key] = typeof value === "string"
+      ? fallbackTranslateEnglishToSpanish(value)
+      : value;
   });
   return spanish;
+}
+
+// Render the sidebar skill chips from the canonical skills data in en.js.
+// Programming = languages; Frameworks / Tools = frameworks + cloud + testing + tools;
+// Databases = databases. `short` gives a compact chip label; `l` sets the level dot.
+function renderSkillChips(skills) {
+  if (!skills) {
+    return;
+  }
+  const chip = (s) =>
+    `<li class="skill-item"><span class="dot-${s.l === "a" ? "a" : "i"}">●</span> ${s.short || s.n}</li>`;
+  const groups = {
+    skillListLanguages: skills.languages || [],
+    skillListFrameworks: []
+      .concat(skills.frameworks || [], skills.cloud || [], skills.testing || [], skills.tools || []),
+    skillListDatabases: skills.databases || []
+  };
+  Object.keys(groups).forEach((id) => {
+    const ul = document.getElementById(id);
+    if (ul) {
+      ul.innerHTML = groups[id].map(chip).join("");
+    }
+  });
 }
 
 const translations = {
@@ -107,6 +133,21 @@ function updateContent() {
       element.innerHTML = translation;
     }
   });
+
+  document.querySelectorAll("[data-i18n-href]").forEach((element) => {
+    const key = element.getAttribute("data-i18n-href");
+    const href = translations[currentLang][key];
+    if (href) {
+      element.setAttribute("href", href);
+    }
+  });
+
+  const fullName = translations[currentLang].fullName;
+  if (fullName) {
+    document.title = `CV - ${fullName}`;
+  }
+
+  renderSkillChips(translations[currentLang].skills);
 
   const langBtn = document.getElementById("langToggle");
   if (langBtn) {

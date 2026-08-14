@@ -1,30 +1,35 @@
-FELIPE DUITAMA
+LUIS FELIPE DUITAMA CASTILLO
 Senior Software Engineer | Software Architect | Full Stack Developer
 Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/in/felipedc09
 
 PROFESSIONAL SUMMARY
-- Senior Software Engineer and Full Stack Developer with 12+ years of experience building robust, scalable and maintainable products across complex domains. Core strength in frontend architecture : component systems, TypeScript migrations, clean code boundaries and atomic design, combined with solid backend and cloud capabilities that cover the full delivery lifecycle.
-- Proven ability to design and implement complex systems, including graph-based routing algorithms , real-time data pipelines , microservice architectures on AWS (ECS Fargate, Lambda, API Gateway), AR experiences and 3D browser rendering via WebGL. Comfortable owning architecture decisions , leading cross-functional teams and going hands-on when it matters.
-- Operates with a product mindset , pragmatic about tradeoffs, deliberate about long-term maintainability and fast to iterate without sacrificing quality. Experienced with CI/CD (GitHub Actions), containerization (Docker, Kubernetes) and AI-assisted development workflows — including hands-on use of LLMs as coding agents , MCP servers, CLI-based agent tooling, and prompt-engineering practices around context management, memory strategies and token efficiency.
+- Senior Software Engineer and Full Stack Developer with 12+ years of experience delivering robust, scalable products across complex domains.
+- Specializing in frontend architecture with full-stack depth, I design and implement sophisticated systems — from graph-based routing and real-time data pipelines to AWS microservices and WebGL 3D rendering — while owning architectural decisions and leading cross-functional teams.
+- I combine a pragmatic, product-focused mindset with hands-on execution and modern AI-assisted development workflows to ship maintainable, high-quality solutions efficiently.
 
 PROFESSIONAL EXPERIENCE
 - 3D Virtual Environment Solutions - Bogota, Colombia
-- Technical Lead / Senior Software Engineer (progressed from Frontend Engineer) | 2015 - 2026
-- Over 11 years contributing to and leading the development of multiple software products, growing from frontend engineer to technical lead . Built deep expertise across the full stack: frontend architecture with React and TypeScript , algorithm design, cloud infrastructure on AWS , 3D and AR experiences, and microservices. Worked closely with product, design and data science teams, taking ownership of architecture decisions , team coordination and end-to-end delivery across all stages of the products.
+- Software Developer -> Frontend Developer -> Full Stack Developer -> Software Engineer -> Software Architect | 2015 - 2026
+- Progressed through five roles over 11+ years at a single employer — Software Developer (2015-2016), Frontend Developer (2016-2018), Full Stack Developer (2018-2023), Software Engineer (2023-2024) and Software Architect (2024-2026) — growing from frontend engineer to technical lead. Built deep expertise across the full stack: frontend architecture with React and TypeScript, algorithm design, cloud infrastructure on AWS, 3D and AR experiences, and microservices, owning architecture decisions, team coordination and end-to-end delivery.
 
-VEYE - HOSPITAL DIGITAL TWIN (2013-2016)
+VEYE - HOSPITAL DIGITAL TWIN
+- Software Developer · 2015 – 2016
 - Contributed to the architecture of a hospital-scale digital twin using Unity 3D and a MENU stack (MongoDB, Express, Node.js, Unity), integrating live HVAC sensor data across a multi-building complex for a US client.
 - Designed OOP-based C#/.NET controller abstractions in Unity to manage interactive 3D elements, enabling polymorphic behavior per equipment type.
-- Built the HUD layer and interfaces to visualize sensor data and let operators update equipment state in real time.
+- Built the HUD layer and interfaces to visualize sensor data and let operators update equipment state in real time, with filters rendering 500+ assets simultaneously at 60 FPS.
 
-RESOURCE DISTRIBUTION TOOL (2017-2018)
-- Developed the frontend of a construction resource planning web app using React, Chart.js and MongoDB , enabling percentage-based resource allocation across time via interactive calendar and breakdown views.
+RESOURCE DISTRIBUTION TOOL
+- Frontend Developer · 2016 – 2018
+- Developed the frontend of a construction resource planning web app using React, Chart.js and MongoDB, enabling percentage-based resource allocation across time via interactive calendar and breakdown views.
+- Replaced legacy jQuery components with React, reducing frontend complexity and boosting maintainability and performance by ~50%.
 
 HOLOLENS AR PROTOTYPE
-- Designed and implemented an AR application using the Microsoft HoloLens SDK and Unity , streaming 3D assets from a file server to stay within device memory constraints, which required deep optimization of model geometry.
+- Full Stack Developer · 2018 – 2023
+- Designed and implemented an AR application using the Microsoft HoloLens SDK and Unity, streaming 3D assets from a file server to stay within device memory constraints, which required deep optimization of model geometry.
 
 ARAS / BIMEP - HVAC AUTOMATION PLATFORM (CORE PROJECT)
-- Led the migration from a vanilla JS monolith to a React, TypeScript and Node.js architecture, establishing component reuse patterns and reducing runtime errors through static typing.
+- Full Stack Developer · 2018 – 2023
+- Led the migration from a vanilla JS monolith to a React, TypeScript and Node.js architecture, establishing component reuse patterns that cut web-component management time by ~90% and reducing runtime errors through static typing.
 - Designed and implemented a Dijkstra-based pipe auto-routing algorithm using a room-grid graph where edge weights encode HVAC heat load, automating layout-aware pipe distribution across building floors.
 - Authored Revit plugins in C# to extend the platform directly inside the mechanical designer's workflow, bridging the web application with BIM tooling.
 - Architected the transition to a microservices model on AWS (ECS Fargate, EC2, API Gateway, CloudWatch, load balancers), decomposing compute-intensive algorithms into independently scalable services.
@@ -33,23 +38,26 @@ ARAS / BIMEP - HVAC AUTOMATION PLATFORM (CORE PROJECT)
 - Used local Kubernetes environments for development and integration testing to avoid AWS costs, and established CI/CD pipelines via GitHub Actions with semantic versioning and conventional commits.
 
 VIRTUAL TAKEOFF - FACILITY MAPPING TOOL
+- Software Engineer · 2023 – 2024
 - Led end-to-end delivery of a facility mapping application (React, Next.js, PostgreSQL, MongoDB, Mapbox) allowing users to annotate floor plans with geolocated markers enriched with images, audio, video and notes.
 - Owned project management for the initiative: scheduling, task assignment and deliverable coordination alongside a small engineering team.
 
 COMMERCIAL CATALOGUE
+- Full Stack Developer · 2018 – 2023
 - Built a Next.js and PostgreSQL HVAC equipment catalogue with advanced filtering, deployed on AWS, reducing quote preparation time for contractor users.
 
 3D MODEL VIEWER - BROWSER-NATIVE PIPELINE
-- Designed and implemented a file conversion pipeline (Revit RVT and LAS to XKT) with a server-side processing queue and WebSocket-based progress notifications , enabling teams to load BIM models in the browser without login friction.
-- Integrated interactive viewer tools (measurements, camera controls, model transforms) and owned full-stack delivery from the conversion backend to frontend rendering.
+- Software Architect · 2024 – 2026
+- Designed and implemented a file conversion pipeline (Revit RVT and LAS to XKT) with a server-side processing queue and WebSocket-based progress notifications, enabling teams to load BIM models in the browser without login friction.
+- Integrated interactive viewer tools (measurements, camera controls, model transforms) and owned full-stack delivery from the conversion backend to frontend rendering, cutting model load time by ~50% and supporting 100 concurrent users through the optimized conversion and streaming pipeline; used AI-assisted development to improve delivery efficiency by ~80%.
 
 TECHNICAL SKILLS
-- Languages: C#, JavaScript, TypeScript, Python, HTML, CSS
-- Frameworks & Libraries: React, Next.js, Node.js, .NET, Unity 3D
-- Cloud & DevOps: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, CI/CD
+- Languages: C#, JavaScript, HTML, TypeScript, Python, CSS
+- Frameworks & Libraries: React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets, RESTful APIs
+- Cloud & DevOps: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, DevOps, CI/CD
 - Databases: MongoDB, MySQL, PostgreSQL
-- Testing: Playwright, Cypress
-- Tools & Practices: Git, GitHub Copilot, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning
+- Testing: Playwright, Cypress, Testing Library
+- Tools & Practices: Git, GitHub, GitHub Copilot, Claude Code, Clean Code, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning, Agile, Scrum, Authentication, System Design, Distributed Systems, Performance Optimization, Technical Leadership, Mentoring
 
 EDUCATION
 - Universidad Distrital Francisco Jose de Caldas | Bachelor of Engineering (BEng), Systems Engineering | 2011 - 2020
@@ -61,10 +69,10 @@ CONFERENCES & TRAINING
 - CSSConf Colombia - 2021
 
 LANGUAGES
-- Spanish (Native) | English (Intermediate (B1-B2, actively improving toward C1 for global roles)) | French (Basic)
+- Spanish (Native) | English (Upper-Intermediate (B2+)) | French (Basic)
 
 CORE COMPETENCIES
 - Self-management & Proactivity, Assertive Communication, Solution-oriented Thinking, Curiosity & Innovation Mindset, Continuous Learning, Leadership & Team Guidance
 
 ATS KEYWORDS
-- Full Stack, React, Next.js, TypeScript, JavaScript, Node.js, C#, .NET, Python, AWS, ECS Fargate, Lambda, API Gateway, CloudWatch, Microservices, Kubernetes, Docker, CI/CD, GitHub Actions, PostgreSQL, MongoDB, Mapbox, WebGL, Unity 3D, Revit, Digital Twin, Dijkstra, WebSocket
+- Full Stack, React, Next.js, TypeScript, JavaScript, Node.js, C#, .NET, Python, AWS, ECS Fargate, Lambda, API Gateway, CloudWatch, Microservices, Kubernetes, Docker, CI/CD, GitHub Actions, PostgreSQL, MongoDB, Mapbox, WebGL, Unity 3D, Revit, Digital Twin, Dijkstra, WebSocket, Technical Leadership, Jenkins, Terraform, Micro-frontends, Authentication, Distributed Systems, System Design, RESTful APIs, GitHub, Claude Code, Clean Code, Testing Library, Agile, Scrum, Performance Optimization, Mentoring, DevOps
