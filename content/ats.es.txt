@@ -1,6 +1,6 @@
 LUIS FELIPE DUITAMA CASTILLO
 Ingeniero de Software Senior | Arquitecto de Software | Desarrollador Full Stack
-Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/in/felipedc09
+Bogotá, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/en/felipedc09
 
 RESUMEN PROFESIONAL
 - Ingeniero de Software Senior y Desarrollador Full Stack con más de 12 años de experiencia entregando productos robustos y escalables en dominios complejos.
@@ -8,7 +8,7 @@ RESUMEN PROFESIONAL
 - Combino una mentalidad pragmática y orientada al producto con ejecución práctica y flujos de trabajo de desarrollo asistido por IA modernos para entregar soluciones mantenibles y de alta calidad de forma eficiente.
 
 EXPERIENCIA PROFESIONAL
-- 3D Virtual Environment Solutions - Bogota, Colombia
+- 3D Virtual Environment Solutions - Bogotá, Colombia
 - Desarrollador de Software -> Desarrollador Frontend -> Desarrollador Full Stack -> Ingeniero de Software -> Arquitecto de Software | 2015 - 2026
 - Progresé a través de cinco roles durante más de 11 años en una misma empresa — Desarrollador de Software (2015-2016), Desarrollador Frontend (2016-2018), Desarrollador Full Stack (2018-2023), Ingeniero de Software (2023-2024) y Arquitecto de Software (2024-2026)— creciendo de ingeniero frontend a líder técnico. Desarrollé experiencia profunda en todo el stack: arquitectura frontend con React y TypeScript, diseño de algoritmos, infraestructura cloud en AWS, experiencias 3D y AR, y microservicios, asumiendo decisiones de arquitectura, coordinación del equipo y entrega de extremo a extremo.
 
@@ -52,7 +52,7 @@ VISOR DE MODELOS 3D - PIPELINE NATIVO DEL NAVEGADOR
 - Integré herramientas de visor interactivas (mediciones, controles de cámara, transformaciones de modelo) y asumí la entrega full-stack desde el backend de conversión hasta el renderizado en el frontend, reduciendo el tiempo de carga del modelo en ~50% y soportando 100 usuarios concurrentes mediante el pipeline optimizado de conversión y streaming; usé desarrollo asistido por IA para mejorar la eficiencia de entrega en ~80%.
 
 HABILIDADES TECNICAS
-- Lenguajes: C#, JavaScript, TypeScript, Python, HTML, CSS
+- Lenguajes: C#, JavaScript, HTML, TypeScript, Python, CSS
 - Frameworks y Librerias: React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets, RESTful APIs
 - Nube y DevOps: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, DevOps, CI/CD
 - Bases de Datos: MongoDB, MySQL, PostgreSQL

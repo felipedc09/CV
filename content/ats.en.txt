@@ -52,7 +52,7 @@ COMMERCIAL CATALOGUE
 - Integrated interactive viewer tools (measurements, camera controls, model transforms) and owned full-stack delivery from the conversion backend to frontend rendering, cutting model load time by ~50% and supporting 100 concurrent users through the optimized conversion and streaming pipeline; used AI-assisted development to improve delivery efficiency by ~80%.
 
 TECHNICAL SKILLS
-- Languages: C#, JavaScript, TypeScript, Python, HTML, CSS
+- Languages: C#, JavaScript, HTML, TypeScript, Python, CSS
 - Frameworks & Libraries: React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets, RESTful APIs
 - Cloud & DevOps: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, DevOps, CI/CD
 - Databases: MongoDB, MySQL, PostgreSQL

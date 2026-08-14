@@ -84,5 +84,11 @@ module.exports = {
   atsButton: "ATS",
   githubCopilot: "GitHub Copilot como agente de IA",
   testing: "Playwright, Cypress - pruebas",
-  devops: "DevOps, CI/CD, contenedores (Docker, Kubernetes)"
+  devops: "DevOps, CI/CD, contenedores (Docker, Kubernetes)",
+
+  // Identity/contact keys that need Spanish (the rest are values/proper nouns,
+  // identical in both languages, so they pass through unchanged).
+  roleLine: "Ingeniero de Software Senior | Arquitecto de Software | Desarrollador Full Stack",
+  locationLine: "Bogotá, Colombia",
+  companyRoleProgression: "Desarrollador de Software -> Desarrollador Frontend -> Desarrollador Full Stack -> Ingeniero de Software -> Arquitecto de Software | 2015 - 2026"
 };

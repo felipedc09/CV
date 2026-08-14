@@ -88,6 +88,225 @@
   "atsButton": "ATS",
   "githubCopilot": "GitHub Copilot como agente de IA",
   "testing": "Playwright, Cypress - pruebas",
-  "devops": "DevOps, CI/CD, contenedores (Docker, Kubernetes)"
+  "devops": "DevOps, CI/CD, contenedores (Docker, Kubernetes)",
+  "fullName": "Luis Felipe Duitama Castillo",
+  "roleLine": "Ingeniero de Software Senior | Arquitecto de Software | Desarrollador Full Stack",
+  "locationLine": "Bogotá, Colombia",
+  "phoneValue": "+57 320 3448583",
+  "emailValue": "felipedc09@gmail.com",
+  "emailHref": "mailto:felipedc09@gmail.com",
+  "addressValue": "Carrera 45 # 56-51, Bogotá - Colombia",
+  "githubUser": "felipedc09",
+  "githubUrl": "https://github.com/felipedc09",
+  "githubLabel": "github.com/felipedc09",
+  "linkedinUser": "felipedc09",
+  "linkedinUrl": "https://linkedin.com/en/felipedc09",
+  "linkedinLabel": "linkedin.com/en/felipedc09",
+  "companyUrl": "https://www.3dves.com",
+  "companyUrlLabel": "www.3dves.com",
+  "companyDates": "2015 - 2026",
+  "companyRoleProgression": "Desarrollador de Software -> Desarrollador Frontend -> Desarrollador Full Stack -> Ingeniero de Software -> Arquitecto de Software | 2015 - 2026",
+  "eduUniversityYears": "2011 - 2020",
+  "eduUnityYears": "2017 - 2019",
+  "unityInstitution": "UNAD Naska Digital",
+  "conf1": "JSConf, NodeConf, Unity Developer Day - 2019",
+  "conf2": "CSSConf Colombia - 2021",
+  "skills": {
+    "languages": [
+      {
+        "n": "C#",
+        "l": "a"
+      },
+      {
+        "n": "JavaScript",
+        "short": "JS",
+        "l": "a"
+      },
+      {
+        "n": "HTML",
+        "l": "a"
+      },
+      {
+        "n": "TypeScript",
+        "short": "TS",
+        "l": "i"
+      },
+      {
+        "n": "Python",
+        "l": "i"
+      },
+      {
+        "n": "CSS",
+        "l": "i"
+      }
+    ],
+    "frameworks": [
+      {
+        "n": "React",
+        "l": "i"
+      },
+      {
+        "n": "Next.js",
+        "l": "i"
+      },
+      {
+        "n": "Node.js",
+        "l": "i"
+      },
+      {
+        "n": ".NET",
+        "l": "i"
+      },
+      {
+        "n": "Unity 3D",
+        "l": "i"
+      },
+      {
+        "n": "Micro-frontends",
+        "l": "i"
+      },
+      {
+        "n": "WebSockets",
+        "l": "i"
+      },
+      {
+        "n": "RESTful APIs",
+        "l": "i"
+      }
+    ],
+    "cloud": [
+      {
+        "n": "AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch)",
+        "short": "AWS",
+        "l": "i"
+      },
+      {
+        "n": "Docker",
+        "l": "i"
+      },
+      {
+        "n": "Kubernetes",
+        "l": "i"
+      },
+      {
+        "n": "GitHub Actions",
+        "l": "i"
+      },
+      {
+        "n": "Jenkins",
+        "l": "i"
+      },
+      {
+        "n": "Terraform",
+        "l": "i"
+      },
+      {
+        "n": "DevOps",
+        "l": "i"
+      },
+      {
+        "n": "CI/CD",
+        "l": "i"
+      }
+    ],
+    "databases": [
+      {
+        "n": "MongoDB",
+        "l": "i"
+      },
+      {
+        "n": "MySQL",
+        "l": "i"
+      },
+      {
+        "n": "PostgreSQL",
+        "l": "i"
+      }
+    ],
+    "testing": [
+      {
+        "n": "Playwright",
+        "l": "i"
+      },
+      {
+        "n": "Cypress",
+        "l": "i"
+      },
+      {
+        "n": "Testing Library",
+        "l": "i"
+      }
+    ],
+    "tools": [
+      {
+        "n": "Git",
+        "l": "i"
+      },
+      {
+        "n": "GitHub",
+        "l": "i"
+      },
+      {
+        "n": "GitHub Copilot",
+        "l": "i"
+      },
+      {
+        "n": "Claude Code",
+        "l": "i"
+      },
+      {
+        "n": "Clean Code",
+        "l": "i"
+      },
+      {
+        "n": "Clean Architecture",
+        "l": "i"
+      },
+      {
+        "n": "Atomic Design",
+        "l": "i"
+      },
+      {
+        "n": "Conventional Commits",
+        "l": "i"
+      },
+      {
+        "n": "Semantic Versioning",
+        "l": "i"
+      },
+      {
+        "n": "Agile",
+        "l": "i"
+      },
+      {
+        "n": "Scrum",
+        "l": "i"
+      },
+      {
+        "n": "Authentication",
+        "l": "i"
+      },
+      {
+        "n": "System Design",
+        "l": "i"
+      },
+      {
+        "n": "Distributed Systems",
+        "l": "i"
+      },
+      {
+        "n": "Performance Optimization",
+        "l": "i"
+      },
+      {
+        "n": "Technical Leadership",
+        "l": "i"
+      },
+      {
+        "n": "Mentoring",
+        "l": "i"
+      }
+    ]
+  }
 };
 });

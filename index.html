@@ -41,7 +41,7 @@
           <div class="slider-wrapper" id="photoSlider"></div>
         </div>
         <div class="name-header-mobile">
-          <h1>Luis Felipe Duitama Castillo</h1>
+          <h1 data-i18n="fullName">Luis Felipe Duitama Castillo</h1>
           <h2 data-i18n="jobTitle">Systems <span>Engineer</span></h2>
         </div>
         <div class="sidebar-section">
@@ -52,7 +52,7 @@
                 <i class="fa-solid fa-phone"></i
                 ><span data-i18n="phone">Phone</span>
               </div>
-              <div class="contact-value">+57 320 3448583</div>
+              <div class="contact-value" data-i18n="phoneValue">+57 320 3448583</div>
             </div>
             <div class="contact-item">
               <div class="contact-label">
@@ -60,7 +60,7 @@
                 ><span data-i18n="email">Email</span>
               </div>
               <div class="contact-value">
-                <a href="mailto:felipedc09@gmail.com">felipedc09@gmail.com</a>
+                <a href="mailto:felipedc09@gmail.com" data-i18n="emailValue" data-i18n-href="emailHref">felipedc09@gmail.com</a>
               </div>
             </div>
             <div class="contact-item">
@@ -68,8 +68,8 @@
                 <i class="fa-solid fa-location-dot"></i
                 ><span data-i18n="address">Address</span>
               </div>
-              <div class="contact-value">
-                Carrera 45 # 56-51<br />Bogotá - Colombia
+              <div class="contact-value" data-i18n="addressValue">
+                Carrera 45 # 56-51, Bogotá - Colombia
               </div>
             </div>
             <hr class="sidebar-divider" />
@@ -79,6 +79,7 @@
               </div>
               <div class="contact-value">
                 <a href="https://github.com/felipedc09" target="_blank"
+                  data-i18n="githubUser" data-i18n-href="githubUrl"
                   >felipedc09</a
                 >
               </div>
@@ -89,6 +90,7 @@
               </div>
               <div class="contact-value">
                 <a href="https://linkedin.com/in/felipedc09" target="_blank"
+                  data-i18n="linkedinUser" data-i18n-href="linkedinUrl"
                   >felipedc09</a
                 >
               </div>
@@ -118,7 +120,7 @@
       </div>
       <div class="section">
         <div class="name-header">
-          <h1>Luis Felipe Duitama Castillo</h1>
+          <h1 data-i18n="fullName">Luis Felipe Duitama Castillo</h1>
           <h2 data-i18n="jobTitle">Systems <span>Engineer</span></h2>
         </div>
         <div class="main-section-title" data-i18n="profile">Profile</div>
@@ -168,12 +170,14 @@
             </div>
             <div class="exp-right">
               <span data-i18n="companyRole">Innovation Engineering</span><br />
-              <strong>2015 - 2026</strong><br />
+              <strong data-i18n="companyDates">2015 - 2026</strong><br />
               <a
                 href="https://www.3dves.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 style="color: var(--accent-yellow)"
+                data-i18n="companyUrlLabel"
+                data-i18n-href="companyUrl"
                 >www.3dves.com</a
               >
             </div>
@@ -334,65 +338,13 @@
             <div class="skill-category" data-i18n="programming">
               Programming
             </div>
-            <ul class="skill-list">
-              <li class="skill-item"><span class="dot-a">●</span> C#</li>
-              <li class="skill-item"><span class="dot-a">●</span> HTML</li>
-              <li class="skill-item"><span class="dot-a">●</span> JS</li>
-              <li class="skill-item"><span class="dot-i">●</span> TS</li>
-              <li class="skill-item"><span class="dot-i">●</span> Python</li>
-              <li class="skill-item"><span class="dot-i">●</span> CSS</li>
-            </ul>
+            <ul class="skill-list" id="skillListLanguages"></ul>
             <div class="skill-category" data-i18n="frameworksTools">
               Frameworks / Tools
             </div>
-            <ul class="skill-list">
-              <li class="skill-item"></li>
-              <li class="skill-item"><span class="dot-i">●</span> ReactJS</li>
-              <li class="skill-item"><span class="dot-i">●</span> NextJS</li>
-              <li class="skill-item"><span class="dot-i">●</span> Node JS</li>
-              <li class="skill-item"><span class="dot-i">●</span> .Net</li>
-              <li class="skill-item"><span class="dot-i">●</span> Unity 3D</li>
-              <li class="skill-item"><span class="dot-i">●</span> Git</li>
-              <li class="skill-item"><span class="dot-i">●</span> GitHub</li>
-              <li class="skill-item"><span class="dot-i">●</span> WebSockets</li>
-              <li class="skill-item"><span class="dot-i">●</span> RESTful APIs</li>
-              <li class="skill-item"><span class="dot-i">●</span> Micro-frontends</li>
-              <li class="skill-item"><span class="dot-i">●</span> Jenkins</li>
-              <li class="skill-item"><span class="dot-i">●</span> Terraform</li>
-              <li class="skill-item"><span class="dot-i">●</span> DevOps</li>
-              <li class="skill-item"><span class="dot-i">●</span> Claude Code</li>
-              <li class="skill-item"><span class="dot-i">●</span> Clean Code</li>
-              <li class="skill-item"><span class="dot-i">●</span> Testing Library</li>
-              <li class="skill-item"><span class="dot-i">●</span> Agile / Scrum</li>
-              <li class="skill-item"><span class="dot-i">●</span> Performance Optimization</li>
-              <li class="skill-item"><span class="dot-i">●</span> Authentication</li>
-              <li class="skill-item"><span class="dot-i">●</span> Distributed Systems</li>
-              <li class="skill-item"><span class="dot-i">●</span> System Design</li>
-              <li class="skill-item">
-                <span class="dot-i">●</span>
-                <span data-i18n="githubCopilot"
-                  >Github copilot as AI agent</span
-                >
-              </li>
-              <li class="skill-item">
-                <span class="dot-i">●</span>
-                <span data-i18n="testing">playwright, cypress - testing</span>
-              </li>
-              <li class="skill-item">
-                <span class="dot-i">●</span>
-                <span data-i18n="devops"
-                  >DevOps, CI/CD, contenedores (Docker, Kubernetes)</span
-                >
-              </li>
-            </ul>
+            <ul class="skill-list" id="skillListFrameworks"></ul>
             <div class="skill-category" data-i18n="databases">Databases</div>
-            <ul class="skill-list">
-              <li class="skill-item"><span class="dot-i">●</span> MongoDB</li>
-              <li class="skill-item"><span class="dot-i">●</span> MySQL</li>
-              <li class="skill-item">
-                <span class="dot-i">●</span> PostgreSQL
-              </li>
-            </ul>
+            <ul class="skill-list" id="skillListDatabases"></ul>
           </div>
           <div class="sidebar-header" data-i18n="softSkills">Soft Skills</div>
           <div class="sidebar-content">
@@ -446,7 +398,7 @@
           <div class="edu-grid">
             <div class="edu-year">
               <span data-i18n="systemsEngineering">Systems Engineering</span
-              ><br />2011 - 2020
+              ><br /><span data-i18n="eduUniversityYears">2011 - 2020</span>
             </div>
             <div class="edu-info">
               <span data-i18n="universityName"
@@ -468,23 +420,19 @@
           <div class="edu-grid">
             <div class="edu-year">
               <span data-i18n="unityCertified">Unity Certified Developer</span
-              ><br />2017 - 2019
+              ><br /><span data-i18n="eduUnityYears">2017 - 2019</span>
             </div>
-            <div class="edu-info">UNAD Naska Digital<br />Bogotá, Colombia</div>
+            <div class="edu-info">
+              <span data-i18n="unityInstitution">UNAD Naska Digital</span><br />Bogotá, Colombia
+            </div>
           </div>
           <div class="sub-section-title" data-i18n="conferences">
             Conferences
           </div>
-          <table class="conf-table">
-            <tr>
-              <td class="conf-year">2019</td>
-              <td>JSConf, NodeConf, Unity Developer Day</td>
-            </tr>
-            <tr>
-              <td class="conf-year">2021</td>
-              <td>CSSConf Colombia</td>
-            </tr>
-          </table>
+          <ul class="main-list">
+            <li data-i18n="conf1">JSConf, NodeConf, Unity Developer Day - 2019</li>
+            <li data-i18n="conf2">CSSConf Colombia - 2021</li>
+          </ul>
         </div>
       </div>
     </div>

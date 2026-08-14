@@ -99,13 +99,23 @@ function translateEnglishToSpanishText(value) {
 function generateSpanishFromEnglish(englishContent, overrides = {}) {
   const spanish = {};
   Object.keys(englishContent).forEach((key) => {
-    const hasOverride =
-      Object.prototype.hasOwnProperty.call(overrides, key) && overrides[key] != null;
-    spanish[key] = hasOverride
-      ? overrides[key]
-      : translateEnglishToSpanishText(englishContent[key]);
+    const value = englishContent[key];
+    if (Object.prototype.hasOwnProperty.call(overrides, key) && overrides[key] != null) {
+      spanish[key] = overrides[key];
+    } else if (typeof value !== "string") {
+      // Non-string content (e.g. the skills data object) is language-neutral;
+      // pass it through unchanged instead of stringifying it.
+      spanish[key] = value;
+    } else {
+      spanish[key] = translateEnglishToSpanishText(value);
+    }
   });
   return spanish;
+}
+
+// Join a skills category array into an ATS comma list using full names.
+function joinSkills(list) {
+  return (list || []).map((s) => s.n).join(", ");
 }
 
 function extractAtsKeywords(sourceText) {
@@ -140,9 +150,6 @@ function addSection(lines, title, items) {
 function getAtsLocale(lang) {
   return lang === "es"
     ? {
-      roleLine: "Ingeniero de Software Senior | Arquitecto de Software | Desarrollador Full Stack",
-      contactLine: "Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/in/felipedc09",
-      companyRoleLine: "Desarrollador de Software -> Desarrollador Frontend -> Desarrollador Full Stack -> Ingeniero de Software -> Arquitecto de Software | 2015 - 2026",
       sectionSummary: "RESUMEN PROFESIONAL",
       sectionSkills: "HABILIDADES TECNICAS",
       sectionExperience: "EXPERIENCIA PROFESIONAL",
@@ -161,9 +168,6 @@ function getAtsLocale(lang) {
       }
     }
     : {
-      roleLine: "Senior Software Engineer | Software Architect | Full Stack Developer",
-      contactLine: "Bogota, Colombia | +57 320 3448583 | felipedc09@gmail.com | github.com/felipedc09 | linkedin.com/in/felipedc09",
-      companyRoleLine: "Software Developer -> Frontend Developer -> Full Stack Developer -> Software Engineer -> Software Architect | 2015 - 2026",
       sectionSummary: "PROFESSIONAL SUMMARY",
       sectionSkills: "TECHNICAL SKILLS",
       sectionExperience: "PROFESSIONAL EXPERIENCE",
@@ -203,16 +207,18 @@ function buildATSContent(translations, lang) {
     [cleanText(content.viewerTitle), [cleanText(content.viewerMeta), cleanText(content.viewer1), cleanText(content.viewer2)]]
   ];
 
+  const skills = content.skills || {};
+
   const lines = [];
-  lines.push("LUIS FELIPE DUITAMA CASTILLO");
-  lines.push(locale.roleLine);
-  lines.push(locale.contactLine);
+  lines.push(cleanText(content.fullName).toUpperCase());
+  lines.push(cleanText(content.roleLine));
+  lines.push(`${cleanText(content.locationLine)} | ${cleanText(content.phoneValue)} | ${cleanText(content.emailValue)} | ${cleanText(content.githubLabel)} | ${cleanText(content.linkedinLabel)}`);
   lines.push("");
 
   addSection(lines, locale.sectionSummary, summary);
   addSection(lines, locale.sectionExperience, [
-    `${cleanText(content.companyName)} - Bogota, Colombia`,
-    locale.companyRoleLine,
+    `${cleanText(content.companyName)} - ${cleanText(content.locationLine)}`,
+    cleanText(content.companyRoleProgression),
     cleanText(content.companySummary)
   ]);
 
@@ -221,23 +227,23 @@ function buildATSContent(translations, lang) {
   });
 
   addSection(lines, locale.sectionSkills, [
-    `${locale.labels.languages}: C#, JavaScript, TypeScript, Python, HTML, CSS`,
-    `${locale.labels.frameworks}: React, Next.js, Node.js, .NET, Unity 3D, Micro-frontends, WebSockets, RESTful APIs`,
-    `${locale.labels.cloud}: AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch), Docker, Kubernetes, GitHub Actions, Jenkins, Terraform, DevOps, CI/CD`,
-    `${locale.labels.databases}: MongoDB, MySQL, PostgreSQL`,
-    `${locale.labels.testing}: Playwright, Cypress, Testing Library`,
-    `${locale.labels.tools}: Git, GitHub, GitHub Copilot, Claude Code, Clean Code, Clean Architecture, Atomic Design, Conventional Commits, Semantic Versioning, Agile, Scrum, Authentication, System Design, Distributed Systems, Performance Optimization, Technical Leadership, Mentoring`
+    `${locale.labels.languages}: ${joinSkills(skills.languages)}`,
+    `${locale.labels.frameworks}: ${joinSkills(skills.frameworks)}`,
+    `${locale.labels.cloud}: ${joinSkills(skills.cloud)}`,
+    `${locale.labels.databases}: ${joinSkills(skills.databases)}`,
+    `${locale.labels.testing}: ${joinSkills(skills.testing)}`,
+    `${locale.labels.tools}: ${joinSkills(skills.tools)}`
   ]);
 
   addSection(lines, locale.sectionEducation, [
-    `${cleanText(content.universityName)} | ${cleanText(content.systemsEngineering)} | 2011 - 2020`,
+    `${cleanText(content.universityName)} | ${cleanText(content.systemsEngineering)} | ${cleanText(content.eduUniversityYears)}`,
     cleanText(content.educationDescription),
-    `UNAD Naska Digital | ${cleanText(content.unityCertified)} | 2017 - 2019`
+    `${cleanText(content.unityInstitution)} | ${cleanText(content.unityCertified)} | ${cleanText(content.eduUnityYears)}`
   ]);
 
   addSection(lines, locale.sectionConferences, [
-    "JSConf, NodeConf, Unity Developer Day - 2019",
-    "CSSConf Colombia - 2021"
+    cleanText(content.conf1),
+    cleanText(content.conf2)
   ]);
 
   addSection(lines, locale.sectionLanguages, [
