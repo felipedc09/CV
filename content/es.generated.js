@@ -47,7 +47,7 @@
   "aras1": "Lideré la migración de un monolito de JS plano a una arquitectura de <strong>React, TypeScript y Node.js</strong>, estableciendo patrones de reutilización de componentes que <strong>redujeron el tiempo de gestión de componentes web en ~90%</strong> y disminuyendo errores en tiempo de ejecución mediante tipado estático.",
   "aras2": "Diseñé e implementé un <strong>algoritmo de auto-ruteo de tuberías basado en Dijkstra</strong> usando un grafo de cuadrícula de habitaciones donde los pesos de las aristas codifican la carga térmica HVAC, automatizando la distribución de tuberías consciente del layout a través de los pisos del edificio.",
   "aras3": "Desarrollé <strong>plugins de Revit en C#</strong> para extender la plataforma directamente dentro del flujo de trabajo del diseñador mecánico, conectando la aplicación web con las herramientas BIM.",
-  "aras4": "Diseñé la transición a un <strong>modelo de microservicios en AWS</strong> (ECS Fargate, EC2, API Gateway, CloudWatch, balanceadores de carga), descomponiendo algoritmos de cómputo intensivo en servicios escalables de forma independiente.",
+  "aras4": "Diseñé la transición a un <strong>modelo de microservicios en AWS</strong> (ECS Fargate, EC2, API Gateway, CloudWatch, S3, balanceadores de carga), descomponiendo algoritmos de cómputo intensivo en servicios escalables de forma independiente.",
   "aras5": "Construí un <strong>message broker personalizado y ligero</strong> para coordinar la comunicación asíncrona entre servicios Node.js y funciones AWS Lambda que ejecutan algoritmos en Python para detección de salas limpias, zonificación, ubicación de equipos y generación de ductos.",
   "aras6": "Actué como <strong>líder técnico</strong> durante la fase de integración de algoritmos: asumí las decisiones de infraestructura y arquitectura, dirigí sesiones de planificación, gestioné el backlog en Notion y coordiné un equipo multifuncional de ingeniería, diseño y ciencia de datos.",
   "aras7": "Utilicé entornos locales de Kubernetes para desarrollo y pruebas de integración a fin de evitar costos de AWS, y establecí <strong>pipelines de CI/CD con GitHub Actions</strong> con versionado semántico y conventional commits.",
@@ -60,8 +60,8 @@
   "catalogue1": "Construí un catálogo de equipos HVAC en <strong>Next.js y PostgreSQL</strong> con filtrado avanzado, desplegado en AWS, reduciendo el tiempo de preparación de cotizaciones para usuarios contratistas.",
   "viewerTitle": "Visor de Modelos 3D - Pipeline Nativo del Navegador",
   "viewerMeta": "Arquitecto de Software · 2024 – 2026",
-  "viewer1": "Diseñé e implementé un <strong>pipeline de conversión de archivos</strong> (Revit RVT y LAS a XKT) con una cola de procesamiento del lado del servidor y <strong>notificaciones de progreso vía WebSocket</strong>, permitiendo a los equipos cargar modelos BIM en el navegador sin fricción de inicio de sesión.",
-  "viewer2": "Integré <strong>herramientas de visor interactivas</strong> (mediciones, controles de cámara, transformaciones de modelo) y asumí la entrega full-stack desde el backend de conversión hasta el renderizado en el frontend, <strong>reduciendo el tiempo de carga del modelo en ~50%</strong> y soportando <strong>100 usuarios concurrentes</strong> mediante el pipeline optimizado de conversión y streaming; usé <strong>desarrollo asistido por IA</strong> para mejorar la eficiencia de entrega en ~80%.",
+  "viewer1": "Diseñé e implementé un <strong>pipeline de conversión de archivos</strong> (Revit RVT y LAS a XKT) con una cola de procesamiento del lado del servidor en <strong>AWS ECS Fargate</strong> y <strong>S3 para almacenamiento de modelos</strong>, con <strong>notificaciones de progreso vía WebSocket</strong>, permitiendo a los equipos cargar modelos BIM en el navegador sin fricción de inicio de sesión.",
+  "viewer2": "Integré <strong>herramientas de visor interactivas</strong> (mediciones, controles de cámara, transformaciones de modelo) y asumí la entrega full-stack desde el backend de conversión hasta el renderizado en el frontend, <strong>reduciendo el tiempo de carga del modelo en ~50%</strong> y soportando <strong>100 usuarios concurrentes</strong> mediante el pipeline optimizado de conversión y streaming; usé <strong>desarrollo asistido por IA con GitHub Copilot como asistente agente en implementaciones de código y planificación arquitectónica</strong> para mejorar la eficiencia de entrega en ~80%.",
   "technicalSkills": "Habilidades Técnicas",
   "advanced": "Avanzado",
   "intermediate": "Intermedio",
@@ -176,7 +176,7 @@
     ],
     "cloud": [
       {
-        "n": "AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch)",
+        "n": "AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch, S3)",
         "short": "AWS",
         "l": "i"
       },

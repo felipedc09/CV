@@ -46,7 +46,7 @@
     aras1: "Led the migration from a vanilla JS monolith to a <strong>React, TypeScript and Node.js</strong> architecture, establishing component reuse patterns that <strong>cut web-component management time by ~90%</strong> and reducing runtime errors through static typing.",
     aras2: "Designed and implemented a <strong>Dijkstra-based pipe auto-routing algorithm</strong> using a room-grid graph where edge weights encode HVAC heat load, automating layout-aware pipe distribution across building floors.",
     aras3: "Authored <strong>Revit plugins in C#</strong> to extend the platform directly inside the mechanical designer's workflow, bridging the web application with BIM tooling.",
-    aras4: "Architected the transition to a <strong>microservices model on AWS</strong> (ECS Fargate, EC2, API Gateway, CloudWatch, load balancers), decomposing compute-intensive algorithms into independently scalable services.",
+    aras4: "Architected the transition to a <strong>microservices model on AWS</strong> (ECS Fargate, EC2, API Gateway, CloudWatch, S3, load balancers), decomposing compute-intensive algorithms into independently scalable services.",
     aras5: "Built a <strong>lightweight custom message broker</strong> to coordinate asynchronous communication between Node.js services and AWS Lambda functions running Python-based algorithms for clean room detection, zoning, equipment plotting and ductwork generation.",
     aras6: "Served as <strong>technical lead</strong> during the algorithm integration phase: owned infrastructure and architecture decisions, ran planning sessions, managed the backlog in Notion and coordinated a cross-functional team across engineering, design and data science.",
     aras7: "Used local Kubernetes environments for development and integration testing to avoid AWS costs, and established <strong>CI/CD pipelines via GitHub Actions</strong> with semantic versioning and conventional commits.",
@@ -59,8 +59,8 @@
     catalogue1: "Built a <strong>Next.js and PostgreSQL</strong> HVAC equipment catalogue with advanced filtering, deployed on AWS, reducing quote preparation time for contractor users.",
     viewerTitle: "3D Model Viewer - Browser-Native Pipeline",
     viewerMeta: "Software Architect · 2024 – 2026",
-    viewer1: "Designed and implemented a <strong>file conversion pipeline</strong> (Revit RVT and LAS to XKT) with a server-side processing queue and <strong>WebSocket-based progress notifications</strong>, enabling teams to load BIM models in the browser without login friction.",
-    viewer2: "Integrated <strong>interactive viewer tools</strong> (measurements, camera controls, model transforms) and owned full-stack delivery from the conversion backend to frontend rendering, <strong>cutting model load time by ~50%</strong> and supporting <strong>100 concurrent users</strong> through the optimized conversion and streaming pipeline; used <strong>AI-assisted development</strong> to improve delivery efficiency by ~80%.",
+    viewer1: "Designed and implemented a <strong>file conversion pipeline</strong> (Revit RVT and LAS to XKT) with a server-side processing queue on <strong>AWS ECS Fargate</strong> and <strong>S3 for model storage</strong>, with <strong>WebSocket-based progress notifications</strong>, enabling teams to load BIM models in the browser without login friction.",
+    viewer2: "Integrated <strong>interactive viewer tools</strong> (measurements, camera controls, model transforms) and owned full-stack delivery from the conversion backend to frontend rendering, <strong>cutting model load time by ~50%</strong> and supporting <strong>100 concurrent users</strong> through the optimized conversion and streaming pipeline; used <strong>AI-assisted development with GitHub Copilot as agent assistant in code implementations and architectural planning</strong> to improve delivery efficiency by ~80%.",
     technicalSkills: "Technical Skills",
     advanced: "Advanced",
     intermediate: "Intermediate",
@@ -126,7 +126,7 @@
         { n: "WebSockets", l: "i" }, { n: "RESTful APIs", l: "i" }
       ],
       cloud: [
-        { n: "AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch)", short: "AWS", l: "i" },
+        { n: "AWS (ECS, Fargate, EC2, Lambda, API Gateway, CloudWatch, S3)", short: "AWS", l: "i" },
         { n: "Docker", l: "i" }, { n: "Kubernetes", l: "i" }, { n: "GitHub Actions", l: "i" },
         { n: "Jenkins", l: "i" }, { n: "Terraform", l: "i" }, { n: "DevOps", l: "i" }, { n: "CI/CD", l: "i" }
       ],
